@@ -15,7 +15,7 @@ jobs:
           uses: actions/checkout@v3
           with:
             repository: organicmaps/organicmaps
-            ref: 'ca31bbaee4cd7ffcb6e8483587d244695777daf9'
+            ref: '3fb39b38a0673252859e59dfbc11671beda1cca6'
             path: ./
         - name: Update dependencies
           shell: bash
