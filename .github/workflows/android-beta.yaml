@@ -14,8 +14,8 @@ jobs:
         - name: Checkout the code
           uses: actions/checkout@v3
           with:
-            repository: Zhu-Pengming-Tom/organicmaps
-            ref: 'TomABdh-patch-1'
+            repository: organicmaps/organicmaps
+            ref: 'ca31bbaee4cd7ffcb6e8483587d244695777daf9'
             path: ./
         - name: Update dependencies
           shell: bash
