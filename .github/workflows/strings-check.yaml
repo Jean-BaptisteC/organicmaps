@@ -21,4 +21,13 @@ jobs:
         - name: CD 
           run: git submodule update --init --recursive
         - run: ./tools/unix/generate_localizations.sh
-        
+        - name: Upload IOS Translations
+          uses: actions/upload-artifact@v3
+          with:
+            name: IOS
+            path: iphone/Maps/LocalizedStrings/
+        - name: Upload Android Translations
+          uses: actions/upload-artifact@v3
+          with:
+            name: Android
+            path: android/res/values*/
