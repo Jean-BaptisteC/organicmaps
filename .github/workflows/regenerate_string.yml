@@ -1,0 +1,23 @@
+name: Regenerate translations
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout the code
+          uses: actions/checkout@v3
+          with:
+            repository: Jean-BaptisteC/organicmaps
+            ref: 'translations_types'
+            path: ./
+        - name: Update dependencies
+          shell: bash
+          run: |
+            sudo apt-get update -y
+            sudo apt-get install -y ninja-build
+        - name: CD 
+          run: git submodule update --init --recursive
+        - run: ./tools/unix/generate_localizations.sh
