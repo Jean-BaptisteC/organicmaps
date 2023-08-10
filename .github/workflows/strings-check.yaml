@@ -1,26 +1,24 @@
-name: Validate translation strings
+name: Regenerate translations
+
 on:
-  workflow_dispatch: # Manual trigger
-  pull_request:
-    paths:
-      - .github/workflows/strings-check.yaml  # Run check on self change
-      - data/countries_names.txt
-      - data/strings/*
-      - tools/python/strings_utils.py
+  workflow_dispatch:
 
 jobs:
-  validate-translation-strings:
-    name: Validate translation strings
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3'
-
-      - name: Validate strings.txt and types_strings.txt files
-        shell: bash
-        run: |
-          ./tools/python/strings_utils.py --validate
-          ./tools/python/strings_utils.py --types-strings --validate
+        - name: Checkout the code
+          uses: actions/checkout@v3
+          with:
+            repository: Jean-BaptisteC/organicmaps
+            ref: 'translations_types'
+            path: ./
+        - name: Update dependencies
+          shell: bash
+          run: |
+            sudo apt-get update -y
+            sudo apt-get install -y ninja-build
+        - name: CD 
+          run: git submodule update --init --recursive
+        - run: ./tools/unix/generate_localizations.sh
+        
