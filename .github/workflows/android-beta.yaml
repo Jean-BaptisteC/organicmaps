@@ -14,8 +14,8 @@ jobs:
         - name: Checkout the code
           uses: actions/checkout@v3
           with:
-            repository: organicmaps/organicmaps
-            ref: '3fb39b38a0673252859e59dfbc11671beda1cca6'
+            repository: Nimausfi/organicmaps
+            ref: 'new-changes'
             path: ./
         - name: Update dependencies
           shell: bash
