@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Kaszinó";
 
+"type.amenity.gambling" = "Szerencsejáték";
+
+"type.leisure.adult_gaming_centre" = "Felnőtt Játékközpont";
+
+"type.leisure.amusement_arcade" = "Árkád";
+
 "type.amenity.charging_station" = "Töltő állomás";
 
 "type.amenity.charging_station.bicycle" = "Kerékpártöltő állomás";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Mélygarázs";
 
+"type.amenity.parking.street_side" = "Parkoló";
+
+"type.amenity.parking.lane" = "Parkoló";
+
 "type.amenity.parking_entrance" = "Parkoló bejárata";
 
 "type.amenity.parking_entrance.private" = "Parkoló bejárata";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Templom";
 
 "type.amenity.place_of_worship.christian" = "Templom";
+
+"type.amenity.place_of_worship.christian.mormon" = "Utolsó Napok Szentjeinek Jézus Krisztus Egyháza";
 
 "type.amenity.place_of_worship.hindu" = "Templom";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Menedék";
 
 "type.amenity.shower" = "Tusoló";
+
+"type.amenity.stripclub" = "Stripclub";
 
 "type.amenity.taxi" = "Taxi Stand";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Sürgősségi gyülekezési pont";
+
 "type.emergency.defibrillator" = "Defibrillátor";
 
 "type.emergency.fire_hydrant" = "Tűzcsap";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Alagút";
 
 "type.highway.busway" = "Kijelölt buszút";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Híd";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Alagút";
 
 "type.highway.bus_stop" = "Buszmegálló";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Vasút";
 
-"type.railway.rail.highspeed" = "Vasút";
+"type.railway.rail.highspeed" = "Nagysebességű vasút";
 
-"type.railway.rail.tourism" = "Vasút";
+"type.railway.rail.tourism" = "Turisztikai vasút";
 
 "type.railway.rail.main" = "Vasút";
 
-"type.railway.rail.branch" = "Vasút";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Másodlagos vasút";
 
-"type.railway.rail.utility" = "Vasút";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Közüzemi vasút";
 
-"type.railway.rail.spur" = "Vasút";
+"type.railway.rail.spur" = "Vasúti nyomvonal";
 
-"type.railway.rail.service" = "Vasút";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Kiegészítő sínpálya";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Vasúti híd";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Vasúti híd";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Vasúti híd";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Vasúti híd";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Vasúti híd";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Vasúti híd";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Vasúti híd";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Vasúti híd";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Vasúti alagút";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Vasúti alagút";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Vasúti alagút";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Vasúti alagút";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Vasúti alagút";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Vasúti alagút";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Vasúti alagút";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Vasúti alagút";
 
 "type.railway.station" = "Vonatmegálló";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Földalatti";
 
 "type.railway.station.subway.tbilisi" = "Földalatti";
+
+"type.railway.station.subway.tehran" = "Földalatti";
 
 "type.railway.station.subway.tianjin" = "Földalatti";
 
@@ -3284,6 +3313,8 @@
 
 "type.railway.subway_entrance.tbilisi" = "Földalatti bejárat";
 
+"type.railway.subway_entrance.tehran" = "Földalatti bejárat";
+
 "type.railway.subway_entrance.tianjin" = "Földalatti bejárat";
 
 "type.railway.subway_entrance.tokyo" = "Földalatti bejárat";
@@ -3448,7 +3479,7 @@
 
 "type.shop.outpost" = "Felvevő pont";
 
-"type.shop.pastry" = "Cukrászsütemény";
+"type.shop.pastry" = "Cukrászda";
 
 "type.shop.pawnbroker" = "Zálogház";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "Akvárium";
+
 "type.tourism.alpine_hut" = "Hegyi menedék";
 
 "type.tourism.apartment" = "Apartmanok";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "Zsilip";
 

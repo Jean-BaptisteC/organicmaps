@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Casino";
 
+"type.amenity.gambling" = "Gambling";
+
+"type.leisure.adult_gaming_centre" = "Adult Gaming Centre";
+
+"type.leisure.amusement_arcade" = "Arcade";
+
 "type.amenity.charging_station" = "Charging Station";
 
 "type.amenity.charging_station.bicycle" = "Bicycle Charging Station";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Underground Parking";
 
+"type.amenity.parking.street_side" = "Street-Side Parking";
+
+"type.amenity.parking.lane" = "Roadside Lane Parking";
+
 "type.amenity.parking_entrance" = "Parking Entrance";
 
 "type.amenity.parking_entrance.private" = "Parking Entrance";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Buddhist Temple";
 
 "type.amenity.place_of_worship.christian" = "Church";
+
+"type.amenity.place_of_worship.christian.mormon" = "Church of Jesus Christ of Latter Day Saints";
 
 "type.amenity.place_of_worship.hindu" = "Hindu Temple";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Shelter";
 
 "type.amenity.shower" = "Shower";
+
+"type.amenity.stripclub" = "Stripclub";
 
 "type.amenity.taxi" = "Taxi Stand";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Emergency Assembly Point";
+
 "type.emergency.defibrillator" = "Defibrillator";
 
 "type.emergency.fire_hydrant" = "Fire Hydrant";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Tunnel";
 
 "type.highway.busway" = "Dedicated Bus Road";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Bridge";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Tunnel";
 
 "type.highway.bus_stop" = "Bus Stop";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,19 +2826,22 @@
 
 "type.railway.rail" = "Railway";
 
-"type.railway.rail.highspeed" = "Railway";
+"type.railway.rail.highspeed" = "High-Speed Railway";
 
-"type.railway.rail.tourism" = "Railway";
+"type.railway.rail.tourism" = "Touristic Railway";
 
 "type.railway.rail.main" = "Railway";
 
-"type.railway.rail.branch" = "Railway";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Railway Branch";
 
-"type.railway.rail.utility" = "Railway";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Utility Railway";
 
-"type.railway.rail.spur" = "Spur Rail";
+"type.railway.rail.spur" = "Railway Spur";
 
-"type.railway.rail.service" = "Railway";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Service Rail Track";
 
 "type.railway.rail.bridge" = "Railway Bridge";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "Subway Station";
 
+"type.railway.station.subway.tehran" = "Subway Station";
+
 "type.railway.station.subway.tianjin" = "Subway Station";
 
 "type.railway.station.subway.tokyo" = "Subway Station";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Subway Entrance";
 
 "type.railway.subway_entrance.tbilisi" = "Subway Entrance";
+
+"type.railway.subway_entrance.tehran" = "Subway Entrance";
 
 "type.railway.subway_entrance.tianjin" = "Subway Entrance";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "Aquarium";
+
 "type.tourism.alpine_hut" = "Alpine Lodging";
 
 "type.tourism.apartment" = "Holiday Apartment";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "Ditch";
 
-"type.waterway.ditch.tunnel" = "Ditch";
+"type.waterway.ditch.tunnel" = "Culvert";
 
 "type.waterway.dock" = "Waterway Dock";
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Culvert";
 
 "type.waterway.lock_gate" = "Lock Gate";
 

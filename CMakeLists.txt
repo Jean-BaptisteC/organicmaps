@@ -58,6 +58,7 @@ set(OMIM_ROOT ${CMAKE_SOURCE_DIR})
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${OMIM_ROOT}/cmake")
 
 include(OmimHelpers)
+include(OmimTesting)
 
 if (CMAKE_SYSTEM_NAME MATCHES "Linux")
   set(LINUX_DETECTED TRUE)
@@ -209,6 +210,8 @@ endif()
 
 if (NOT SKIP_TESTS)
   set(SKIP_TESTS FALSE)
+  enable_testing()
+  set(CTEST_CONFIGURATION_TYPE ${CMAKE_BUILD_TYPE})
 endif()
 
 if (NOT PYTHON_VERSION)
@@ -283,6 +286,13 @@ if (USE_PCH)
   )
 endif()
 
+# Should be on the root level, not in 3party, so tests can get these dependencies.
+# Should go before 3party as harfbuzz is using them.
+if (LINUX_DETECTED)
+  find_package(ICU COMPONENTS uc i18n data REQUIRED)
+  find_package(Freetype REQUIRED)
+endif()
+
 # Include 3party dependencies.
 add_subdirectory(3party)
 
@@ -290,11 +300,6 @@ add_subdirectory(3party)
 # that doesn't see gflags/gflags.h in binary dir (gflags has tricky cmake configuration).
 if (PLATFORM_DESKTOP)
   include_directories("${PROJECT_BINARY_DIR}/3party/gflags/include")
-endif()
-
-if (LINUX_DETECTED)
-  find_package(ICU COMPONENTS uc i18n data REQUIRED)
-  find_package(Freetype REQUIRED)
 endif()
 
 find_package(Python3 COMPONENTS Interpreter)

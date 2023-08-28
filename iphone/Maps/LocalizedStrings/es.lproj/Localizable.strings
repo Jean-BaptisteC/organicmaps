@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -544,7 +544,7 @@
 
 "p2p_only_from_current" = "La navegación solo está disponible desde su ubicación actual.";
 
-"p2p_reroute_from_current" = "¿Quiere que planeemos un ruta desde su ubicación actual?";
+"p2p_reroute_from_current" = "¿Quiere que planeemos una ruta desde su ubicación actual?";
 
 "editor_time_add" = "Añadir horario";
 
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Casino";
 
+"type.amenity.gambling" = "Juegos de azar";
+
+"type.leisure.adult_gaming_centre" = "Centro de juegos para adultos";
+
+"type.leisure.amusement_arcade" = "Arcade";
+
 "type.amenity.charging_station" = "Estación de carga";
 
 "type.amenity.charging_station.bicycle" = "Estación de carga de bicicletas";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Aparcamiento subterráneo";
 
+"type.amenity.parking.street_side" = "Aparcamiento";
+
+"type.amenity.parking.lane" = "Aparcamiento";
+
 "type.amenity.parking_entrance" = "Entrada al aparcamiento";
 
 "type.amenity.parking_entrance.private" = "Entrada al aparcamiento";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Templo";
 
 "type.amenity.place_of_worship.christian" = "Iglesia";
+
+"type.amenity.place_of_worship.christian.mormon" = "Iglesia de Jesucristo de los Santos de los Últimos Días";
 
 "type.amenity.place_of_worship.hindu" = "Templo";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Refugio";
 
 "type.amenity.shower" = "Ducha";
+
+"type.amenity.stripclub" = "Club de striptease";
 
 "type.amenity.taxi" = "Taxi";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergencia";
 
+"type.emergency.assembly_point" = "Punto de reunión de emergencia";
+
 "type.emergency.defibrillator" = "Desfibrilador";
 
 "type.emergency.fire_hydrant" = "Boca de incendio";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Túnel";
 
 "type.highway.busway" = "Carretera exclusiva para autobuses";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Puente";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Túnel";
 
 "type.highway.bus_stop" = "Parada de autobús";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Rotonda";
 
 "type.junction.roundabout" = "Rotonda";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Ferrocarril";
 
-"type.railway.rail.highspeed" = "Ferrocarril";
+"type.railway.rail.highspeed" = "Ferrocarril de alta velocidad";
 
-"type.railway.rail.tourism" = "Ferrocarril";
+"type.railway.rail.tourism" = "Ferrocarril turístico";
 
 "type.railway.rail.main" = "Ferrocarril";
 
-"type.railway.rail.branch" = "Ferrocarril";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Ramal ferroviario";
 
-"type.railway.rail.utility" = "Ferrocarril";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Ferrocarril utilitario";
 
-"type.railway.rail.spur" = "Ferrocarril";
+"type.railway.rail.spur" = "Espolón ferroviario";
 
-"type.railway.rail.service" = "Ferrocarril";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Vía férrea de maniobras";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Puente ferroviario";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Puente ferroviario";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Puente ferroviario";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Puente ferroviario";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Puente ferroviario";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Puente ferroviario";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Puente ferroviario";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Puente ferroviario";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Túnel ferroviario";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Túnel ferroviario";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Túnel ferroviario";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Túnel ferroviario";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Túnel ferroviario";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Túnel ferroviario";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Túnel ferroviario";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Túnel ferroviario";
 
 "type.railway.station" = "Estación de tren";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Metro";
 
 "type.railway.station.subway.tbilisi" = "Metro";
+
+"type.railway.station.subway.tehran" = "Metro";
 
 "type.railway.station.subway.tianjin" = "Metro";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Entrada al metro";
 
 "type.railway.subway_entrance.tbilisi" = "Entrada al metro";
+
+"type.railway.subway_entrance.tehran" = "Entrada al metro";
 
 "type.railway.subway_entrance.tianjin" = "Entrada al metro";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Turismo";
 
+"type.tourism.aquarium" = "Acuario";
+
 "type.tourism.alpine_hut" = "Refugio de montaña";
 
 "type.tourism.apartment" = "Apartamentos";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "Zanja";
 
-"type.waterway.ditch.tunnel" = "Zanja";
+"type.waterway.ditch.tunnel" = "Obra de drenaje";
 
 "type.waterway.dock" = "Muelle";
 
 "type.waterway.drain" = "Desagüe";
 
-"type.waterway.drain.tunnel" = "Desagüe";
+"type.waterway.drain.tunnel" = "Obra de drenaje";
 
 "type.waterway.lock_gate" = "Compuerta";
 

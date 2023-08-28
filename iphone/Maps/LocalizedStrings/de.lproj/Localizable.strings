@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Kasino";
 
+"type.amenity.gambling" = "Glücksspiel";
+
+"type.leisure.adult_gaming_centre" = "Gaming-Zentrum für Erwachsene";
+
+"type.leisure.amusement_arcade" = "Arkade";
+
 "type.amenity.charging_station" = "Ladestation";
 
 "type.amenity.charging_station.bicycle" = "Fahrrad Ladestation";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Tiefgarage";
 
+"type.amenity.parking.street_side" = "Parkplatz";
+
+"type.amenity.parking.lane" = "Parkplatz";
+
 "type.amenity.parking_entrance" = "Parkplatzeinfahrt";
 
 "type.amenity.parking_entrance.private" = "Parkplatzeinfahrt";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Buddhistischer Tempel";
 
 "type.amenity.place_of_worship.christian" = "Kirche";
+
+"type.amenity.place_of_worship.christian.mormon" = "Kirche Jesu Christi der Heiligen der Letzten Tage";
 
 "type.amenity.place_of_worship.hindu" = "Hinduistischer Tempel";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Unterstand";
 
 "type.amenity.shower" = "Dusche";
+
+"type.amenity.stripclub" = "Stripclub";
 
 "type.amenity.taxi" = "Taxistand";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Notfall";
 
+"type.emergency.assembly_point" = "Notfall-Sammelpunkt";
+
 "type.emergency.defibrillator" = "Defibrillator";
 
 "type.emergency.fire_hydrant" = "Hydrant";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Tunnel";
 
 "type.highway.busway" = "Eigene Busstraße";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Brücke";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Tunnel";
 
 "type.highway.bus_stop" = "Bushaltestelle";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Straßenknotenpunkt";
+
+"type.junction.circular" = "Kreisverkehr";
 
 "type.junction.roundabout" = "Kreisverkehr";
 
@@ -2802,19 +2826,22 @@
 
 "type.railway.rail" = "Eisenbahn";
 
-"type.railway.rail.highspeed" = "Eisenbahn";
+"type.railway.rail.highspeed" = "Hochgeschwindigkeits-eisenbahn";
 
-"type.railway.rail.tourism" = "Eisenbahn";
+"type.railway.rail.tourism" = "Touristische eisenbahn";
 
 "type.railway.rail.main" = "Eisenbahn";
 
-"type.railway.rail.branch" = "Eisenbahn";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Sekundärbahn";
 
-"type.railway.rail.utility" = "Eisenbahn";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Versorgungseisenbahn";
 
 "type.railway.rail.spur" = "Anschlussgleis";
 
-"type.railway.rail.service" = "Eisenbahn";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Hilfsbahngleis";
 
 "type.railway.rail.bridge" = "Eisenbahnbrücke";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "U-Bahn-Station";
 
+"type.railway.station.subway.tehran" = "U-Bahn-Station";
+
 "type.railway.station.subway.tianjin" = "U-Bahn-Station";
 
 "type.railway.station.subway.tokyo" = "U-Bahn-Station";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "U-Bahn-Eingang";
 
 "type.railway.subway_entrance.tbilisi" = "U-Bahn-Eingang";
+
+"type.railway.subway_entrance.tehran" = "U-Bahn-Eingang";
 
 "type.railway.subway_entrance.tianjin" = "U-Bahn-Eingang";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourismus";
 
+"type.tourism.aquarium" = "Aquarium";
+
 "type.tourism.alpine_hut" = "Berghütte";
 
 "type.tourism.apartment" = "Ferienwohnung";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "Graben";
 
-"type.waterway.ditch.tunnel" = "Graben";
+"type.waterway.ditch.tunnel" = "Durchlass";
 
 "type.waterway.dock" = "Dock";
 
 "type.waterway.drain" = "Abfluss";
 
-"type.waterway.drain.tunnel" = "Abfluss";
+"type.waterway.drain.tunnel" = "Durchlass";
 
 "type.waterway.lock_gate" = "Schleusentor";
 

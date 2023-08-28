@@ -717,6 +717,9 @@
 	<string name="type.amenity.car_sharing">Berbagi mobil</string>
 	<string name="type.amenity.car_wash">Cuci Mobil</string>
 	<string name="type.amenity.casino">Hiburan</string>
+	<string name="type.amenity.gambling">Berjudi</string>
+	<string name="type.leisure.adult_gaming_centre">Pusat Permainan Dewasa</string>
+	<string name="type.leisure.amusement_arcade">Arkade</string>
 	<string name="type.amenity.charging_station">Pusat Pengisian Daya</string>
 	<string name="type.amenity.charging_station.bicycle">Stasiun Pengisian Sepeda</string>
 	<string name="type.amenity.charging_station.motorcar">Stasiun Pengisian Mobil</string>
@@ -765,6 +768,8 @@
 	<string name="type.amenity.parking.private">Parkir pribadi</string>
 	<string name="type.amenity.parking.park_and_ride">Parkir</string>
 	<string name="type.amenity.parking.underground">Parkir bawah tanah</string>
+	<string name="type.amenity.parking.street_side">Parkir</string>
+	<string name="type.amenity.parking.lane">Parkir</string>
 	<string name="type.amenity.parking_entrance">Pintu masuk parkir</string>
 	<string name="type.amenity.parking_entrance.private">Pintu masuk parkir</string>
 	<string name="type.amenity.parking_entrance.permissive">Pintu masuk parkir</string>
@@ -778,6 +783,7 @@
 	<string name="type.amenity.place_of_worship">Tempat ibadah</string>
 	<string name="type.amenity.place_of_worship.buddhist">Kuil</string>
 	<string name="type.amenity.place_of_worship.christian">Gereja</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Gereja Yesus Kristus dari Orang-Orang Suci Zaman Akhir</string>
 	<string name="type.amenity.place_of_worship.hindu">Kuil</string>
 	<string name="type.amenity.place_of_worship.jewish">Sinagoge</string>
 	<string name="type.amenity.place_of_worship.muslim">Masjid</string>
@@ -804,6 +810,7 @@
 	<string name="type.amenity.school">Sekolah</string>
 	<string name="type.amenity.shelter">Tempat penampungan</string>
 	<string name="type.amenity.shower">Pancuran</string>
+	<string name="type.amenity.stripclub">Klub telanjang</string>
 	<string name="type.amenity.taxi">Taksi</string>
 	<string name="type.amenity.telephone">Telepon</string>
 	<string name="type.amenity.theatre">Teater</string>
@@ -953,6 +960,7 @@
 	<string name="type.cuisine.vegan">Masakan vegan</string>
 	<string name="type.cuisine.vegetarian">Masakan vegetarian</string>
 	<string name="type.cuisine.vietnamese">Masakan vietnam</string>
+	<string name="type.emergency.assembly_point">Titik Berkumpul Darurat</string>
 	<string name="type.emergency.defibrillator">Defibrilator</string>
 	<string name="type.emergency.fire_hydrant">Keran Kebakaran</string>
 	<string name="type.emergency.phone">Telepon darurat</string>
@@ -978,6 +986,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Terowongan</string>
 	<string name="type.highway.busway">Jalan khusus bus</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Menjembatani</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Terowongan</string>
 	<string name="type.highway.bus_stop">Halte bus</string>
 	<string name="type.highway.construction">Jalan sedang dibangun</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
@@ -1317,13 +1329,32 @@
 	<string name="type.railway.level_crossing">Perlintasan Kereta Api</string>
 	<string name="type.railway.monorail">Monorel</string>
 	<string name="type.railway.rail">Kereta api</string>
-	<string name="type.railway.rail.highspeed">Kereta api</string>
-	<string name="type.railway.rail.tourism">Kereta api</string>
+	<string name="type.railway.rail.highspeed">Kereta api berkecepatan tinggi</string>
+	<string name="type.railway.rail.tourism">Kereta api wisata</string>
 	<string name="type.railway.rail.main">Kereta api</string>
-	<string name="type.railway.rail.branch">Kereta api</string>
-	<string name="type.railway.rail.utility">Kereta api</string>
-	<string name="type.railway.rail.spur">Kereta api</string>
-	<string name="type.railway.rail.service">Kereta api</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Kereta api sekunder</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Kereta api utilitas</string>
+	<string name="type.railway.rail.spur">Pacu kereta api</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Jalur rel bantu</string>
+	<string name="type.railway.rail.bridge">Jembatan kereta api</string>
+	<string name="type.railway.rail.highspeed.bridge">Jembatan kereta api</string>
+	<string name="type.railway.rail.tourism.bridge">Jembatan kereta api</string>
+	<string name="type.railway.rail.main.bridge">Jembatan kereta api</string>
+	<string name="type.railway.rail.branch.bridge">Jembatan kereta api</string>
+	<string name="type.railway.rail.utility.bridge">Jembatan kereta api</string>
+	<string name="type.railway.rail.spur.bridge">Jembatan kereta api</string>
+	<string name="type.railway.rail.service.bridge">Jembatan kereta api</string>
+	<string name="type.railway.rail.tunnel">Terowongan kereta api</string>
+	<string name="type.railway.rail.highspeed.tunnel">Terowongan kereta api</string>
+	<string name="type.railway.rail.tourism.tunnel">Terowongan kereta api</string>
+	<string name="type.railway.rail.main.tunnel">Terowongan kereta api</string>
+	<string name="type.railway.rail.branch.tunnel">Terowongan kereta api</string>
+	<string name="type.railway.rail.utility.tunnel">Terowongan kereta api</string>
+	<string name="type.railway.rail.spur.tunnel">Terowongan kereta api</string>
+	<string name="type.railway.rail.service.tunnel">Terowongan kereta api</string>
 	<string name="type.railway.station">Rel kereta api</string>
 	<string name="type.railway.station.funicular">Kereta gantung</string>
 	<string name="type.railway.station.light_rail">Rel kereta api</string>
@@ -1429,6 +1460,7 @@
 	<string name="type.railway.station.subway.taoyuan">Stasiun bawah tanah</string>
 	<string name="type.railway.station.subway.tashkent">Stasiun bawah tanah</string>
 	<string name="type.railway.station.subway.tbilisi">Stasiun bawah tanah</string>
+	<string name="type.railway.station.subway.tehran">Stasiun bawah tanah</string>
 	<string name="type.railway.station.subway.tianjin">Stasiun bawah tanah</string>
 	<string name="type.railway.station.subway.tokyo">Stasiun bawah tanah</string>
 	<string name="type.railway.station.subway.valencia">Stasiun bawah tanah</string>
@@ -1539,6 +1571,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Pintu masuk kereta bawah tanah</string>
 	<string name="type.railway.subway_entrance.tashkent">Pintu masuk kereta bawah tanah</string>
 	<string name="type.railway.subway_entrance.tbilisi">Pintu masuk kereta bawah tanah</string>
+	<string name="type.railway.subway_entrance.tehran">Pintu masuk kereta bawah tanah</string>
 	<string name="type.railway.subway_entrance.tianjin">Pintu masuk kereta bawah tanah</string>
 	<string name="type.railway.subway_entrance.tokyo">Pintu masuk kereta bawah tanah</string>
 	<string name="type.railway.subway_entrance.valencia">Pintu masuk kereta bawah tanah</string>
@@ -1694,6 +1727,7 @@
 	<string name="type.sport.field_hockey">Hoki Lapangan</string>
 	<string name="type.sport.badminton">Bulu tangkis</string>
 	<string name="type.sport.pelota">Basque pelota</string>
+	<string name="type.tourism.aquarium">Akuarium</string>
 	<string name="type.tourism.alpine_hut">Penginapan di pegunungan</string>
 	<string name="type.tourism.apartment">Apartemen</string>
 	<string name="type.tourism.artwork">Pariwisata</string>

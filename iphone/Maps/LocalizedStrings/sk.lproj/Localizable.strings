@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Kasíno";
 
+"type.amenity.gambling" = "Hazardné hry";
+
+"type.leisure.adult_gaming_centre" = "Centrum hier pre dospelých";
+
+"type.leisure.amusement_arcade" = "Arcade";
+
 "type.amenity.charging_station" = "Dobíjacia stanica";
 
 "type.amenity.charging_station.bicycle" = "Nabíjacia stanica pre bicykle";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Podzemné parkovisko";
 
+"type.amenity.parking.street_side" = "Parkovisko";
+
+"type.amenity.parking.lane" = "Parkovisko";
+
 "type.amenity.parking_entrance" = "Vstup na parkovisko";
 
 "type.amenity.parking_entrance.private" = "Vstup na parkovisko";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Chrám";
 
 "type.amenity.place_of_worship.christian" = "Chrám";
+
+"type.amenity.place_of_worship.christian.mormon" = "Cirkev Ježiša Krista Svätých neskorších dní";
 
 "type.amenity.place_of_worship.hindu" = "Chrám";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Prístrešok";
 
 "type.amenity.shower" = "Sprcha";
+
+"type.amenity.stripclub" = "Stripclub";
 
 "type.amenity.taxi" = "Taxi Stand";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Núdzové zhromaždenie";
+
 "type.emergency.defibrillator" = "Defibrilátor";
 
 "type.emergency.fire_hydrant" = "Požiarny hydrant";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Tunel";
 
 "type.highway.busway" = "Vyhradená autobusová cesta";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Most";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Tunel";
 
 "type.highway.bus_stop" = "Autobusová zastávka";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Železnica";
 
-"type.railway.rail.highspeed" = "Železnica";
+"type.railway.rail.highspeed" = "Vysokorýchlostná železnica";
 
-"type.railway.rail.tourism" = "Železnica";
+"type.railway.rail.tourism" = "Turistická železnica";
 
-"type.railway.rail.main" = "Železnica";
+"type.railway.rail.main" = "Železnice";
 
-"type.railway.rail.branch" = "Železnica";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Sekundárna železnica";
 
-"type.railway.rail.utility" = "Železnica";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Úžitková železnica";
 
-"type.railway.rail.spur" = "Železnica";
+"type.railway.rail.spur" = "Železničná odbočka";
 
-"type.railway.rail.service" = "Železnica";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Pomocná železničná trať";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Železničný most";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Železničný most";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Železničný most";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Železničný most";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Železničný most";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Železničný most";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Železničný most";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Železničný most";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Železničný tunel";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Železničný tunel";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Železničný tunel";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Železničný tunel";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Železničný tunel";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Železničný tunel";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Železničný tunel";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Železničný tunel";
 
 "type.railway.station" = "Železničná stanica";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Metro";
 
 "type.railway.station.subway.tbilisi" = "Metro";
+
+"type.railway.station.subway.tehran" = "Metro";
 
 "type.railway.station.subway.tianjin" = "Metro";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Vstup do metra";
 
 "type.railway.subway_entrance.tbilisi" = "Vstup do metra";
+
+"type.railway.subway_entrance.tehran" = "Vstup do metra";
 
 "type.railway.subway_entrance.tianjin" = "Vstup do metra";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "Akvárium";
+
 "type.tourism.alpine_hut" = "Horská chata";
 
 "type.tourism.apartment" = "Apartmány";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "Stavidlo";
 

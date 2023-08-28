@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Kumarhane";
 
+"type.amenity.gambling" = "Kumar";
+
+"type.leisure.adult_gaming_centre" = "Yetişkin Oyun Merkezi";
+
+"type.leisure.amusement_arcade" = "Oyun makinesi";
+
 "type.amenity.charging_station" = "Şarj İstasyonu";
 
 "type.amenity.charging_station.bicycle" = "Bisiklet Şarj İstasyonu";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Yeraltı otoparkı";
 
+"type.amenity.parking.street_side" = "Otopark";
+
+"type.amenity.parking.lane" = "Otopark";
+
 "type.amenity.parking_entrance" = "Otopark girişi";
 
 "type.amenity.parking_entrance.private" = "Otopark girişi";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Tapınak";
 
 "type.amenity.place_of_worship.christian" = "Kilise";
+
+"type.amenity.place_of_worship.christian.mormon" = "İsa Mesih'in Son Zaman Azizleri Kilisesi";
 
 "type.amenity.place_of_worship.hindu" = "Tapınak";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Barınak";
 
 "type.amenity.shower" = "Duş";
+
+"type.amenity.stripclub" = "Striptiz kulübü";
 
 "type.amenity.taxi" = "Taksi";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Acil";
 
+"type.emergency.assembly_point" = "Acil Toplanma Noktası";
+
 "type.emergency.defibrillator" = "Defibrilatör";
 
 "type.emergency.fire_hydrant" = "Yangın Söndürme Musluğu";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Tünel";
 
 "type.highway.busway" = "Özel otobüs yolu";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Köprü";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Tünel";
 
 "type.highway.bus_stop" = "Otobüs Durağı";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "İnternet";
 
 "type.junction" = "Kavşak noktası";
+
+"type.junction.circular" = "Göbekli kavşak";
 
 "type.junction.roundabout" = "Göbekli kavşak";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Demiryolu";
 
-"type.railway.rail.highspeed" = "Demiryolu";
+"type.railway.rail.highspeed" = "Yüksek hızlı demiryolu";
 
-"type.railway.rail.tourism" = "Demiryolu";
+"type.railway.rail.tourism" = "Turistik demiryolu";
 
 "type.railway.rail.main" = "Demiryolu";
 
-"type.railway.rail.branch" = "Demiryolu";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "İkincil demiryolu";
 
-"type.railway.rail.utility" = "Demiryolu";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Yardımcı demiryolu";
 
 "type.railway.rail.spur" = "Düz Ray";
 
-"type.railway.rail.service" = "Demiryolu";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Yardımcı ray hattı";
 
-"type.railway.rail.bridge" = "Demiryolu";
+"type.railway.rail.bridge" = "Demiryolu köprüsü";
 
-"type.railway.rail.highspeed.bridge" = "Demiryolu";
+"type.railway.rail.highspeed.bridge" = "Demiryolu köprüsü";
 
-"type.railway.rail.tourism.bridge" = "Demiryolu";
+"type.railway.rail.tourism.bridge" = "Demiryolu köprüsü";
 
-"type.railway.rail.main.bridge" = "Demiryolu";
+"type.railway.rail.main.bridge" = "Demiryolu köprüsü";
 
-"type.railway.rail.branch.bridge" = "Demiryolu";
+"type.railway.rail.branch.bridge" = "Demiryolu köprüsü";
 
-"type.railway.rail.utility.bridge" = "Demiryolu";
+"type.railway.rail.utility.bridge" = "Demiryolu köprüsü";
 
-"type.railway.rail.spur.bridge" = "Demiryolu";
+"type.railway.rail.spur.bridge" = "Demiryolu köprüsü";
 
-"type.railway.rail.service.bridge" = "Demiryolu";
+"type.railway.rail.service.bridge" = "Demiryolu köprüsü";
 
-"type.railway.rail.tunnel" = "Demiryolu";
+"type.railway.rail.tunnel" = "Demiryolu tüneli";
 
-"type.railway.rail.highspeed.tunnel" = "Demiryolu";
+"type.railway.rail.highspeed.tunnel" = "Demiryolu tüneli";
 
-"type.railway.rail.tourism.tunnel" = "Demiryolu";
+"type.railway.rail.tourism.tunnel" = "Demiryolu tüneli";
 
-"type.railway.rail.main.tunnel" = "Demiryolu";
+"type.railway.rail.main.tunnel" = "Demiryolu tüneli";
 
-"type.railway.rail.branch.tunnel" = "Demiryolu";
+"type.railway.rail.branch.tunnel" = "Demiryolu tüneli";
 
-"type.railway.rail.utility.tunnel" = "Demiryolu";
+"type.railway.rail.utility.tunnel" = "Demiryolu tüneli";
 
-"type.railway.rail.spur.tunnel" = "Demiryolu";
+"type.railway.rail.spur.tunnel" = "Demiryolu tüneli";
 
-"type.railway.rail.service.tunnel" = "Demiryolu";
+"type.railway.rail.service.tunnel" = "Demiryolu tüneli";
 
 "type.railway.station" = "Tren İstasyonu";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Metro";
 
 "type.railway.station.subway.tbilisi" = "Metro";
+
+"type.railway.station.subway.tehran" = "Metro";
 
 "type.railway.station.subway.tianjin" = "Metro";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Metro Girişi";
 
 "type.railway.subway_entrance.tbilisi" = "Metro Girişi";
+
+"type.railway.subway_entrance.tehran" = "Metro Girişi";
 
 "type.railway.subway_entrance.tianjin" = "Metro Girişi";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Turizm";
 
+"type.tourism.aquarium" = "Akvaryum";
+
 "type.tourism.alpine_hut" = "Dağda Konaklama";
 
 "type.tourism.apartment" = "Apart Otel";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Lağım";
 
-"type.waterway.drain.tunnel" = "Lağım";
+"type.waterway.drain.tunnel" = "Hendek";
 
 "type.waterway.lock_gate" = "Eklüz Kapağı";
 

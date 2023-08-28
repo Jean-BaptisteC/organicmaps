@@ -728,6 +728,9 @@
 	<string name="type.amenity.car_sharing">カーシェアリング</string>
 	<string name="type.amenity.car_wash">洗車場</string>
 	<string name="type.amenity.casino">カジノ</string>
+	<string name="type.amenity.gambling">ギャンブル</string>
+	<string name="type.leisure.adult_gaming_centre">アダルト ゲーム センター</string>
+	<string name="type.leisure.amusement_arcade">アーケード</string>
 	<string name="type.amenity.charging_station">充電ステーション</string>
 	<string name="type.amenity.charging_station.bicycle">自転車充電ステーション</string>
 	<string name="type.amenity.charging_station.motorcar">自動車充電ステーション</string>
@@ -777,6 +780,8 @@
 	<string name="type.amenity.parking.private">専用駐車場</string>
 	<string name="type.amenity.parking.park_and_ride">駐車場</string>
 	<string name="type.amenity.parking.underground">地下駐車場</string>
+	<string name="type.amenity.parking.street_side">駐車場</string>
+	<string name="type.amenity.parking.lane">駐車場</string>
 	<string name="type.amenity.parking_entrance">駐車場入口</string>
 	<string name="type.amenity.parking_entrance.private">駐車場入口</string>
 	<string name="type.amenity.parking_entrance.permissive">駐車場入口</string>
@@ -790,6 +795,7 @@
 	<string name="type.amenity.place_of_worship">礼拝</string>
 	<string name="type.amenity.place_of_worship.buddhist">寺院</string>
 	<string name="type.amenity.place_of_worship.christian">キリスト教会</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">末日聖徒イエス・キリスト教会</string>
 	<string name="type.amenity.place_of_worship.hindu">ヒンドゥー教寺院</string>
 	<string name="type.amenity.place_of_worship.jewish">ユダヤ教会</string>
 	<string name="type.amenity.place_of_worship.muslim">モスク</string>
@@ -818,6 +824,7 @@
 	<string name="type.amenity.school">学校</string>
 	<string name="type.amenity.shelter">避難所</string>
 	<string name="type.amenity.shower">シャワー</string>
+	<string name="type.amenity.stripclub">ストリップクラブ</string>
 	<string name="type.amenity.taxi">タクシー</string>
 	<string name="type.amenity.telephone">公衆電話</string>
 	<string name="type.amenity.theatre">劇場</string>
@@ -986,6 +993,7 @@
 	<string name="type.cuisine.vegan">ビーガン料理</string>
 	<string name="type.cuisine.vegetarian">ベジタリアン料理</string>
 	<string name="type.cuisine.vietnamese">ベトナム料理</string>
+	<string name="type.emergency.assembly_point">緊急集合場所</string>
 	<string name="type.emergency.defibrillator">除細動器</string>
 	<string name="type.emergency.fire_hydrant">消火栓</string>
 	<string name="type.emergency.phone">緊急電話</string>
@@ -1014,6 +1022,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">馬道(トンネル)</string>
 	<string name="type.highway.busway">バス専用道路</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">橋</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">トンネル</string>
 	<string name="type.highway.bus_stop">バス停</string>
 	<string name="type.highway.construction">工事中の道路</string>
 	<string name="type.highway.cycleway">自転車道</string>
@@ -1215,6 +1227,7 @@
 	<string name="type.internet_access">インターネット</string>
 	<string name="type.internet_access.wlan">インターネット</string>
 	<string name="type.junction">交差点</string>
+	<string name="type.junction.circular">ラウンドアバウト</string>
 	<string name="type.junction.roundabout">ラウンドアバウト</string>
 	<string name="type.landuse">土地利用</string>
 	<string name="type.landuse.allotments">市民農園</string>
@@ -1432,13 +1445,16 @@
 	<string name="type.railway.preserved.bridge">保存鉄道(橋)</string>
 	<string name="type.railway.preserved.tunnel">保存鉄道(トンネル)</string>
 	<string name="type.railway.rail">鉄道</string>
-	<string name="type.railway.rail.highspeed">鉄道</string>
-	<string name="type.railway.rail.tourism">鉄道</string>
+	<string name="type.railway.rail.highspeed">高速鉄道</string>
+	<string name="type.railway.rail.tourism">観光鉄道</string>
 	<string name="type.railway.rail.main">鉄道</string>
-	<string name="type.railway.rail.branch">鉄道</string>
-	<string name="type.railway.rail.utility">鉄道</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">二次鉄道</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">実用鉄道</string>
 	<string name="type.railway.rail.spur">引き込み線</string>
-	<string name="type.railway.rail.service">鉄道</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">補助線路</string>
 	<string name="type.railway.rail.bridge">鉄道(橋)</string>
 	<string name="type.railway.rail.highspeed.bridge">鉄道(橋)</string>
 	<string name="type.railway.rail.tourism.bridge">鉄道(橋)</string>
@@ -1560,6 +1576,7 @@
 	<string name="type.railway.station.subway.taoyuan">地下鉄</string>
 	<string name="type.railway.station.subway.tashkent">地下鉄</string>
 	<string name="type.railway.station.subway.tbilisi">地下鉄</string>
+	<string name="type.railway.station.subway.tehran">地下鉄</string>
 	<string name="type.railway.station.subway.tianjin">地下鉄</string>
 	<string name="type.railway.station.subway.tokyo">地下鉄</string>
 	<string name="type.railway.station.subway.valencia">地下鉄</string>
@@ -1670,6 +1687,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">地下鉄入り口</string>
 	<string name="type.railway.subway_entrance.tashkent">地下鉄入り口</string>
 	<string name="type.railway.subway_entrance.tbilisi">地下鉄入り口</string>
+	<string name="type.railway.subway_entrance.tehran">地下鉄入り口</string>
 	<string name="type.railway.subway_entrance.tianjin">地下鉄入り口</string>
 	<string name="type.railway.subway_entrance.tokyo">地下鉄入り口</string>
 	<string name="type.railway.subway_entrance.valencia">地下鉄入り口</string>
@@ -1834,6 +1852,7 @@
 	<string name="type.sport.badminton">バドミントン</string>
 	<string name="type.sport.pelota">バスクペロタ</string>
 	<string name="type.tourism">観光</string>
+	<string name="type.tourism.aquarium">水族館</string>
 	<string name="type.tourism.alpine_hut">山小屋</string>
 	<string name="type.tourism.apartment">アパート</string>
 	<string name="type.tourism.artwork">芸術</string>
@@ -1873,10 +1892,10 @@
 	<string name="type.waterway.fish_pass">魚道</string>
 	<string name="type.waterway.dam">ダム</string>
 	<string name="type.waterway.ditch">排水路</string>
-	<string name="type.waterway.ditch.tunnel">排水路</string>
+	<string name="type.waterway.ditch.tunnel">暗渠</string>
 	<string name="type.waterway.dock">ドック</string>
 	<string name="type.waterway.drain">用水路</string>
-	<string name="type.waterway.drain.tunnel">用水路</string>
+	<string name="type.waterway.drain.tunnel">暗渠</string>
 	<string name="type.waterway.lock_gate">水門</string>
 	<string name="type.waterway.river">河川</string>
 	<string name="type.waterway.river.tunnel">河川</string>

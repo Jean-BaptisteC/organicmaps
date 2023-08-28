@@ -2262,7 +2262,7 @@
     et = Vali asukoht, kuhu kaardid tuleks alla laadida
     eu = Hautatu mapak non deskargatu behar diren
     fa = مسیری را که نقشه‌ها باید در آن دانلود شود را انتخاب کنید
-    fi = Valitse karttojen latauskohde
+    fi = Valitse karttojen latauskohde.
     fr = Sélectionner l'emplacement où les cartes devraient être téléchargées
     he = בחר הכתובת במחשבך לשמירת המפות שתוריד
     hu = Válassza ki, hogy hova töltsük le a térképeket
@@ -2921,7 +2921,7 @@
     et = Kasutatud
     eu = Bigarren eskuko
     fa = دست دوم
-    fi = Käytetty
+    fi = Käytetyt tavarat
     fr = D'occasion
     he = יד שניה
     hu = Second-hand
@@ -5796,6 +5796,7 @@
     tags = android
     en = Menu
     af = Kieslys
+    ar = القائمة
     ca = Menú
     es = Menú
     eu = Menua
@@ -5922,9 +5923,9 @@
   [twitter]
     comment = Text in menu
     tags = android,ios
-    en = Twitter
-    zh-Hans = 推特
-    zh-Hant = 推特
+    en = X (Twitter)
+    zh-Hans = X (推特)
+    zh-Hant = X (推特)
 
   [instagram]
     comment = Text in menu
@@ -10462,7 +10463,7 @@
     da = Ønsker du, at vi planlægger en rute fra din nuværende placering?
     de = Soll eine Route von Ihrem aktuellen Standort aus berechnet werden?
     el = Θέλετε να σχεδιάσουμε μια διαδρομή από την τρέχουσα θέση σας;
-    es = ¿Quiere que planeemos un ruta desde su ubicación actual?
+    es = ¿Quiere que planeemos una ruta desde su ubicación actual?
     et = Kas soovid, et planeeriksime marsruudi Sinu praegusest asukohast?
     eu = Zure uneko kokapenetik ibilbide bat antolatzea nahi duzu?
     fa = آیا می خواهید یک مسیر را از موقعیت فعلیتان برنامه ریزی کنیم؟
@@ -10745,7 +10746,7 @@
     tags = android,ios
     en = Open
     af = Oop
-    ar = يفتح
+    ar = مفتوح
     be = Адкрыта
     bg = Отворено
     ca = Obert
@@ -10786,7 +10787,7 @@
     tags = android,ios
     en = Closed
     af = Gesluit
-    ar = يغلق
+    ar = مغلق
     be = Закрыта
     bg = Затворено
     ca = Tancat
@@ -11858,6 +11859,7 @@
     tags = ios
     en = Opens at %@
     af = Open om %@
+    ar = يفتح في %@
     be = Адкрываецца ў %@
     ca = Obre a les %@
     de = Öffnet um %@
@@ -11902,6 +11904,7 @@
     tags = ios
     en = Closes at %@
     af = Sluit om %@
+    ar = يغلق في %@
     be = Закрываецца ў %@
     ca = Tanca a les %@
     de = Schließt um %@
@@ -13890,7 +13893,7 @@
     tags = android,ios
     en = Adding
     af = Voeg tans toe
-    ar = يتم الإٍضافة
+    ar = يتم الإضافة
     be = Даданне
     bg = Добавяне
     ca = Addició
@@ -14424,7 +14427,7 @@
     comment = Downloaded 10 **of** 20 <- it is that "of"
     tags = android,ios
     en = %1$d of %2$d
-    af = %a$d van %2$d
+    af = %1$d van %2$d
     ar = %1$d من%2$d
     be = %1$d з %2$d
     bg = %1$d от %2$d
@@ -19189,12 +19192,12 @@
     ar = استيراد الإشارات المرجعية والمسارات
     be = Імпартаваць закладкі і cцежкі
     bg = Импортиране на отметки и песни
-    ca = Importa marcadors i les pistes
+    ca = Importa marcadors i les traces
     cs = Import záložek a stop
     da = Importer bogmærker og spor
     de = Lesezeichen und Tracks importieren
     el = Εισαγωγή σελιδοδεικτών και κομματιών
-    es = Importar marcadores y pistas
+    es = Importar marcadores y trazas
     et = Importida järjehoidjaid ja lugusid
     eu = Laster-markak eta ibilbideak inportatu
     fa = وارد کردن نشانکu200cها و آهنگu200cها
@@ -20604,7 +20607,7 @@
     da = Vi kan anvende dine data til at forbedre brugeroplevelsen på Organic Maps. Ændringerne træder i kraft, når du har genstartet appen.
     de = Wir können Ihre Daten nutzen, um Organic Maps weiterzuentwickeln und zu verbessern. Die Änderungen werden nach dem Neustart der App wirksam werden.
     el = Μπορεί να χρησιμοποιήσουμε τα δεδομένα σας για να βελτιώσουμε την εμπειρία του Organic Maps. Οι αλλαγές θα ενεργοποιηθούν μετά την επανεκκίνηση της εφαρμογής.
-    es = Puede que utilicemos sus datos para mejorar la experiencia de Organic Maps. Los cambios tendrán efecto después dw que reinicie la aplicación.
+    es = Puede que utilicemos sus datos para mejorar la experiencia de Organic Maps. Los cambios tendrán efecto después de que reinicie la aplicación.
     es-MX = Puede que utilicemos sus datos para mejorar la experiencia de Organic Maps. Los cambios surtirán efecto después de que reinicie la aplicación.
     et = õime kasutada teie andmeid Organic Maps kasutuskogemuse parandamiseks. Muudatused jõustuvad pärast rakenduse taaskäivitamist.
     eu = Zure datuak Organic Maps-en esperientzia hobetzeko erabil ditzakegu. Aldaketak aplikazioa berrabiarazi ondoren jarriko dira indarrean.
@@ -21885,7 +21888,7 @@
     et = Kui on valitud automaatrežiim, hakkab rakendus aku tühjendamise funktsioone olenevalt praegusest aku laetuse tasemest keelama
     eu = Energia aurrezteko modua aktibatuta badago, aplikazioak energia kontsumitzen duten funtzioak itzaliko ditu, telefonoaren uneko kargaren arabera.
     fa = هنگامی که حالت خودکار انتخاب شده‌باشد، برنامه با توجه میزان شارژ باتری شما، ویژگی‌های تخلیه کننده باتری را غیر فعال می‌کند
-    fi = Kun olet valinnut automaattisen tilan, sovellus alkaa sammuttamaan virtaa vieviä ominaisuuksia riippuen kulloisestakin akun latauksesta
+    fi = Kun olet valinnut automaattisen tilan, sovellus alkaa sammuttamaan virtaa vieviä ominaisuuksia riippuen kulloisestakin akun latauksesta.
     fr = Si le mode d'économie d'énergie est activé, l'application désactive les fonctions consommant de l'énergie en fonction de la charge actuelle du téléphone
     hu = Amikor az automatikus mód van kiválasztva, az alkalmazás elkezdi kikapcsolni az akkumulátort merítő funkciókat a jelenlegi akkumulátor töltöttség alapján
     id = Saat mode otomatis dipilih, aplikasi mulai menonaktifkan fitur yang menghabiskan daya baterai, bergantung pada tingkat daya baterai saat ini
@@ -26430,6 +26433,7 @@
     tags = android
     en = Disconnect USB cable
     af = Ontkoppel USB-kabel
+    ar = إفصل سلك USB
     be = Адлучыце USB кабель
     bg = Изключване на USB кабел
     ca = Desconnecteu el cable USB
@@ -26577,7 +26581,7 @@
     es = Cuando está habilitado, no tiene que desbloquear su dispositivo mientras la aplicación se está ejecutando.
     et = Kui lubatud, ei pea te seadet iga kord avama, kui rakendus töötab.
     eu = Gaituta dagoenean, ez duzu gailua desblokeatu beharrik aplikazioa abian dagoen bitartean.
-    fi = Kun käytössä, sovellus toimii lukitusnäytöllä vaikka laita olisi lukittuna.
+    fi = Kun käytössä, sovellus toimii lukitusnäytöllä vaikka laite olisi lukittuna.
     fr = Lorsqu'il est activé, vous n'avez pas besoin de déverrouiller votre appareil à chaque fois que l'application est en fonctionnement.
     hu = Ha engedélyezve van, nem kell minden alkalommal feloldanod a telefonod, amíg az alkalmazás fut.
     it = Quando è abilitata, non è necessario sbloccare il dispositivo ogni volta mentre l'app è in esecuzione.
@@ -26907,7 +26911,7 @@
     en = Map data from OpenStreetMap
     af = Kaartdata vanad OpenStreetMap
     ar = بيانات الخريطة من خريطة الشارع المفتوحة
-    be = Дадзеныя карты з OpenStreetMap
+    be = Даныя карты з OpenStreetMap
     bg = Картографски данни от OpenStreetMap
     ca = Dades del mapa de l'OpenStreetMap
     cs = Mapová data z OpenStreetMap

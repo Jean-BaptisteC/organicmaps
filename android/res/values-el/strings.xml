@@ -719,6 +719,9 @@
 	<string name="type.amenity.car_sharing">Παραχώρηση αυτοκινήτου</string>
 	<string name="type.amenity.car_wash">Καθαρισμός αυτοκινήτων</string>
 	<string name="type.amenity.casino">Καζίνο</string>
+	<string name="type.amenity.gambling">ΤΥΧΕΡΑ ΠΑΙΧΝΙΔΙΑ</string>
+	<string name="type.leisure.adult_gaming_centre">Κέντρο παιχνιδιών ενηλίκων</string>
+	<string name="type.leisure.amusement_arcade">Στοά</string>
 	<string name="type.amenity.charging_station">Σταθμός φόρτισης</string>
 	<string name="type.amenity.charging_station.bicycle">Σταθμός φόρτισης ποδηλάτων</string>
 	<string name="type.amenity.charging_station.motorcar">Σταθμός φόρτισης αυτοκινήτων</string>
@@ -767,6 +770,8 @@
 	<string name="type.amenity.parking.private">Ιδιωτικός χώρος στάθμευσης</string>
 	<string name="type.amenity.parking.park_and_ride">Χώρος στάθμευσης</string>
 	<string name="type.amenity.parking.underground">Υπόγειος χώρος στάθμευσης</string>
+	<string name="type.amenity.parking.street_side">Χώρος στάθμευσης</string>
+	<string name="type.amenity.parking.lane">Χώρος στάθμευσης</string>
 	<string name="type.amenity.parking_entrance">Είσοδος στάθμευσης</string>
 	<string name="type.amenity.parking_entrance.private">Είσοδος στάθμευσης</string>
 	<string name="type.amenity.parking_entrance.permissive">Είσοδος στάθμευσης</string>
@@ -780,6 +785,7 @@
 	<string name="type.amenity.place_of_worship">Χώρος λατρείας</string>
 	<string name="type.amenity.place_of_worship.buddhist">Ναός</string>
 	<string name="type.amenity.place_of_worship.christian">Εκκλησία</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Εκκλησία του Ιησού Χριστού των Αγίων των Τελευταίων Ημερών</string>
 	<string name="type.amenity.place_of_worship.hindu">Ναός</string>
 	<string name="type.amenity.place_of_worship.jewish">Συναγωγή</string>
 	<string name="type.amenity.place_of_worship.muslim">Τζαμί</string>
@@ -807,6 +813,7 @@
 	<string name="type.amenity.school">Σχολείο</string>
 	<string name="type.amenity.shelter">Καταφύγιο</string>
 	<string name="type.amenity.shower">Ντους</string>
+	<string name="type.amenity.stripclub">Stripclub</string>
 	<string name="type.amenity.taxi">Ταξί</string>
 	<string name="type.amenity.telephone">Τηλέφωνο</string>
 	<string name="type.amenity.theatre">Θέατρο</string>
@@ -957,6 +964,7 @@
 	<string name="type.cuisine.vegan">Για χορτοφάγους</string>
 	<string name="type.cuisine.vegetarian">Χορτοφαγική</string>
 	<string name="type.cuisine.vietnamese">Βιετναμέζικη</string>
+	<string name="type.emergency.assembly_point">Σημείο συναρμολόγησης έκτακτης ανάγκης</string>
 	<string name="type.emergency.defibrillator">Πρώτες βοήθειες</string>
 	<string name="type.emergency.fire_hydrant">Πυροσβεστικός κρουνός</string>
 	<string name="type.emergency.phone">Τηλέφωνο έκτακτης ανάγκης</string>
@@ -982,6 +990,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Σήραγγα</string>
 	<string name="type.highway.busway">Αφιερωμένος δρόμος λεωφορείων</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Γέφυρα</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Σήραγγα</string>
 	<string name="type.highway.bus_stop">Στάση λεωφορείου</string>
 	<string name="type.highway.construction">Οδός υπό κατασκευή</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
@@ -1325,13 +1337,32 @@
 	<string name="type.railway.level_crossing">Σιδηροδρομική διέλευση</string>
 	<string name="type.railway.monorail">Μονοαξονικός σιδηρόδρομος</string>
 	<string name="type.railway.rail">Σιδηρόδρομος</string>
-	<string name="type.railway.rail.highspeed">Σιδηρόδρομος</string>
-	<string name="type.railway.rail.tourism">Σιδηρόδρομος</string>
+	<string name="type.railway.rail.highspeed">Σιδηρόδρομος υψηλής ταχύτητας</string>
+	<string name="type.railway.rail.tourism">Τουριστικός σιδηρόδρομος</string>
 	<string name="type.railway.rail.main">Σιδηρόδρομος</string>
-	<string name="type.railway.rail.branch">Σιδηρόδρομος</string>
-	<string name="type.railway.rail.utility">Σιδηρόδρομος</string>
-	<string name="type.railway.rail.spur">Σιδηρόδρομος</string>
-	<string name="type.railway.rail.service">Σιδηρόδρομος</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Δευτερεύων σιδηροδρομικός σιδηρόδρομος</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Σιδηρόδρομος κοινής ωφέλειας</string>
+	<string name="type.railway.rail.spur">Σιδηροδρομική ατραπός</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Βοηθητική σιδηροδρομική γραμμή</string>
+	<string name="type.railway.rail.bridge">Σιδηροδρομική γέφυρα</string>
+	<string name="type.railway.rail.highspeed.bridge">Σιδηροδρομική γέφυρα</string>
+	<string name="type.railway.rail.tourism.bridge">Σιδηροδρομική γέφυρα</string>
+	<string name="type.railway.rail.main.bridge">Σιδηροδρομική γέφυρα</string>
+	<string name="type.railway.rail.branch.bridge">Σιδηροδρομική γέφυρα</string>
+	<string name="type.railway.rail.utility.bridge">Σιδηροδρομική γέφυρα</string>
+	<string name="type.railway.rail.spur.bridge">Σιδηροδρομική γέφυρα</string>
+	<string name="type.railway.rail.service.bridge">Σιδηροδρομική γέφυρα</string>
+	<string name="type.railway.rail.tunnel">Σιδηροδρομική σήραγγα</string>
+	<string name="type.railway.rail.highspeed.tunnel">Σιδηροδρομική σήραγγα</string>
+	<string name="type.railway.rail.tourism.tunnel">Σιδηροδρομική σήραγγα</string>
+	<string name="type.railway.rail.main.tunnel">Σιδηροδρομική σήραγγα</string>
+	<string name="type.railway.rail.branch.tunnel">Σιδηροδρομική σήραγγα</string>
+	<string name="type.railway.rail.utility.tunnel">Σιδηροδρομική σήραγγα</string>
+	<string name="type.railway.rail.spur.tunnel">Σιδηροδρομική σήραγγα</string>
+	<string name="type.railway.rail.service.tunnel">Σιδηροδρομική σήραγγα</string>
 	<string name="type.railway.station">Σιδηροδρομικός σταθμός</string>
 	<string name="type.railway.station.funicular">Μονωτικό τρενάκι</string>
 	<string name="type.railway.station.light_rail">Σιδηροδρομικός σταθμός</string>
@@ -1437,6 +1468,7 @@
 	<string name="type.railway.station.subway.taoyuan">Μετρό</string>
 	<string name="type.railway.station.subway.tashkent">Μετρό</string>
 	<string name="type.railway.station.subway.tbilisi">Μετρό</string>
+	<string name="type.railway.station.subway.tehran">Μετρό</string>
 	<string name="type.railway.station.subway.tianjin">Μετρό</string>
 	<string name="type.railway.station.subway.tokyo">Μετρό</string>
 	<string name="type.railway.station.subway.valencia">Μετρό</string>
@@ -1547,6 +1579,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Είσοδος μετρό</string>
 	<string name="type.railway.subway_entrance.tashkent">Είσοδος μετρό</string>
 	<string name="type.railway.subway_entrance.tbilisi">Είσοδος μετρό</string>
+	<string name="type.railway.subway_entrance.tehran">Είσοδος μετρό</string>
 	<string name="type.railway.subway_entrance.tianjin">Είσοδος μετρό</string>
 	<string name="type.railway.subway_entrance.tokyo">Είσοδος μετρό</string>
 	<string name="type.railway.subway_entrance.valencia">Είσοδος μετρό</string>
@@ -1703,6 +1736,7 @@
 	<string name="type.sport.field_hockey">Χόκεϊ επί χόρτου</string>
 	<string name="type.sport.badminton">Αντιπτέριση</string>
 	<string name="type.sport.pelota">Βασκική πελότα</string>
+	<string name="type.tourism.aquarium">Ενυδρείο</string>
 	<string name="type.tourism.alpine_hut">Ορεινό καταφύγιο</string>
 	<string name="type.tourism.apartment">Διαμερίσματα</string>
 	<string name="type.tourism.artwork">Έργα τέχνης</string>

@@ -389,7 +389,7 @@
 	<string name="p2p_from_here">Ruta desde</string>
 	<string name="p2p_to_here">Ruta hacia</string>
 	<string name="p2p_only_from_current">La navegación solo está disponible desde su ubicación actual.</string>
-	<string name="p2p_reroute_from_current">¿Quiere que planeemos un ruta desde su ubicación actual?</string>
+	<string name="p2p_reroute_from_current">¿Quiere que planeemos una ruta desde su ubicación actual?</string>
 	<!-- Edit open hours/set time and minutes dialog -->
 	<string name="next_button">Siguiente</string>
 	<!-- Tab title in the Edit Opening Hours time picker -->
@@ -582,7 +582,7 @@
 	<string name="bookmark_lists_show_all">Mostrar todo</string>
 	<string name="bookmarks_create_new_group">Crear nueva lista</string>
 	<!-- Bookmark categories screen, button that opens folder selection dialog to import KML/KMZ/GPX/KMB files -->
-	<string name="bookmarks_import">Importar marcadores y pistas</string>
+	<string name="bookmarks_import">Importar marcadores y trazas</string>
 	<string name="bookmarks_error_message_share_general">No se puede compartir debido a un error de la aplicación</string>
 	<string name="bookmarks_error_title_share_empty">Error al compartir</string>
 	<string name="bookmarks_error_message_share_empty">No se puede compartir una lista vacía</string>
@@ -614,7 +614,7 @@
 	<!-- used to choose between the Google and Android location services -->
 	<string name="subtittle_opt_out">Configuraciones de seguimiento</string>
 	<string name="crash_reports">Informe de incidentes</string>
-	<string name="crash_reports_description">Puede que utilicemos sus datos para mejorar la experiencia de Organic Maps. Los cambios tendrán efecto después dw que reinicie la aplicación.</string>
+	<string name="crash_reports_description">Puede que utilicemos sus datos para mejorar la experiencia de Organic Maps. Los cambios tendrán efecto después de que reinicie la aplicación.</string>
 	<string name="privacy_policy">Política de privacidad</string>
 	<string name="terms_of_use">Condiciones de uso</string>
 	<string name="button_layer_traffic">Tráfico</string>
@@ -783,6 +783,9 @@
 	<string name="type.amenity.car_sharing">Compartir coche</string>
 	<string name="type.amenity.car_wash">Lavado de coches</string>
 	<string name="type.amenity.casino">Casino</string>
+	<string name="type.amenity.gambling">Juegos de azar</string>
+	<string name="type.leisure.adult_gaming_centre">Centro de juegos para adultos</string>
+	<string name="type.leisure.amusement_arcade">Arcade</string>
 	<string name="type.amenity.charging_station">Estación de carga</string>
 	<string name="type.amenity.charging_station.bicycle">Estación de carga de bicicletas</string>
 	<string name="type.amenity.charging_station.motorcar">Estación de carga de automóviles</string>
@@ -832,6 +835,8 @@
 	<string name="type.amenity.parking.private">Aparcamiento privado</string>
 	<string name="type.amenity.parking.park_and_ride">Aparcamiento</string>
 	<string name="type.amenity.parking.underground">Aparcamiento subterráneo</string>
+	<string name="type.amenity.parking.street_side">Aparcamiento</string>
+	<string name="type.amenity.parking.lane">Aparcamiento</string>
 	<string name="type.amenity.parking_entrance">Entrada al aparcamiento</string>
 	<string name="type.amenity.parking_entrance.private">Entrada al aparcamiento</string>
 	<string name="type.amenity.parking_entrance.permissive">Entrada al aparcamiento</string>
@@ -845,6 +850,7 @@
 	<string name="type.amenity.place_of_worship">Lugar de culto</string>
 	<string name="type.amenity.place_of_worship.buddhist">Templo</string>
 	<string name="type.amenity.place_of_worship.christian">Iglesia</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Iglesia de Jesucristo de los Santos de los Últimos Días</string>
 	<string name="type.amenity.place_of_worship.hindu">Templo</string>
 	<string name="type.amenity.place_of_worship.jewish">Sinagoga</string>
 	<string name="type.amenity.place_of_worship.muslim">Mezquita</string>
@@ -879,6 +885,7 @@
 	<string name="type.amenity.school">Escuela</string>
 	<string name="type.amenity.shelter">Refugio</string>
 	<string name="type.amenity.shower">Ducha</string>
+	<string name="type.amenity.stripclub">Club de striptease</string>
 	<string name="type.amenity.taxi">Taxi</string>
 	<string name="type.amenity.telephone">Teléfono</string>
 	<string name="type.amenity.theatre">Teatro</string>
@@ -1069,6 +1076,7 @@
 	<string name="type.cuisine.vegetarian">Cocina vegetariana</string>
 	<string name="type.cuisine.vietnamese">Cocina vietnamita</string>
 	<string name="type.emergency">Emergencia</string>
+	<string name="type.emergency.assembly_point">Punto de reunión de emergencia</string>
 	<string name="type.emergency.defibrillator">Desfibrilador</string>
 	<string name="type.emergency.fire_hydrant">Boca de incendio</string>
 	<string name="type.emergency.phone">Teléfono de emergencias</string>
@@ -1097,6 +1105,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Túnel</string>
 	<string name="type.highway.busway">Carretera exclusiva para autobuses</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Puente</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Túnel</string>
 	<string name="type.highway.bus_stop">Parada de autobús</string>
 	<string name="type.highway.construction">Carretera en construcción</string>
 	<string name="type.highway.cycleway">Ciclovía</string>
@@ -1298,6 +1310,7 @@
 	<string name="type.historic.wayside_shrine">Peto de ánimas</string>
 	<string name="type.internet_access">Internet</string>
 	<string name="type.internet_access.wlan">Internet</string>
+	<string name="type.junction.circular">Rotonda</string>
 	<string name="type.junction.roundabout">Rotonda</string>
 	<string name="type.landuse">Uso del suelo</string>
 	<string name="type.landuse.basin">Cuenca</string>
@@ -1503,13 +1516,32 @@
 	<string name="type.railway.narrow_gauge">Vía férrea de ancho estrecho</string>
 	<string name="type.railway.platform">Plataforma de vía férrea</string>
 	<string name="type.railway.rail">Ferrocarril</string>
-	<string name="type.railway.rail.highspeed">Ferrocarril</string>
-	<string name="type.railway.rail.tourism">Ferrocarril</string>
+	<string name="type.railway.rail.highspeed">Ferrocarril de alta velocidad</string>
+	<string name="type.railway.rail.tourism">Ferrocarril turístico</string>
 	<string name="type.railway.rail.main">Ferrocarril</string>
-	<string name="type.railway.rail.branch">Ferrocarril</string>
-	<string name="type.railway.rail.utility">Ferrocarril</string>
-	<string name="type.railway.rail.spur">Ferrocarril</string>
-	<string name="type.railway.rail.service">Ferrocarril</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Ramal ferroviario</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Ferrocarril utilitario</string>
+	<string name="type.railway.rail.spur">Espolón ferroviario</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Vía férrea de maniobras</string>
+	<string name="type.railway.rail.bridge">Puente ferroviario</string>
+	<string name="type.railway.rail.highspeed.bridge">Puente ferroviario</string>
+	<string name="type.railway.rail.tourism.bridge">Puente ferroviario</string>
+	<string name="type.railway.rail.main.bridge">Puente ferroviario</string>
+	<string name="type.railway.rail.branch.bridge">Puente ferroviario</string>
+	<string name="type.railway.rail.utility.bridge">Puente ferroviario</string>
+	<string name="type.railway.rail.spur.bridge">Puente ferroviario</string>
+	<string name="type.railway.rail.service.bridge">Puente ferroviario</string>
+	<string name="type.railway.rail.tunnel">Túnel ferroviario</string>
+	<string name="type.railway.rail.highspeed.tunnel">Túnel ferroviario</string>
+	<string name="type.railway.rail.tourism.tunnel">Túnel ferroviario</string>
+	<string name="type.railway.rail.main.tunnel">Túnel ferroviario</string>
+	<string name="type.railway.rail.branch.tunnel">Túnel ferroviario</string>
+	<string name="type.railway.rail.utility.tunnel">Túnel ferroviario</string>
+	<string name="type.railway.rail.spur.tunnel">Túnel ferroviario</string>
+	<string name="type.railway.rail.service.tunnel">Túnel ferroviario</string>
 	<string name="type.railway.station">Estación de tren</string>
 	<string name="type.railway.station.funicular">Funicular</string>
 	<string name="type.railway.station.light_rail">Estación de tren</string>
@@ -1615,6 +1647,7 @@
 	<string name="type.railway.station.subway.taoyuan">Metro</string>
 	<string name="type.railway.station.subway.tashkent">Metro</string>
 	<string name="type.railway.station.subway.tbilisi">Metro</string>
+	<string name="type.railway.station.subway.tehran">Metro</string>
 	<string name="type.railway.station.subway.tianjin">Metro</string>
 	<string name="type.railway.station.subway.tokyo">Metro</string>
 	<string name="type.railway.station.subway.valencia">Metro</string>
@@ -1726,6 +1759,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Entrada al metro</string>
 	<string name="type.railway.subway_entrance.tashkent">Entrada al metro</string>
 	<string name="type.railway.subway_entrance.tbilisi">Entrada al metro</string>
+	<string name="type.railway.subway_entrance.tehran">Entrada al metro</string>
 	<string name="type.railway.subway_entrance.tianjin">Entrada al metro</string>
 	<string name="type.railway.subway_entrance.tokyo">Entrada al metro</string>
 	<string name="type.railway.subway_entrance.valencia">Entrada al metro</string>
@@ -1888,6 +1922,7 @@
 	<string name="type.sport.badminton">Bádminton</string>
 	<string name="type.sport.pelota">Pelota vasca</string>
 	<string name="type.tourism">Turismo</string>
+	<string name="type.tourism.aquarium">Acuario</string>
 	<string name="type.tourism.alpine_hut">Refugio de montaña</string>
 	<string name="type.tourism.apartment">Apartamentos</string>
 	<string name="type.tourism.artwork">Obras de arte</string>
@@ -1927,10 +1962,10 @@
 	<string name="type.waterway.fish_pass">Escalera de peces</string>
 	<string name="type.waterway.dam">Presa</string>
 	<string name="type.waterway.ditch">Zanja</string>
-	<string name="type.waterway.ditch.tunnel">Zanja</string>
+	<string name="type.waterway.ditch.tunnel">Obra de drenaje</string>
 	<string name="type.waterway.dock">Muelle</string>
 	<string name="type.waterway.drain">Desagüe</string>
-	<string name="type.waterway.drain.tunnel">Desagüe</string>
+	<string name="type.waterway.drain.tunnel">Obra de drenaje</string>
 	<string name="type.waterway.lock_gate">Compuerta</string>
 	<string name="type.waterway.river">Río</string>
 	<string name="type.waterway.river.tunnel">Río</string>

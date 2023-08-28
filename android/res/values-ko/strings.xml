@@ -718,6 +718,9 @@
 	<string name="type.amenity.car_sharing">카 셰어링</string>
 	<string name="type.amenity.car_wash">세차</string>
 	<string name="type.amenity.casino">카지노</string>
+	<string name="type.amenity.gambling">도박</string>
+	<string name="type.leisure.adult_gaming_centre">성인 게임 센터</string>
+	<string name="type.leisure.amusement_arcade">아케이드</string>
 	<string name="type.amenity.charging_station">충전 역</string>
 	<string name="type.amenity.charging_station.bicycle">자전거 충전소</string>
 	<string name="type.amenity.charging_station.motorcar">자동차 충전소</string>
@@ -766,6 +769,8 @@
 	<string name="type.amenity.parking.private">전용 주차장</string>
 	<string name="type.amenity.parking.park_and_ride">주차</string>
 	<string name="type.amenity.parking.underground">지하주차장</string>
+	<string name="type.amenity.parking.street_side">주차</string>
+	<string name="type.amenity.parking.lane">주차</string>
 	<string name="type.amenity.parking_entrance">주차장 입구</string>
 	<string name="type.amenity.parking_entrance.private">주차장 입구</string>
 	<string name="type.amenity.parking_entrance.permissive">주차장 입구</string>
@@ -779,6 +784,7 @@
 	<string name="type.amenity.place_of_worship">예배 장소</string>
 	<string name="type.amenity.place_of_worship.buddhist">불교 사원</string>
 	<string name="type.amenity.place_of_worship.christian">교회</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">예수 그리스도 후기 성도 교회</string>
 	<string name="type.amenity.place_of_worship.hindu">힌두교 사원</string>
 	<string name="type.amenity.place_of_worship.jewish">유태교 회당</string>
 	<string name="type.amenity.place_of_worship.muslim">모스크</string>
@@ -806,6 +812,7 @@
 	<string name="type.amenity.school">학교</string>
 	<string name="type.amenity.shelter">대피소</string>
 	<string name="type.amenity.shower">샤워시설</string>
+	<string name="type.amenity.stripclub">스트립클럽</string>
 	<string name="type.amenity.taxi">택시</string>
 	<string name="type.amenity.telephone">전화</string>
 	<string name="type.amenity.theatre">연극</string>
@@ -956,6 +963,7 @@
 	<string name="type.cuisine.vegan">비건 음식</string>
 	<string name="type.cuisine.vegetarian">채식주의자 음식</string>
 	<string name="type.cuisine.vietnamese">베트남식 음식</string>
+	<string name="type.emergency.assembly_point">비상 집결지</string>
 	<string name="type.emergency.defibrillator">제세동기</string>
 	<string name="type.emergency.fire_hydrant">소화전</string>
 	<string name="type.emergency.phone">긴급 전화</string>
@@ -981,6 +989,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">터널</string>
 	<string name="type.highway.busway">버스전용도로</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">다리</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">터널</string>
 	<string name="type.highway.bus_stop">버스 정류장</string>
 	<string name="type.highway.construction">공사 중 도로</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
@@ -1322,13 +1334,32 @@
 	<string name="type.railway.level_crossing">철도 건널목</string>
 	<string name="type.railway.monorail">모노레일</string>
 	<string name="type.railway.rail">철로</string>
-	<string name="type.railway.rail.highspeed">철로</string>
-	<string name="type.railway.rail.tourism">철로</string>
-	<string name="type.railway.rail.main">철로</string>
-	<string name="type.railway.rail.branch">철로</string>
-	<string name="type.railway.rail.utility">철로</string>
-	<string name="type.railway.rail.spur">철로</string>
-	<string name="type.railway.rail.service">철로</string>
+	<string name="type.railway.rail.highspeed">고속 철도</string>
+	<string name="type.railway.rail.tourism">관광 철도</string>
+	<string name="type.railway.rail.main">철도</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">보조 철도</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">유틸리티 철도</string>
+	<string name="type.railway.rail.spur">철도 박차</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">보조 레일 트랙</string>
+	<string name="type.railway.rail.bridge">철도 교량</string>
+	<string name="type.railway.rail.highspeed.bridge">철도 교량</string>
+	<string name="type.railway.rail.tourism.bridge">철도 교량</string>
+	<string name="type.railway.rail.main.bridge">철도 교량</string>
+	<string name="type.railway.rail.branch.bridge">철도 교량</string>
+	<string name="type.railway.rail.utility.bridge">철도 교량</string>
+	<string name="type.railway.rail.spur.bridge">철도 교량</string>
+	<string name="type.railway.rail.service.bridge">철도 교량</string>
+	<string name="type.railway.rail.tunnel">철도 터널</string>
+	<string name="type.railway.rail.highspeed.tunnel">철도 터널</string>
+	<string name="type.railway.rail.tourism.tunnel">철도 터널</string>
+	<string name="type.railway.rail.main.tunnel">철도 터널</string>
+	<string name="type.railway.rail.branch.tunnel">철도 터널</string>
+	<string name="type.railway.rail.utility.tunnel">철도 터널</string>
+	<string name="type.railway.rail.spur.tunnel">철도 터널</string>
+	<string name="type.railway.rail.service.tunnel">철도 터널</string>
 	<string name="type.railway.station">기차역</string>
 	<string name="type.railway.station.funicular">케이블카</string>
 	<string name="type.railway.station.light_rail">기차역</string>
@@ -1434,6 +1465,7 @@
 	<string name="type.railway.station.subway.taoyuan">지하철</string>
 	<string name="type.railway.station.subway.tashkent">지하철</string>
 	<string name="type.railway.station.subway.tbilisi">지하철</string>
+	<string name="type.railway.station.subway.tehran">지하철</string>
 	<string name="type.railway.station.subway.tianjin">지하철</string>
 	<string name="type.railway.station.subway.tokyo">지하철</string>
 	<string name="type.railway.station.subway.valencia">지하철</string>
@@ -1544,6 +1576,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">지하철 입구</string>
 	<string name="type.railway.subway_entrance.tashkent">지하철 입구</string>
 	<string name="type.railway.subway_entrance.tbilisi">지하철 입구</string>
+	<string name="type.railway.subway_entrance.tehran">지하철 입구</string>
 	<string name="type.railway.subway_entrance.tianjin">지하철 입구</string>
 	<string name="type.railway.subway_entrance.tokyo">지하철 입구</string>
 	<string name="type.railway.subway_entrance.valencia">지하철 입구</string>
@@ -1701,6 +1734,7 @@
 	<string name="type.sport.field_hockey">필드 하키</string>
 	<string name="type.sport.badminton">배드민턴</string>
 	<string name="type.sport.pelota">바스크 펠로타</string>
+	<string name="type.tourism.aquarium">수족관</string>
 	<string name="type.tourism.alpine_hut">고산 오두막</string>
 	<string name="type.tourism.apartment">아파트</string>
 	<string name="type.tourism.artwork">작품</string>

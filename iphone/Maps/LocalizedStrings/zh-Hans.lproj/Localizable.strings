@@ -289,7 +289,7 @@
 "facebook" = "脸书";
 
 /* Text in menu */
-"twitter" = "推特";
+"twitter" = "X (推特)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "赌场";
 
+"type.amenity.gambling" = "赌博";
+
+"type.leisure.adult_gaming_centre" = "成人游戏中心";
+
+"type.leisure.amusement_arcade" = "拱廊";
+
 "type.amenity.charging_station" = "充电站";
 
 "type.amenity.charging_station.bicycle" = "自行车充电站";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "地下停车场";
 
+"type.amenity.parking.street_side" = "停车场";
+
+"type.amenity.parking.lane" = "停车场";
+
 "type.amenity.parking_entrance" = "停车场入口";
 
 "type.amenity.parking_entrance.private" = "停车场入口";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "佛教寺庙";
 
 "type.amenity.place_of_worship.christian" = "基督教堂";
+
+"type.amenity.place_of_worship.christian.mormon" = "耶稣基督后期圣徒教会";
 
 "type.amenity.place_of_worship.hindu" = "印度教寺庙";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "庇护所";
 
 "type.amenity.shower" = "淋浴间";
+
+"type.amenity.stripclub" = "脱衣舞俱乐部";
 
 "type.amenity.taxi" = "出租车";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "应急要素";
 
+"type.emergency.assembly_point" = "紧急集合点";
+
 "type.emergency.defibrillator" = "除颤器";
 
 "type.emergency.fire_hydrant" = "消防栓";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "隧道";
 
 "type.highway.busway" = "巴士专用道";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "桥";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "隧道";
 
 "type.highway.bus_stop" = "公交站";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "无线热点";
 
 "type.junction" = "交叉口";
+
+"type.junction.circular" = "环岛";
 
 "type.junction.roundabout" = "环岛";
 
@@ -2802,19 +2826,22 @@
 
 "type.railway.rail" = "铁路轨道";
 
-"type.railway.rail.highspeed" = "铁路轨道";
+"type.railway.rail.highspeed" = "高速铁路";
 
-"type.railway.rail.tourism" = "铁路轨道";
+"type.railway.rail.tourism" = "观光性铁路";
 
-"type.railway.rail.main" = "铁路轨道";
+"type.railway.rail.main" = "铁路";
 
-"type.railway.rail.branch" = "铁路轨道";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "铁路支线";
 
-"type.railway.rail.utility" = "铁路轨道";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "公共铁路";
 
-"type.railway.rail.spur" = "铁路轨道";
+"type.railway.rail.spur" = "铁路岔线";
 
-"type.railway.rail.service" = "铁路轨道";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "服务性铁路";
 
 "type.railway.rail.bridge" = "铁路轨道";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "地铁车站";
 
+"type.railway.station.subway.tehran" = "地铁车站";
+
 "type.railway.station.subway.tianjin" = "地铁车站";
 
 "type.railway.station.subway.tokyo" = "地铁车站";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "地铁出入口";
 
 "type.railway.subway_entrance.tbilisi" = "地铁出入口";
+
+"type.railway.subway_entrance.tehran" = "地铁出入口";
 
 "type.railway.subway_entrance.tianjin" = "地铁出入口";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "旅游要素";
 
+"type.tourism.aquarium" = "水族馆";
+
 "type.tourism.alpine_hut" = "山上住宿";
 
 "type.tourism.apartment" = "公寓";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "水沟";
 
-"type.waterway.ditch.tunnel" = "水沟";
+"type.waterway.ditch.tunnel" = "涵洞";
 
 "type.waterway.dock" = "船坞";
 
 "type.waterway.drain" = "渠";
 
-"type.waterway.drain.tunnel" = "渠";
+"type.waterway.drain.tunnel" = "涵洞";
 
 "type.waterway.lock_gate" = "闸门";
 

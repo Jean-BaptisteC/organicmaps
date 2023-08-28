@@ -69,6 +69,7 @@ world  +
         food_court  -
         fountain  -
         fuel  -
+        gambling  -
         grave_yard  +
             christian  -
             {}
@@ -89,11 +90,13 @@ world  +
         parcel_locker  -
         parking  +
             fee  -
+            lane  -
             multi-storey  -
             no-access  -
             park_and_ride  -
             permissive  -
             private  -
+            street_side  -
             underground  -
             {}
         parking_entrance  +
@@ -110,7 +113,9 @@ world  +
         pharmacy  -
         place_of_worship  +
             buddhist  -
-            christian  -
+            christian  +
+                mormon  -
+                {}
             hindu  -
             jewish  -
             muslim  -
@@ -132,6 +137,7 @@ world  +
         school  -
         shelter  -
         shower  -
+        stripclub  -
         taxi  -
         telephone  -
         theatre  -
@@ -352,6 +358,7 @@ world  +
         spontaneous_camp  -
         {}
     emergency  +
+        assembly_point  -
         defibrillator  -
         fire_hydrant  -
         phone  -
@@ -576,6 +583,7 @@ world  +
         zero  -
         {}
     junction  +
+        circular  -
         roundabout  -
         {}
     landuse  +
@@ -620,6 +628,8 @@ world  +
         vineyard  -
         {}
     leisure  +
+        adult_gaming_centre  -
+        amusement_arcade  -
         beach_resort  -
         bowling_alley  -
         common  -
@@ -992,6 +1002,7 @@ world  +
                 taoyuan  -
                 tashkent  -
                 tbilisi  -
+                tehran  -
                 tianjin  -
                 tokyo  -
                 valencia  -
@@ -1108,6 +1119,7 @@ world  +
             taoyuan  -
             tashkent  -
             tbilisi  -
+            tehran  -
             tianjin  -
             tokyo  -
             valencia  -
@@ -1302,6 +1314,7 @@ world  +
     tourism  +
         alpine_hut  -
         apartment  -
+        aquarium  -
         artwork  +
             architecture  -
             painting  -

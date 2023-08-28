@@ -767,6 +767,9 @@
 	<string name="type.amenity.car_sharing">Bildeling</string>
 	<string name="type.amenity.car_wash">Bilvask</string>
 	<string name="type.amenity.casino">Kasino</string>
+	<string name="type.amenity.gambling">Gambling</string>
+	<string name="type.leisure.adult_gaming_centre">Spillsenter for voksne</string>
+	<string name="type.leisure.amusement_arcade">Arcade</string>
 	<string name="type.amenity.charging_station">Ladestasjon</string>
 	<string name="type.amenity.charging_station.bicycle">Ladestasjon for sykkel</string>
 	<string name="type.amenity.charging_station.motorcar">Ladestasjon for biler</string>
@@ -815,6 +818,8 @@
 	<string name="type.amenity.parking.private">Privat parkering</string>
 	<string name="type.amenity.parking.park_and_ride">Parkering</string>
 	<string name="type.amenity.parking.underground">Underjordisk parkering</string>
+	<string name="type.amenity.parking.street_side">Parkering</string>
+	<string name="type.amenity.parking.lane">Parkering</string>
 	<string name="type.amenity.parking_entrance">Parkeringsinngang</string>
 	<string name="type.amenity.parking_entrance.private">Parkeringsinngang</string>
 	<string name="type.amenity.parking_entrance.permissive">Parkeringsinngang</string>
@@ -828,6 +833,7 @@
 	<string name="type.amenity.place_of_worship">Gudshus</string>
 	<string name="type.amenity.place_of_worship.buddhist">Tempel</string>
 	<string name="type.amenity.place_of_worship.christian">Kirke</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Jesu Kristi Kirke av Siste Dagers Hellige</string>
 	<string name="type.amenity.place_of_worship.hindu">Tempel</string>
 	<string name="type.amenity.place_of_worship.jewish">Synagoge</string>
 	<string name="type.amenity.place_of_worship.muslim">Moské</string>
@@ -853,6 +859,7 @@
 	<string name="type.amenity.school">Skole</string>
 	<string name="type.amenity.shelter">Ly</string>
 	<string name="type.amenity.shower">Dusj</string>
+	<string name="type.amenity.stripclub">Stripklubb</string>
 	<string name="type.amenity.taxi">Drosje</string>
 	<string name="type.amenity.telephone">Telefon</string>
 	<string name="type.amenity.theatre">Teater</string>
@@ -1005,6 +1012,7 @@
 	<string name="type.cuisine.vegan">Vegansk</string>
 	<string name="type.cuisine.vegetarian">Vegetarisk</string>
 	<string name="type.cuisine.vietnamese">Vietnamesisk mat</string>
+	<string name="type.emergency.assembly_point">Nødsamlingssted</string>
 	<string name="type.emergency.defibrillator">Hjertestarter</string>
 	<string name="type.emergency.fire_hydrant">Brannhydrant</string>
 	<string name="type.emergency.phone">Nødtelefon</string>
@@ -1032,6 +1040,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Tunnel</string>
 	<string name="type.highway.busway">Dedikert bussvei</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Bru</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Tunnel</string>
 	<string name="type.highway.bus_stop">Busstopp</string>
 	<string name="type.highway.construction">Veikonstruksjon</string>
 	<string name="type.highway.cycleway">Sykkelvei</string>
@@ -1378,13 +1390,32 @@
 	<string name="type.railway.platform">Jernbaneplattform</string>
 	<string name="type.railway.preserved">Museumsjernbane</string>
 	<string name="type.railway.rail">Toglinje</string>
-	<string name="type.railway.rail.highspeed">Toglinje</string>
-	<string name="type.railway.rail.tourism">Toglinje</string>
-	<string name="type.railway.rail.main">Toglinje</string>
-	<string name="type.railway.rail.branch">Toglinje</string>
-	<string name="type.railway.rail.utility">Toglinje</string>
-	<string name="type.railway.rail.spur">Toglinje</string>
-	<string name="type.railway.rail.service">Toglinje</string>
+	<string name="type.railway.rail.highspeed">Høyhastighetsjernbane</string>
+	<string name="type.railway.rail.tourism">Turistjernbane</string>
+	<string name="type.railway.rail.main">Jernbane</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Sekundær jernbane</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Service jernbane</string>
+	<string name="type.railway.rail.spur">Jernbanespor</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Ekstra jernbanespor</string>
+	<string name="type.railway.rail.bridge">Jernbanebro</string>
+	<string name="type.railway.rail.highspeed.bridge">Jernbanebro</string>
+	<string name="type.railway.rail.tourism.bridge">Jernbanebro</string>
+	<string name="type.railway.rail.main.bridge">Jernbanebro</string>
+	<string name="type.railway.rail.branch.bridge">Jernbanebro</string>
+	<string name="type.railway.rail.utility.bridge">Jernbanebro</string>
+	<string name="type.railway.rail.spur.bridge">Jernbanebro</string>
+	<string name="type.railway.rail.service.bridge">Jernbanebro</string>
+	<string name="type.railway.rail.tunnel">Jernbanetunnel</string>
+	<string name="type.railway.rail.highspeed.tunnel">Jernbanetunnel</string>
+	<string name="type.railway.rail.tourism.tunnel">Jernbanetunnel</string>
+	<string name="type.railway.rail.main.tunnel">Jernbanetunnel</string>
+	<string name="type.railway.rail.branch.tunnel">Jernbanetunnel</string>
+	<string name="type.railway.rail.utility.tunnel">Jernbanetunnel</string>
+	<string name="type.railway.rail.spur.tunnel">Jernbanetunnel</string>
+	<string name="type.railway.rail.service.tunnel">Jernbanetunnel</string>
 	<string name="type.railway.station">Togstasjon</string>
 	<string name="type.railway.station.funicular">Kabelbane</string>
 	<string name="type.railway.station.light_rail">Togstasjon</string>
@@ -1490,6 +1521,7 @@
 	<string name="type.railway.station.subway.taoyuan">T-bane</string>
 	<string name="type.railway.station.subway.tashkent">T-bane</string>
 	<string name="type.railway.station.subway.tbilisi">T-bane</string>
+	<string name="type.railway.station.subway.tehran">T-bane</string>
 	<string name="type.railway.station.subway.tianjin">T-bane</string>
 	<string name="type.railway.station.subway.tokyo">T-bane</string>
 	<string name="type.railway.station.subway.valencia">T-bane</string>
@@ -1600,6 +1632,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">T-bane inngang</string>
 	<string name="type.railway.subway_entrance.tashkent">T-bane inngang</string>
 	<string name="type.railway.subway_entrance.tbilisi">T-bane inngang</string>
+	<string name="type.railway.subway_entrance.tehran">T-bane inngang</string>
 	<string name="type.railway.subway_entrance.tianjin">T-bane inngang</string>
 	<string name="type.railway.subway_entrance.tokyo">T-bane inngang</string>
 	<string name="type.railway.subway_entrance.valencia">T-bane inngang</string>
@@ -1757,6 +1790,7 @@
 	<string name="type.sport.badminton">Badminton</string>
 	<string name="type.sport.pelota">Baskisk pelota</string>
 	<string name="type.tourism">Turisme</string>
+	<string name="type.tourism.aquarium">Akvarium</string>
 	<string name="type.tourism.alpine_hut">Fjellstue</string>
 	<string name="type.tourism.apartment">Leiligheter</string>
 	<string name="type.tourism.artwork">Kunstverk</string>

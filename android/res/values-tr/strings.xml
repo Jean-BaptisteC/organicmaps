@@ -783,6 +783,9 @@
 	<string name="type.amenity.car_sharing">Araç Paylaşımı</string>
 	<string name="type.amenity.car_wash">Araba Yıkama</string>
 	<string name="type.amenity.casino">Kumarhane</string>
+	<string name="type.amenity.gambling">Kumar</string>
+	<string name="type.leisure.adult_gaming_centre">Yetişkin Oyun Merkezi</string>
+	<string name="type.leisure.amusement_arcade">Oyun makinesi</string>
 	<string name="type.amenity.charging_station">Şarj İstasyonu</string>
 	<string name="type.amenity.charging_station.bicycle">Bisiklet Şarj İstasyonu</string>
 	<string name="type.amenity.charging_station.motorcar">Araç Şarj İstasyonu</string>
@@ -832,6 +835,8 @@
 	<string name="type.amenity.parking.private">Özel Otopark</string>
 	<string name="type.amenity.parking.park_and_ride">Otopark</string>
 	<string name="type.amenity.parking.underground">Yeraltı otoparkı</string>
+	<string name="type.amenity.parking.street_side">Otopark</string>
+	<string name="type.amenity.parking.lane">Otopark</string>
 	<string name="type.amenity.parking_entrance">Otopark girişi</string>
 	<string name="type.amenity.parking_entrance.private">Otopark girişi</string>
 	<string name="type.amenity.parking_entrance.permissive">Otopark girişi</string>
@@ -845,6 +850,7 @@
 	<string name="type.amenity.place_of_worship">İbadet Yerleri</string>
 	<string name="type.amenity.place_of_worship.buddhist">Tapınak</string>
 	<string name="type.amenity.place_of_worship.christian">Kilise</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">İsa Mesih\'in Son Zaman Azizleri Kilisesi</string>
 	<string name="type.amenity.place_of_worship.hindu">Tapınak</string>
 	<string name="type.amenity.place_of_worship.jewish">Sinagog</string>
 	<string name="type.amenity.place_of_worship.muslim">Cami</string>
@@ -879,6 +885,7 @@
 	<string name="type.amenity.school">Okul</string>
 	<string name="type.amenity.shelter">Barınak</string>
 	<string name="type.amenity.shower">Duş</string>
+	<string name="type.amenity.stripclub">Striptiz kulübü</string>
 	<string name="type.amenity.taxi">Taksi</string>
 	<string name="type.amenity.telephone">Telefon</string>
 	<string name="type.amenity.theatre">Tiyatro</string>
@@ -1063,6 +1070,7 @@
 	<string name="type.cuisine.vegetarian">Vejetaryen mutfağı</string>
 	<string name="type.cuisine.vietnamese">Vietnam mutfağı</string>
 	<string name="type.emergency">Acil</string>
+	<string name="type.emergency.assembly_point">Acil Toplanma Noktası</string>
 	<string name="type.emergency.defibrillator">Defibrilatör</string>
 	<string name="type.emergency.fire_hydrant">Yangın Söndürme Musluğu</string>
 	<string name="type.emergency.phone">Acil Telefon</string>
@@ -1091,6 +1099,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Tünel</string>
 	<string name="type.highway.busway">Özel otobüs yolu</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Köprü</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Tünel</string>
 	<string name="type.highway.bus_stop">Otobüs Durağı</string>
 	<string name="type.highway.construction">Yapım Aşamasında Yol</string>
 	<string name="type.highway.cycleway">Bisiklet Yolu</string>
@@ -1293,6 +1305,7 @@
 	<string name="type.internet_access">İnternet</string>
 	<string name="type.internet_access.wlan">İnternet</string>
 	<string name="type.junction">Kavşak noktası</string>
+	<string name="type.junction.circular">Göbekli kavşak</string>
 	<string name="type.junction.roundabout">Göbekli kavşak</string>
 	<string name="type.landuse">Arazi Kullanımı</string>
 	<string name="type.landuse.allotments">Tahsisler</string>
@@ -1516,29 +1529,32 @@
 	<string name="type.railway.preserved.bridge">Korunmuş Ray</string>
 	<string name="type.railway.preserved.tunnel">Korunmuş Ray</string>
 	<string name="type.railway.rail">Demiryolu</string>
-	<string name="type.railway.rail.highspeed">Demiryolu</string>
-	<string name="type.railway.rail.tourism">Demiryolu</string>
+	<string name="type.railway.rail.highspeed">Yüksek hızlı demiryolu</string>
+	<string name="type.railway.rail.tourism">Turistik demiryolu</string>
 	<string name="type.railway.rail.main">Demiryolu</string>
-	<string name="type.railway.rail.branch">Demiryolu</string>
-	<string name="type.railway.rail.utility">Demiryolu</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">İkincil demiryolu</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Yardımcı demiryolu</string>
 	<string name="type.railway.rail.spur">Düz Ray</string>
-	<string name="type.railway.rail.service">Demiryolu</string>
-	<string name="type.railway.rail.bridge">Demiryolu</string>
-	<string name="type.railway.rail.highspeed.bridge">Demiryolu</string>
-	<string name="type.railway.rail.tourism.bridge">Demiryolu</string>
-	<string name="type.railway.rail.main.bridge">Demiryolu</string>
-	<string name="type.railway.rail.branch.bridge">Demiryolu</string>
-	<string name="type.railway.rail.utility.bridge">Demiryolu</string>
-	<string name="type.railway.rail.spur.bridge">Demiryolu</string>
-	<string name="type.railway.rail.service.bridge">Demiryolu</string>
-	<string name="type.railway.rail.tunnel">Demiryolu</string>
-	<string name="type.railway.rail.highspeed.tunnel">Demiryolu</string>
-	<string name="type.railway.rail.tourism.tunnel">Demiryolu</string>
-	<string name="type.railway.rail.main.tunnel">Demiryolu</string>
-	<string name="type.railway.rail.branch.tunnel">Demiryolu</string>
-	<string name="type.railway.rail.utility.tunnel">Demiryolu</string>
-	<string name="type.railway.rail.spur.tunnel">Demiryolu</string>
-	<string name="type.railway.rail.service.tunnel">Demiryolu</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Yardımcı ray hattı</string>
+	<string name="type.railway.rail.bridge">Demiryolu köprüsü</string>
+	<string name="type.railway.rail.highspeed.bridge">Demiryolu köprüsü</string>
+	<string name="type.railway.rail.tourism.bridge">Demiryolu köprüsü</string>
+	<string name="type.railway.rail.main.bridge">Demiryolu köprüsü</string>
+	<string name="type.railway.rail.branch.bridge">Demiryolu köprüsü</string>
+	<string name="type.railway.rail.utility.bridge">Demiryolu köprüsü</string>
+	<string name="type.railway.rail.spur.bridge">Demiryolu köprüsü</string>
+	<string name="type.railway.rail.service.bridge">Demiryolu köprüsü</string>
+	<string name="type.railway.rail.tunnel">Demiryolu tüneli</string>
+	<string name="type.railway.rail.highspeed.tunnel">Demiryolu tüneli</string>
+	<string name="type.railway.rail.tourism.tunnel">Demiryolu tüneli</string>
+	<string name="type.railway.rail.main.tunnel">Demiryolu tüneli</string>
+	<string name="type.railway.rail.branch.tunnel">Demiryolu tüneli</string>
+	<string name="type.railway.rail.utility.tunnel">Demiryolu tüneli</string>
+	<string name="type.railway.rail.spur.tunnel">Demiryolu tüneli</string>
+	<string name="type.railway.rail.service.tunnel">Demiryolu tüneli</string>
 	<string name="type.railway.station">Tren İstasyonu</string>
 	<string name="type.railway.station.funicular">Füniküler</string>
 	<string name="type.railway.station.light_rail">Tren İstasyonu</string>
@@ -1644,6 +1660,7 @@
 	<string name="type.railway.station.subway.taoyuan">Metro</string>
 	<string name="type.railway.station.subway.tashkent">Metro</string>
 	<string name="type.railway.station.subway.tbilisi">Metro</string>
+	<string name="type.railway.station.subway.tehran">Metro</string>
 	<string name="type.railway.station.subway.tianjin">Metro</string>
 	<string name="type.railway.station.subway.tokyo">Metro</string>
 	<string name="type.railway.station.subway.valencia">Metro</string>
@@ -1757,6 +1774,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Metro Girişi</string>
 	<string name="type.railway.subway_entrance.tashkent">Metro Girişi</string>
 	<string name="type.railway.subway_entrance.tbilisi">Metro Girişi</string>
+	<string name="type.railway.subway_entrance.tehran">Metro Girişi</string>
 	<string name="type.railway.subway_entrance.tianjin">Metro Girişi</string>
 	<string name="type.railway.subway_entrance.tokyo">Metro Girişi</string>
 	<string name="type.railway.subway_entrance.valencia">Metro Girişi</string>
@@ -1922,6 +1940,7 @@
 	<string name="type.sport.badminton">Badminton</string>
 	<string name="type.sport.pelota">Bask pelotası</string>
 	<string name="type.tourism">Turizm</string>
+	<string name="type.tourism.aquarium">Akvaryum</string>
 	<string name="type.tourism.alpine_hut">Dağda Konaklama</string>
 	<string name="type.tourism.apartment">Apart Otel</string>
 	<string name="type.tourism.artwork">Sanat</string>
@@ -1964,7 +1983,7 @@
 	<string name="type.waterway.ditch.tunnel">Hendek</string>
 	<string name="type.waterway.dock">Rıhtım</string>
 	<string name="type.waterway.drain">Lağım</string>
-	<string name="type.waterway.drain.tunnel">Lağım</string>
+	<string name="type.waterway.drain.tunnel">Hendek</string>
 	<string name="type.waterway.lock_gate">Eklüz Kapağı</string>
 	<string name="type.waterway.river">Nehir</string>
 	<string name="type.waterway.river.tunnel">Nehir</string>

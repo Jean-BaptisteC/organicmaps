@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Καζίνο";
 
+"type.amenity.gambling" = "ΤΥΧΕΡΑ ΠΑΙΧΝΙΔΙΑ";
+
+"type.leisure.adult_gaming_centre" = "Κέντρο παιχνιδιών ενηλίκων";
+
+"type.leisure.amusement_arcade" = "Στοά";
+
 "type.amenity.charging_station" = "Σταθμός φόρτισης";
 
 "type.amenity.charging_station.bicycle" = "Σταθμός φόρτισης ποδηλάτων";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Υπόγειος χώρος στάθμευσης";
 
+"type.amenity.parking.street_side" = "Χώρος στάθμευσης";
+
+"type.amenity.parking.lane" = "Χώρος στάθμευσης";
+
 "type.amenity.parking_entrance" = "Είσοδος στάθμευσης";
 
 "type.amenity.parking_entrance.private" = "Είσοδος στάθμευσης";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Ναός";
 
 "type.amenity.place_of_worship.christian" = "Εκκλησία";
+
+"type.amenity.place_of_worship.christian.mormon" = "Εκκλησία του Ιησού Χριστού των Αγίων των Τελευταίων Ημερών";
 
 "type.amenity.place_of_worship.hindu" = "Ναός";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Καταφύγιο";
 
 "type.amenity.shower" = "Ντους";
+
+"type.amenity.stripclub" = "Stripclub";
 
 "type.amenity.taxi" = "Ταξί";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Σημείο συναρμολόγησης έκτακτης ανάγκης";
+
 "type.emergency.defibrillator" = "Πρώτες βοήθειες";
 
 "type.emergency.fire_hydrant" = "Πυροσβεστικός κρουνός";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Σήραγγα";
 
 "type.highway.busway" = "Αφιερωμένος δρόμος λεωφορείων";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Γέφυρα";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Σήραγγα";
 
 "type.highway.bus_stop" = "Στάση λεωφορείου";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Ίντερνετ";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Σιδηρόδρομος";
 
-"type.railway.rail.highspeed" = "Σιδηρόδρομος";
+"type.railway.rail.highspeed" = "Σιδηρόδρομος υψηλής ταχύτητας";
 
-"type.railway.rail.tourism" = "Σιδηρόδρομος";
+"type.railway.rail.tourism" = "Τουριστικός σιδηρόδρομος";
 
 "type.railway.rail.main" = "Σιδηρόδρομος";
 
-"type.railway.rail.branch" = "Σιδηρόδρομος";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Δευτερεύων σιδηροδρομικός σιδηρόδρομος";
 
-"type.railway.rail.utility" = "Σιδηρόδρομος";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Σιδηρόδρομος κοινής ωφέλειας";
 
-"type.railway.rail.spur" = "Σιδηρόδρομος";
+"type.railway.rail.spur" = "Σιδηροδρομική ατραπός";
 
-"type.railway.rail.service" = "Σιδηρόδρομος";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Βοηθητική σιδηροδρομική γραμμή";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Σιδηροδρομική γέφυρα";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Σιδηροδρομική γέφυρα";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Σιδηροδρομική γέφυρα";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Σιδηροδρομική γέφυρα";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Σιδηροδρομική γέφυρα";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Σιδηροδρομική γέφυρα";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Σιδηροδρομική γέφυρα";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Σιδηροδρομική γέφυρα";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Σιδηροδρομική σήραγγα";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Σιδηροδρομική σήραγγα";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Σιδηροδρομική σήραγγα";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Σιδηροδρομική σήραγγα";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Σιδηροδρομική σήραγγα";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Σιδηροδρομική σήραγγα";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Σιδηροδρομική σήραγγα";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Σιδηροδρομική σήραγγα";
 
 "type.railway.station" = "Σιδηροδρομικός σταθμός";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Μετρό";
 
 "type.railway.station.subway.tbilisi" = "Μετρό";
+
+"type.railway.station.subway.tehran" = "Μετρό";
 
 "type.railway.station.subway.tianjin" = "Μετρό";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Είσοδος μετρό";
 
 "type.railway.subway_entrance.tbilisi" = "Είσοδος μετρό";
+
+"type.railway.subway_entrance.tehran" = "Είσοδος μετρό";
 
 "type.railway.subway_entrance.tianjin" = "Είσοδος μετρό";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "Ενυδρείο";
+
 "type.tourism.alpine_hut" = "Ορεινό καταφύγιο";
 
 "type.tourism.apartment" = "Διαμερίσματα";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "Φράγμα";
 

@@ -13,7 +13,7 @@
 #include <iterator>
 #include <map>
 #include <sstream>
-#include <unordered_map>
+
 
 namespace ftypes
 {
@@ -139,7 +139,7 @@ uint32_t BaseChecker::PrepareToMatch(uint32_t type, uint8_t level)
 
 bool BaseChecker::IsMatched(uint32_t type) const
 {
-  return (find(m_types.begin(), m_types.end(), PrepareToMatch(type, m_level)) != m_types.end());
+  return base::IsExist(m_types, PrepareToMatch(type, m_level));
 }
 
 void BaseChecker::ForEachType(function<void(uint32_t)> const & fn) const
@@ -410,6 +410,7 @@ IsOneWayChecker::IsOneWayChecker()
 IsRoundAboutChecker::IsRoundAboutChecker()
 {
   Classificator const & c = classif();
+  m_types.push_back(c.GetTypeByPath({"junction", "circular"}));
   m_types.push_back(c.GetTypeByPath({"junction", "roundabout"}));
 }
 
@@ -497,7 +498,8 @@ AttractionsChecker::AttractionsChecker() : BaseChecker(2 /* level */)
       {"leisure", "park"},
       {"leisure", "water_park"},
       {"man_made", "lighthouse"},
-      {"man_made", "tower"},
+      {"man_made", "windmill"},
+      //{"man_made", "tower"},
       {"natural", "beach"},
       {"natural", "cave_entrance"},
       {"natural", "geyser"},

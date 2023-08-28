@@ -739,6 +739,9 @@
 	<string name="type.amenity.car_sharing">Gépjármű megosztása</string>
 	<string name="type.amenity.car_wash">Autómosó</string>
 	<string name="type.amenity.casino">Kaszinó</string>
+	<string name="type.amenity.gambling">Szerencsejáték</string>
+	<string name="type.leisure.adult_gaming_centre">Felnőtt Játékközpont</string>
+	<string name="type.leisure.amusement_arcade">Árkád</string>
 	<string name="type.amenity.charging_station">Töltő állomás</string>
 	<string name="type.amenity.charging_station.bicycle">Kerékpártöltő állomás</string>
 	<string name="type.amenity.charging_station.motorcar">Autó töltőállomás</string>
@@ -787,6 +790,8 @@
 	<string name="type.amenity.parking.private">Saját parkoló</string>
 	<string name="type.amenity.parking.park_and_ride">Parkoló</string>
 	<string name="type.amenity.parking.underground">Mélygarázs</string>
+	<string name="type.amenity.parking.street_side">Parkoló</string>
+	<string name="type.amenity.parking.lane">Parkoló</string>
 	<string name="type.amenity.parking_entrance">Parkoló bejárata</string>
 	<string name="type.amenity.parking_entrance.private">Parkoló bejárata</string>
 	<string name="type.amenity.parking_entrance.permissive">Parkoló bejárata</string>
@@ -800,6 +805,7 @@
 	<string name="type.amenity.place_of_worship">Templom</string>
 	<string name="type.amenity.place_of_worship.buddhist">Templom</string>
 	<string name="type.amenity.place_of_worship.christian">Templom</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Utolsó Napok Szentjeinek Jézus Krisztus Egyháza</string>
 	<string name="type.amenity.place_of_worship.hindu">Templom</string>
 	<string name="type.amenity.place_of_worship.jewish">Zsinagóga</string>
 	<string name="type.amenity.place_of_worship.muslim">Mecset</string>
@@ -827,6 +833,7 @@
 	<string name="type.amenity.school">Iskola</string>
 	<string name="type.amenity.shelter">Menedék</string>
 	<string name="type.amenity.shower">Tusoló</string>
+	<string name="type.amenity.stripclub">Stripclub</string>
 	<string name="type.amenity.telephone">Telefon</string>
 	<string name="type.amenity.theatre">Színház</string>
 	<string name="type.amenity.toilets">Mosdó</string>
@@ -976,6 +983,7 @@
 	<string name="type.cuisine.vegan">Vegán konyha</string>
 	<string name="type.cuisine.vegetarian">Vegetáriánus konyha</string>
 	<string name="type.cuisine.vietnamese">Vietnami konyha</string>
+	<string name="type.emergency.assembly_point">Sürgősségi gyülekezési pont</string>
 	<string name="type.emergency.defibrillator">Defibrillátor</string>
 	<string name="type.emergency.fire_hydrant">Tűzcsap</string>
 	<string name="type.emergency.phone">Sürgősségi telefon</string>
@@ -1001,6 +1009,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Alagút</string>
 	<string name="type.highway.busway">Kijelölt buszút</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Híd</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Alagút</string>
 	<string name="type.highway.bus_stop">Buszmegálló</string>
 	<string name="type.highway.construction">Útépítés</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
@@ -1340,13 +1352,32 @@
 	<string name="type.railway.level_crossing">Vasúti átjáró</string>
 	<string name="type.railway.monorail">Egysínű vasút</string>
 	<string name="type.railway.rail">Vasút</string>
-	<string name="type.railway.rail.highspeed">Vasút</string>
-	<string name="type.railway.rail.tourism">Vasút</string>
+	<string name="type.railway.rail.highspeed">Nagysebességű vasút</string>
+	<string name="type.railway.rail.tourism">Turisztikai vasút</string>
 	<string name="type.railway.rail.main">Vasút</string>
-	<string name="type.railway.rail.branch">Vasút</string>
-	<string name="type.railway.rail.utility">Vasút</string>
-	<string name="type.railway.rail.spur">Vasút</string>
-	<string name="type.railway.rail.service">Vasút</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Másodlagos vasút</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Közüzemi vasút</string>
+	<string name="type.railway.rail.spur">Vasúti nyomvonal</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Kiegészítő sínpálya</string>
+	<string name="type.railway.rail.bridge">Vasúti híd</string>
+	<string name="type.railway.rail.highspeed.bridge">Vasúti híd</string>
+	<string name="type.railway.rail.tourism.bridge">Vasúti híd</string>
+	<string name="type.railway.rail.main.bridge">Vasúti híd</string>
+	<string name="type.railway.rail.branch.bridge">Vasúti híd</string>
+	<string name="type.railway.rail.utility.bridge">Vasúti híd</string>
+	<string name="type.railway.rail.spur.bridge">Vasúti híd</string>
+	<string name="type.railway.rail.service.bridge">Vasúti híd</string>
+	<string name="type.railway.rail.tunnel">Vasúti alagút</string>
+	<string name="type.railway.rail.highspeed.tunnel">Vasúti alagút</string>
+	<string name="type.railway.rail.tourism.tunnel">Vasúti alagút</string>
+	<string name="type.railway.rail.main.tunnel">Vasúti alagút</string>
+	<string name="type.railway.rail.branch.tunnel">Vasúti alagút</string>
+	<string name="type.railway.rail.utility.tunnel">Vasúti alagút</string>
+	<string name="type.railway.rail.spur.tunnel">Vasúti alagút</string>
+	<string name="type.railway.rail.service.tunnel">Vasúti alagút</string>
 	<string name="type.railway.station">Vonatmegálló</string>
 	<string name="type.railway.station.funicular">Funicular</string>
 	<string name="type.railway.station.light_rail">Vonatmegálló</string>
@@ -1452,6 +1483,7 @@
 	<string name="type.railway.station.subway.taoyuan">Földalatti</string>
 	<string name="type.railway.station.subway.tashkent">Földalatti</string>
 	<string name="type.railway.station.subway.tbilisi">Földalatti</string>
+	<string name="type.railway.station.subway.tehran">Földalatti</string>
 	<string name="type.railway.station.subway.tianjin">Földalatti</string>
 	<string name="type.railway.station.subway.tokyo">Földalatti</string>
 	<string name="type.railway.station.subway.valencia">Földalatti</string>
@@ -1562,6 +1594,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Földalatti bejárat</string>
 	<string name="type.railway.subway_entrance.tashkent">Földalatti bejárat</string>
 	<string name="type.railway.subway_entrance.tbilisi">Földalatti bejárat</string>
+	<string name="type.railway.subway_entrance.tehran">Földalatti bejárat</string>
 	<string name="type.railway.subway_entrance.tianjin">Földalatti bejárat</string>
 	<string name="type.railway.subway_entrance.tokyo">Földalatti bejárat</string>
 	<string name="type.railway.subway_entrance.valencia">Földalatti bejárat</string>
@@ -1637,7 +1670,7 @@
 	<string name="type.shop.optician">Optika</string>
 	<string name="type.shop.outdoor">Túrafelszerelés</string>
 	<string name="type.shop.outpost">Felvevő pont</string>
-	<string name="type.shop.pastry">Cukrászsütemény</string>
+	<string name="type.shop.pastry">Cukrászda</string>
 	<string name="type.shop.pawnbroker">Zálogház</string>
 	<string name="type.shop.pet">Házikedvenc-üzlet</string>
 	<string name="type.shop.pet_grooming">Kisállat ápolás</string>
@@ -1719,6 +1752,7 @@
 	<string name="type.sport.field_hockey">Gyeplabda</string>
 	<string name="type.sport.badminton">Tollaslabda</string>
 	<string name="type.sport.pelota">Baszk pelota</string>
+	<string name="type.tourism.aquarium">Akvárium</string>
 	<string name="type.tourism.alpine_hut">Hegyi menedék</string>
 	<string name="type.tourism.apartment">Apartmanok</string>
 	<string name="type.tourism.artwork">Szobor</string>

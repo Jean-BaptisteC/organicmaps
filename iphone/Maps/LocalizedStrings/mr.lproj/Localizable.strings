@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "जुगारगृह";
 
+"type.amenity.gambling" = "जुगार";
+
+"type.leisure.adult_gaming_centre" = "प्रौढ गेमिंग केंद्र";
+
+"type.leisure.amusement_arcade" = "आर्केड";
+
 "type.amenity.charging_station" = "चार्जिंग केंद्र";
 
 "type.amenity.charging_station.bicycle" = "सायकल चार्जिंग स्टेशन";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Underground Parking";
 
+"type.amenity.parking.street_side" = "वाहनतळ";
+
+"type.amenity.parking.lane" = "वाहनतळ";
+
 "type.amenity.parking_entrance" = "Parking Entrance";
 
 "type.amenity.parking_entrance.private" = "Parking Entrance";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "मंदिर";
 
 "type.amenity.place_of_worship.christian" = "चर्च";
+
+"type.amenity.place_of_worship.christian.mormon" = "चर्च ऑफ जिझस क्राइस्ट ऑफ लेटर डे सेंट्स";
 
 "type.amenity.place_of_worship.hindu" = "मंदिर";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "निवारा";
 
 "type.amenity.shower" = "अंघोळ";
+
+"type.amenity.stripclub" = "स्ट्रिपक्लब";
 
 "type.amenity.taxi" = "टॅक्सी";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "आणीबाणी";
 
+"type.emergency.assembly_point" = "आपत्कालीन विधानसभा पॉइंट";
+
 "type.emergency.defibrillator" = "कंपनरोधक";
 
 "type.emergency.fire_hydrant" = "अग्निशामक नळ";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "बोगदा";
 
 "type.highway.busway" = "समर्पित बस रस्ता";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "पूल";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "बोगदा";
 
 "type.highway.bus_stop" = "बस थांबा";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "इंटरनेट";
 
 "type.junction" = "जंक्शन";
+
+"type.junction.circular" = "गोलमार्ग";
 
 "type.junction.roundabout" = "गोलमार्ग";
 
@@ -2802,19 +2826,22 @@
 
 "type.railway.rail" = "रेल्वे";
 
-"type.railway.rail.highspeed" = "रेल्वे";
+"type.railway.rail.highspeed" = "हाय-स्पीड रेल्वे";
 
-"type.railway.rail.tourism" = "रेल्वे";
+"type.railway.rail.tourism" = "पर्यटन रेल्वे";
 
 "type.railway.rail.main" = "रेल्वे";
 
-"type.railway.rail.branch" = "रेल्वे";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "दुय्यम रेल्वे";
 
-"type.railway.rail.utility" = "रेल्वे";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "उपयुक्तता रेल्वे";
 
-"type.railway.rail.spur" = "रेल्वे";
+"type.railway.rail.spur" = "रेल्वे स्पर";
 
-"type.railway.rail.service" = "रेल्वे";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "सहायक रेल्वे ट्रॅक";
 
 "type.railway.rail.bridge" = "रेल्वे";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "भुयारी मार्ग";
 
+"type.railway.station.subway.tehran" = "भुयारी मार्ग";
+
 "type.railway.station.subway.tianjin" = "भुयारी मार्ग";
 
 "type.railway.station.subway.tokyo" = "भुयारी मार्ग";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "भुयारी प्रवेशद्वार";
 
 "type.railway.subway_entrance.tbilisi" = "भुयारी प्रवेशद्वार";
+
+"type.railway.subway_entrance.tehran" = "भुयारी प्रवेशद्वार";
 
 "type.railway.subway_entrance.tianjin" = "भुयारी प्रवेशद्वार";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "पर्यटन";
 
+"type.tourism.aquarium" = "मत्स्यालय";
+
 "type.tourism.alpine_hut" = "Alpine Lodging";
 
 "type.tourism.apartment" = "सदनिका";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "नाला";
 
-"type.waterway.drain.tunnel" = "नाला";
+"type.waterway.drain.tunnel" = "खंदक";
 
 "type.waterway.lock_gate" = "जलद्वार";
 

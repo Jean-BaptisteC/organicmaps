@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Casino";
 
+"type.amenity.gambling" = "Хазарт";
+
+"type.leisure.adult_gaming_centre" = "Център за игри за възрастни";
+
+"type.leisure.amusement_arcade" = "Аркада";
+
 "type.amenity.charging_station" = "Charging Station";
 
 "type.amenity.charging_station.bicycle" = "Станция за зареждане на велосипеди";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Подземен паркинг";
 
+"type.amenity.parking.street_side" = "Паркинг";
+
+"type.amenity.parking.lane" = "Паркинг";
+
 "type.amenity.parking_entrance" = "Вход за паркинг";
 
 "type.amenity.parking_entrance.private" = "Вход за паркинг";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Buddhist Temple";
 
 "type.amenity.place_of_worship.christian" = "Church";
+
+"type.amenity.place_of_worship.christian.mormon" = "Църквата на Исус Христос на светиите от последните дни";
 
 "type.amenity.place_of_worship.hindu" = "Hindu Temple";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Shelter";
 
 "type.amenity.shower" = "Shower";
+
+"type.amenity.stripclub" = "Стриптийз клуб";
 
 "type.amenity.taxi" = "Taxi Stand";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Авариен сборен пункт";
+
 "type.emergency.defibrillator" = "Defibrillator";
 
 "type.emergency.fire_hydrant" = "Fire Hydrant";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Тунел";
 
 "type.highway.busway" = "Обособен автобусен път";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Мост";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Тунел";
 
 "type.highway.bus_stop" = "Bus Stop";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Railway";
 
-"type.railway.rail.highspeed" = "Railway";
+"type.railway.rail.highspeed" = "Високоскоростна железница";
 
-"type.railway.rail.tourism" = "Railway";
+"type.railway.rail.tourism" = "Туристическа железница";
 
-"type.railway.rail.main" = "Railway";
+"type.railway.rail.main" = "Железопътна линия";
 
-"type.railway.rail.branch" = "Railway";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Вторична железница";
 
-"type.railway.rail.utility" = "Railway";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Сервизна железница";
 
-"type.railway.rail.spur" = "Railway";
+"type.railway.rail.spur" = "Железопътна отбивка";
 
-"type.railway.rail.service" = "Railway";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Спомагателен релсов път";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Железопътен мост";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Железопътен мост";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Железопътен мост";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Железопътен мост";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Железопътен мост";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Железопътен мост";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Железопътен мост";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Железопътен мост";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Железопътен тунел";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Железопътен тунел";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Железопътен тунел";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Железопътен тунел";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Железопътен тунел";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Железопътен тунел";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Железопътен тунел";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Железопътен тунел";
 
 "type.railway.station" = "Train Station";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Subway Station";
 
 "type.railway.station.subway.tbilisi" = "Subway Station";
+
+"type.railway.station.subway.tehran" = "Subway Station";
 
 "type.railway.station.subway.tianjin" = "Subway Station";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Subway Entrance";
 
 "type.railway.subway_entrance.tbilisi" = "Subway Entrance";
+
+"type.railway.subway_entrance.tehran" = "Subway Entrance";
 
 "type.railway.subway_entrance.tianjin" = "Subway Entrance";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "Аквариум";
+
 "type.tourism.alpine_hut" = "Alpine Lodging";
 
 "type.tourism.apartment" = "Holiday Apartment";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "Lock Gate";
 

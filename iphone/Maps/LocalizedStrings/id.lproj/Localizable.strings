@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Hiburan";
 
+"type.amenity.gambling" = "Berjudi";
+
+"type.leisure.adult_gaming_centre" = "Pusat Permainan Dewasa";
+
+"type.leisure.amusement_arcade" = "Arkade";
+
 "type.amenity.charging_station" = "Pusat Pengisian Daya";
 
 "type.amenity.charging_station.bicycle" = "Stasiun Pengisian Sepeda";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Parkir bawah tanah";
 
+"type.amenity.parking.street_side" = "Parkir";
+
+"type.amenity.parking.lane" = "Parkir";
+
 "type.amenity.parking_entrance" = "Pintu masuk parkir";
 
 "type.amenity.parking_entrance.private" = "Pintu masuk parkir";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Kuil";
 
 "type.amenity.place_of_worship.christian" = "Gereja";
+
+"type.amenity.place_of_worship.christian.mormon" = "Gereja Yesus Kristus dari Orang-Orang Suci Zaman Akhir";
 
 "type.amenity.place_of_worship.hindu" = "Kuil";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Tempat penampungan";
 
 "type.amenity.shower" = "Pancuran";
+
+"type.amenity.stripclub" = "Klub telanjang";
 
 "type.amenity.taxi" = "Taksi";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Titik Berkumpul Darurat";
+
 "type.emergency.defibrillator" = "Defibrilator";
 
 "type.emergency.fire_hydrant" = "Keran Kebakaran";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Terowongan";
 
 "type.highway.busway" = "Jalan khusus bus";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Menjembatani";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Terowongan";
 
 "type.highway.bus_stop" = "Halte bus";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Kereta api";
 
-"type.railway.rail.highspeed" = "Kereta api";
+"type.railway.rail.highspeed" = "Kereta api berkecepatan tinggi";
 
-"type.railway.rail.tourism" = "Kereta api";
+"type.railway.rail.tourism" = "Kereta api wisata";
 
 "type.railway.rail.main" = "Kereta api";
 
-"type.railway.rail.branch" = "Kereta api";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Kereta api sekunder";
 
-"type.railway.rail.utility" = "Kereta api";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Kereta api utilitas";
 
-"type.railway.rail.spur" = "Kereta api";
+"type.railway.rail.spur" = "Pacu kereta api";
 
-"type.railway.rail.service" = "Kereta api";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Jalur rel bantu";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Jembatan kereta api";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Jembatan kereta api";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Jembatan kereta api";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Jembatan kereta api";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Jembatan kereta api";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Jembatan kereta api";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Jembatan kereta api";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Jembatan kereta api";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Terowongan kereta api";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Terowongan kereta api";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Terowongan kereta api";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Terowongan kereta api";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Terowongan kereta api";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Terowongan kereta api";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Terowongan kereta api";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Terowongan kereta api";
 
 "type.railway.station" = "Rel kereta api";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Stasiun bawah tanah";
 
 "type.railway.station.subway.tbilisi" = "Stasiun bawah tanah";
+
+"type.railway.station.subway.tehran" = "Stasiun bawah tanah";
 
 "type.railway.station.subway.tianjin" = "Stasiun bawah tanah";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Pintu masuk kereta bawah tanah";
 
 "type.railway.subway_entrance.tbilisi" = "Pintu masuk kereta bawah tanah";
+
+"type.railway.subway_entrance.tehran" = "Pintu masuk kereta bawah tanah";
 
 "type.railway.subway_entrance.tianjin" = "Pintu masuk kereta bawah tanah";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "Akuarium";
+
 "type.tourism.alpine_hut" = "Penginapan di pegunungan";
 
 "type.tourism.apartment" = "Apartemen";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "Gerbang pengunci";
 

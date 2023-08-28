@@ -1,17 +1,41 @@
-• GPX import support
-• New OpenStreetMap data as of June 2, 2023
-• Fixed disappearing bookmark lists when wrong characters were saved in a bookmark name or description
-• Improved car and bicycle routing
-• Fixed non-working Portuguese (Brazil) and Spanish (Mexico) voice directions languages
-• Fixed crash when importing KML/KMZ/GPX file
-• Fixed repeated imports of the same file
-• Corrected Basque, Belarusian, British, English, and Ukrainian translations
+• Novos dados OpenStreetMap de 14 de agosto
+• Atualização de artigos da Wikipédia com mais de um ano
+• Correção do texto da Wiki no modo escuro
+• Adição de isolinhas ausentes para algumas regiões da Argentina, Chile, Cazaquistão, EUA, Rússia e Tibete (tamanho dos mapas aumentado)
+• Isolinhas mais densas em muitas áreas
+• Redução de muitos outros mapas
+• Importação de comentários da etiqueta GPX cmt
+• Tratamento dos segmentos de trilha GPX como parte da trilha singular à qual pertencem
+• Correção de um bug ao editar contatos sociais
+• Parques Caninos podem ser adicionado no Editor
+• Atualização de direções de voz em persa
 
-Styles:
-• Fixed funicular icon
-• Changed desert color in the dark mode
-• Added Fish Pass
-• New Icon for Parcel Locker
-• Fixed icon for northernmost Munich underground station
+Roteamento
+• Atualização de fatores de superfície da estrada para o roteamento de veículos
+• Atualização de roteamento de pedestres para Turquia e Geórgia
+• Correção do roteamento cross-mwm quando as opções "evitar" estão ativadas
 
-Follow our news at https://omaps.org/news
+Busca
+• Correção de pesquisa de moradas na Eslováquia e República Checa
+• Melhoria na correspondência de rua
+• Remoção de Informações Turísticas, Local de Religião, Mapa Turístico, Painel de Informações e Parque da categoria Passeios Turísticos
+• Não filtragem dos resultados de pesquisa duplicados, exceto para paragens de autocarro muito próximas
+• Melhoria da classificação ao pesquisar por categoria
+• Correção de busca por um nome de casa
+
+Estilos
+• Adição de rotas de balsa ao mapa do mundo
+• Remoção de fundo quadrado dos ícones de estacionamento
+• Adição de ícones distintos para estacionamentos pagos e privados
+• Diferenciação do ícone de estacionamento de bicicletas em relação ao ícone de motocicleta
+• Atualização do ícone de entrada de estacionamento
+• Uso de ícone menor para estacionamentos ao lado da rua e faixas de estacionamento, aparecendo mais tarde ao aumentar o zoom
+• Adição de ícones de estacionamento de motocicletas e de entrada de estacionamento ao modo de navegação
+• Correção de visibilidade de ligação de autoestradas no modo de navegação
+• Melhoria nas cores de autoestradas
+• Remoção de isolinhas muito pequenas nos níveis de zoom da visão geral
+• Adição de ícone do metrô de Teerão
+• Reformulação de sistema de prioridades, especialmente para POIs
+• Muitas outras correções e melhorias
+
+Acompanhe nossas novidades em https://omaps.org/news

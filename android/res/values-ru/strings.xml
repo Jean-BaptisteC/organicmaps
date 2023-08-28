@@ -792,6 +792,9 @@
 	<string name="type.amenity.car_sharing">Каршеринг</string>
 	<string name="type.amenity.car_wash">Автомойка</string>
 	<string name="type.amenity.casino">Казино</string>
+	<string name="type.amenity.gambling">Играть в азартные игры</string>
+	<string name="type.leisure.adult_gaming_centre">Игровой центр для взрослых</string>
+	<string name="type.leisure.amusement_arcade">Аркада</string>
 	<string name="type.amenity.charging_station">Зарядная станция</string>
 	<string name="type.amenity.charging_station.bicycle">Станция зарядки велосипедов</string>
 	<string name="type.amenity.charging_station.motorcar">Зарядная станция для автомобилей</string>
@@ -841,6 +844,8 @@
 	<string name="type.amenity.parking.private">Частная парковка</string>
 	<string name="type.amenity.parking.park_and_ride">Парковка</string>
 	<string name="type.amenity.parking.underground">Подземный паркинг</string>
+	<string name="type.amenity.parking.street_side">Парковка</string>
+	<string name="type.amenity.parking.lane">Парковка</string>
 	<string name="type.amenity.parking_entrance">Въезд на парковку</string>
 	<string name="type.amenity.parking_entrance.private">Въезд на парковку</string>
 	<string name="type.amenity.parking_entrance.permissive">Въезд на парковку</string>
@@ -854,6 +859,7 @@
 	<string name="type.amenity.place_of_worship">Храм</string>
 	<string name="type.amenity.place_of_worship.buddhist">Храм</string>
 	<string name="type.amenity.place_of_worship.christian">Церковь</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Церковь Иисуса Христа Святых последних дней</string>
 	<string name="type.amenity.place_of_worship.hindu">Храм</string>
 	<string name="type.amenity.place_of_worship.jewish">Синагога</string>
 	<string name="type.amenity.place_of_worship.muslim">Мечеть</string>
@@ -888,6 +894,7 @@
 	<string name="type.amenity.school">Школа</string>
 	<string name="type.amenity.shelter">Укрытие</string>
 	<string name="type.amenity.shower">Душ</string>
+	<string name="type.amenity.stripclub">Стриптиз-клуб</string>
 	<string name="type.amenity.taxi">Такси</string>
 	<string name="type.amenity.telephone">Телефон</string>
 	<string name="type.amenity.theatre">Театр</string>
@@ -1078,6 +1085,7 @@
 	<string name="type.cuisine.vegetarian">Вегетарианская кухня</string>
 	<string name="type.cuisine.vietnamese">Вьетнамская кухня</string>
 	<string name="type.emergency">Экстренная служба</string>
+	<string name="type.emergency.assembly_point">Пункт аварийного сбора</string>
 	<string name="type.emergency.defibrillator">Дефибриллятор</string>
 	<string name="type.emergency.fire_hydrant">Пожарный гидрант</string>
 	<string name="type.emergency.phone">Телефон для экстренных вызовов</string>
@@ -1106,6 +1114,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Тоннель</string>
 	<string name="type.highway.busway">Выделенная автобусная дорога</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Мост</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Тоннель</string>
 	<string name="type.highway.bus_stop">Остановка</string>
 	<string name="type.highway.construction">Строящаяся дорога</string>
 	<string name="type.highway.cycleway">Велодорожка</string>
@@ -1308,6 +1320,7 @@
 	<string name="type.internet_access">Интернет</string>
 	<string name="type.internet_access.wlan">Интернет</string>
 	<string name="type.junction">Перекрёсток</string>
+	<string name="type.junction.circular">Кольцо</string>
 	<string name="type.junction.roundabout">Кольцо</string>
 	<string name="type.landuse">Землепользование</string>
 	<string name="type.landuse.allotments">Земельные участки</string>
@@ -1541,13 +1554,16 @@
 	<string name="type.railway.preserved.bridge">Законсервированная Ж/Д</string>
 	<string name="type.railway.preserved.tunnel">Законсервированная Ж/Д</string>
 	<string name="type.railway.rail">Железнодорожный путь</string>
-	<string name="type.railway.rail.highspeed">Железнодорожный путь</string>
-	<string name="type.railway.rail.tourism">Железнодорожный путь</string>
-	<string name="type.railway.rail.main">Железнодорожный путь</string>
-	<string name="type.railway.rail.branch">Железнодорожный путь</string>
-	<string name="type.railway.rail.utility">Железнодорожный путь</string>
-	<string name="type.railway.rail.spur">Подъездная Ж/Д</string>
-	<string name="type.railway.rail.service">Железнодорожный путь</string>
+	<string name="type.railway.rail.highspeed">Высокоскоростная железная дорога</string>
+	<string name="type.railway.rail.tourism">Туристическая железная дорога</string>
+	<string name="type.railway.rail.main">Железная дорога</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Второстепенная железная дорога</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Служебная железная дорога</string>
+	<string name="type.railway.rail.spur">Подъездной Ж/Д путь</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Вспомогательный Ж/Д путь</string>
 	<string name="type.railway.rail.bridge">Железнодорожный мост</string>
 	<string name="type.railway.rail.highspeed.bridge">Железнодорожный мост</string>
 	<string name="type.railway.rail.tourism.bridge">Железнодорожный мост</string>
@@ -1669,6 +1685,7 @@
 	<string name="type.railway.station.subway.taoyuan">Метро</string>
 	<string name="type.railway.station.subway.tashkent">Метро</string>
 	<string name="type.railway.station.subway.tbilisi">Метро</string>
+	<string name="type.railway.station.subway.tehran">Метро</string>
 	<string name="type.railway.station.subway.tianjin">Метро</string>
 	<string name="type.railway.station.subway.tokyo">Метро</string>
 	<string name="type.railway.station.subway.valencia">Метро</string>
@@ -1782,6 +1799,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Вход в метро</string>
 	<string name="type.railway.subway_entrance.tashkent">Вход в метро</string>
 	<string name="type.railway.subway_entrance.tbilisi">Вход в метро</string>
+	<string name="type.railway.subway_entrance.tehran">Вход в метро</string>
 	<string name="type.railway.subway_entrance.tianjin">Вход в метро</string>
 	<string name="type.railway.subway_entrance.tokyo">Вход в метро</string>
 	<string name="type.railway.subway_entrance.valencia">Вход в метро</string>
@@ -1947,6 +1965,7 @@
 	<string name="type.sport.badminton">Бадминтон</string>
 	<string name="type.sport.pelota">Баскская пелота</string>
 	<string name="type.tourism">Туризм</string>
+	<string name="type.tourism.aquarium">Аквариум</string>
 	<string name="type.tourism.alpine_hut">Горный отель</string>
 	<string name="type.tourism.apartment">Апартаменты</string>
 	<string name="type.tourism.artwork">Произведение искусства</string>
@@ -1986,10 +2005,10 @@
 	<string name="type.waterway.fish_pass">Рыбоход</string>
 	<string name="type.waterway.dam">Дамба</string>
 	<string name="type.waterway.ditch">Канава</string>
-	<string name="type.waterway.ditch.tunnel">Канава</string>
+	<string name="type.waterway.ditch.tunnel">Водопропускная труба</string>
 	<string name="type.waterway.dock">Причал</string>
 	<string name="type.waterway.drain">Водоотвод</string>
-	<string name="type.waterway.drain.tunnel">Водоотвод</string>
+	<string name="type.waterway.drain.tunnel">Водопропускная труба</string>
 	<string name="type.waterway.lock_gate">Шлюз</string>
 	<string name="type.waterway.river">Река</string>
 	<string name="type.waterway.river.tunnel">Река</string>

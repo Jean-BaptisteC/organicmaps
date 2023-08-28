@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1285,7 +1285,7 @@
 
 "type.aeroway.taxiway" = "Taxibaan";
 
-"type.aeroway.terminal" = "Terminal";
+"type.aeroway.terminal" = "Luchthaventerminal";
 
 "type.amenity" = "Voorzieningen";
 
@@ -1324,6 +1324,12 @@
 "type.amenity.car_wash" = "Car Wash";
 
 "type.amenity.casino" = "Casino";
+
+"type.amenity.gambling" = "Gokken";
+
+"type.leisure.adult_gaming_centre" = "Gamingcentrum voor volwassenen";
+
+"type.leisure.amusement_arcade" = "Arcade";
 
 "type.amenity.charging_station" = "Oplaadstation";
 
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Ondergrondse parking";
 
+"type.amenity.parking.street_side" = "Parkeerplaats";
+
+"type.amenity.parking.lane" = "Parkeerplaats";
+
 "type.amenity.parking_entrance" = "Parkeeringang";
 
 "type.amenity.parking_entrance.private" = "Parkeeringang";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Tempel";
 
 "type.amenity.place_of_worship.christian" = "Kerk";
+
+"type.amenity.place_of_worship.christian.mormon" = "Kerk van Jezus Christus van de Heiligen der Laatste Dagen";
 
 "type.amenity.place_of_worship.hindu" = "Tempel";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Beschutting";
 
 "type.amenity.shower" = "Douche";
+
+"type.amenity.stripclub" = "Stripclub";
 
 "type.amenity.taxi" = "Taxi";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Noodgeval";
 
+"type.emergency.assembly_point" = "Verzamelpunt voor noodgevallen";
+
 "type.emergency.defibrillator" = "Defibrillator (AED)";
 
 "type.emergency.fire_hydrant" = "Brandkraan";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Tunnel";
 
 "type.highway.busway" = "Speciale busweg";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Brug";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Tunnel";
 
 "type.highway.bus_stop" = "Bushalte";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Draadloos internet";
 
 "type.junction" = "Kruispunt";
+
+"type.junction.circular" = "Rotonde";
 
 "type.junction.roundabout" = "Rotonde";
 
@@ -2802,19 +2826,22 @@
 
 "type.railway.rail" = "Spoorlijn";
 
-"type.railway.rail.highspeed" = "Spoorlijn";
+"type.railway.rail.highspeed" = "Hogesnelheidstrein";
 
-"type.railway.rail.tourism" = "Spoorlijn";
+"type.railway.rail.tourism" = "Toeristische spoorlijn";
 
-"type.railway.rail.main" = "Spoorlijn";
+"type.railway.rail.main" = "Spoor";
 
-"type.railway.rail.branch" = "Spoorlijn";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Secundaire spoorwegen";
 
-"type.railway.rail.utility" = "Spoorlijn";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Spoorwegen";
 
 "type.railway.rail.spur" = "Zijspoor";
 
-"type.railway.rail.service" = "Spoorlijn";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Hulpspoor";
 
 "type.railway.rail.bridge" = "Treinspoorbrug";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "Metrostation";
 
+"type.railway.station.subway.tehran" = "Metrostation";
+
 "type.railway.station.subway.tianjin" = "Metrostation";
 
 "type.railway.station.subway.tokyo" = "Metrostation";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Metro ingang";
 
 "type.railway.subway_entrance.tbilisi" = "Metro ingang";
+
+"type.railway.subway_entrance.tehran" = "Metro ingang";
 
 "type.railway.subway_entrance.tianjin" = "Metro ingang";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourisme";
 
+"type.tourism.aquarium" = "Aquarium";
+
 "type.tourism.alpine_hut" = "Berghut";
 
 "type.tourism.apartment" = "Appartementen";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "Sloot";
 
-"type.waterway.ditch.tunnel" = "Sloot";
+"type.waterway.ditch.tunnel" = "Duiker";
 
 "type.waterway.dock" = "Dok";
 
 "type.waterway.drain" = "Afvoer";
 
-"type.waterway.drain.tunnel" = "Afvoer";
+"type.waterway.drain.tunnel" = "Duiker";
 
 "type.waterway.lock_gate" = "Sluisdeur";
 

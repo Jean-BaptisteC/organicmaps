@@ -720,6 +720,9 @@
 	<string name="type.amenity.car_rental">مکان اجاره ماشین</string>
 	<string name="type.amenity.car_wash">کارواش</string>
 	<string name="type.amenity.casino">قمارخانه</string>
+	<string name="type.amenity.gambling">قمار</string>
+	<string name="type.leisure.adult_gaming_centre">مرکز بازی بزرگسالان</string>
+	<string name="type.leisure.amusement_arcade">گذرگاه طاقدار</string>
 	<string name="type.amenity.charging_station">ایستگاه شارژ</string>
 	<string name="type.amenity.charging_station.bicycle">ایستگاه شارژ دوچرخه</string>
 	<string name="type.amenity.charging_station.motorcar">ایستگاه شارژ موتور</string>
@@ -768,6 +771,8 @@
 	<string name="type.amenity.parking.private">ﯽﺻﺎﺼﺘﺧﺍ ﮓﻨﯿﮐﺭﺎﭘ</string>
 	<string name="type.amenity.parking.park_and_ride">پارکینگ</string>
 	<string name="type.amenity.parking.underground">ﯽﻨﯿﻣﺯ ﺮﯾﺯ ﮓﻨﯿﮐﺭﺎﭘ</string>
+	<string name="type.amenity.parking.street_side">پارکینگ</string>
+	<string name="type.amenity.parking.lane">پارکینگ</string>
 	<string name="type.amenity.parking_entrance">ﮓﻨﯿﮐﺭﺎﭘ ﯼﺩﻭﺭﻭ</string>
 	<string name="type.amenity.parking_entrance.private">ﮓﻨﯿﮐﺭﺎﭘ ﯼﺩﻭﺭﻭ</string>
 	<string name="type.amenity.parking_entrance.permissive">ﮓﻨﯿﮐﺭﺎﭘ ﯼﺩﻭﺭﻭ</string>
@@ -781,6 +786,7 @@
 	<string name="type.amenity.place_of_worship">گردشگری</string>
 	<string name="type.amenity.place_of_worship.buddhist">گردشگری</string>
 	<string name="type.amenity.place_of_worship.christian">گردشگری</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">کلیسای عیسی مسیح مقدسین آخرالزمان</string>
 	<string name="type.amenity.place_of_worship.hindu">گردشگری</string>
 	<string name="type.amenity.place_of_worship.jewish">گردشگری</string>
 	<string name="type.amenity.place_of_worship.muslim">گردشگری</string>
@@ -807,6 +813,7 @@
 	<string name="type.amenity.school">مدرسه</string>
 	<string name="type.amenity.shelter">پناهگاه</string>
 	<string name="type.amenity.shower">حمام</string>
+	<string name="type.amenity.stripclub">باشگاه استریپ</string>
 	<string name="type.amenity.taxi">تاکسی</string>
 	<string name="type.amenity.telephone">تلفن خانه</string>
 	<string name="type.amenity.theatre">سرگرمی</string>
@@ -872,6 +879,7 @@
 	<string name="type.craft.shoemaker">کفاش</string>
 	<string name="type.craft.winery">شراب‌خانه</string>
 	<string name="type.craft.tailor">خیاطی</string>
+	<string name="type.emergency.assembly_point">محل تجمع اضطراری</string>
 	<string name="type.emergency.defibrillator">دستگاه شوک</string>
 	<string name="type.emergency.fire_hydrant">شیر آتش‌نشانی</string>
 	<string name="type.emergency.phone">تلفن اضطراری</string>
@@ -897,6 +905,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">تونل</string>
 	<string name="type.highway.busway">ﺱﻮﺑﻮﺗﺍ ﯽﺻﺎﺼﺘﺧﺍ ﻩﺩﺎﺟ</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">پل</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">تونل</string>
 	<string name="type.highway.bus_stop">حمل و نقل</string>
 	<string name="type.highway.construction">جاده در دست ساخت است</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
@@ -1235,13 +1247,32 @@
 	<string name="type.railway.level_crossing">تقاطع راه آهن</string>
 	<string name="type.railway.monorail">مونوریل</string>
 	<string name="type.railway.rail">راه آهن</string>
-	<string name="type.railway.rail.highspeed">راه آهن</string>
-	<string name="type.railway.rail.tourism">راه آهن</string>
+	<string name="type.railway.rail.highspeed">راه آهن پرسرعت</string>
+	<string name="type.railway.rail.tourism">راه آهن توریستی</string>
 	<string name="type.railway.rail.main">راه آهن</string>
-	<string name="type.railway.rail.branch">راه آهن</string>
-	<string name="type.railway.rail.utility">راه آهن</string>
-	<string name="type.railway.rail.spur">راه آهن</string>
-	<string name="type.railway.rail.service">راه آهن</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">راه آهن ثانویه</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">راه آهن شهری</string>
+	<string name="type.railway.rail.spur">خار راه آهن</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">ریل کمکی</string>
+	<string name="type.railway.rail.bridge">پل راه آهن</string>
+	<string name="type.railway.rail.highspeed.bridge">پل راه آهن</string>
+	<string name="type.railway.rail.tourism.bridge">پل راه آهن</string>
+	<string name="type.railway.rail.main.bridge">پل راه آهن</string>
+	<string name="type.railway.rail.branch.bridge">پل راه آهن</string>
+	<string name="type.railway.rail.utility.bridge">پل راه آهن</string>
+	<string name="type.railway.rail.spur.bridge">پل راه آهن</string>
+	<string name="type.railway.rail.service.bridge">پل راه آهن</string>
+	<string name="type.railway.rail.tunnel">تونل راه آهن</string>
+	<string name="type.railway.rail.highspeed.tunnel">تونل راه آهن</string>
+	<string name="type.railway.rail.tourism.tunnel">تونل راه آهن</string>
+	<string name="type.railway.rail.main.tunnel">تونل راه آهن</string>
+	<string name="type.railway.rail.branch.tunnel">تونل راه آهن</string>
+	<string name="type.railway.rail.utility.tunnel">تونل راه آهن</string>
+	<string name="type.railway.rail.spur.tunnel">تونل راه آهن</string>
+	<string name="type.railway.rail.service.tunnel">تونل راه آهن</string>
 	<string name="type.railway.station">ایستگاه قطار</string>
 	<string name="type.railway.station.funicular">فونیکولور</string>
 	<string name="type.railway.station.light_rail">ایستگاه قطار</string>
@@ -1347,6 +1378,7 @@
 	<string name="type.railway.station.subway.taoyuan">حمل و نقل</string>
 	<string name="type.railway.station.subway.tashkent">حمل و نقل</string>
 	<string name="type.railway.station.subway.tbilisi">حمل و نقل</string>
+	<string name="type.railway.station.subway.tehran">حمل و نقل</string>
 	<string name="type.railway.station.subway.tianjin">حمل و نقل</string>
 	<string name="type.railway.station.subway.tokyo">حمل و نقل</string>
 	<string name="type.railway.station.subway.valencia">حمل و نقل</string>
@@ -1457,6 +1489,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">ورودی مترو</string>
 	<string name="type.railway.subway_entrance.tashkent">ورودی مترو</string>
 	<string name="type.railway.subway_entrance.tbilisi">ورودی مترو</string>
+	<string name="type.railway.subway_entrance.tehran">ورودی مترو</string>
 	<string name="type.railway.subway_entrance.tianjin">ورودی مترو</string>
 	<string name="type.railway.subway_entrance.tokyo">ورودی مترو</string>
 	<string name="type.railway.subway_entrance.valencia">ورودی مترو</string>
@@ -1615,6 +1648,7 @@
 	<string name="type.sport.field_hockey">ﻦﻤﭼ ﯼﻭﺭ ﯽﮐﺎﻫ</string>
 	<string name="type.sport.badminton">ﻥﻮﺘﻨﯿﻣﺪﺑ</string>
 	<string name="type.sport.pelota">ﯽﮑﺳﺎﺑ ﯼﺎﺗﻮﻠﭘ</string>
+	<string name="type.tourism.aquarium">آکواریوم</string>
 	<string name="type.tourism.apartment">اپارتمان</string>
 	<string name="type.tourism.artwork">گردشگری</string>
 	<string name="type.tourism.artwork.architecture">گردشگری</string>

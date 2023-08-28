@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Kasiino";
 
+"type.amenity.gambling" = "Hasartmängud";
+
+"type.leisure.adult_gaming_centre" = "Täiskasvanute mängukeskus";
+
+"type.leisure.amusement_arcade" = "Arkaad";
+
 "type.amenity.charging_station" = "Laadimisjaam";
 
 "type.amenity.charging_station.bicycle" = "Jalgratta laadimisjaam";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Maa-alune parkimine";
 
+"type.amenity.parking.street_side" = "Parkimine";
+
+"type.amenity.parking.lane" = "Parkimine";
+
 "type.amenity.parking_entrance" = "Parkla sissepääs";
 
 "type.amenity.parking_entrance.private" = "Parkla sissepääs";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Tempel";
 
 "type.amenity.place_of_worship.christian" = "Kirik";
+
+"type.amenity.place_of_worship.christian.mormon" = "Viimse Aja Pühade Jeesuse Kristuse kirik";
 
 "type.amenity.place_of_worship.hindu" = "Tempel";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Varjupaik";
 
 "type.amenity.shower" = "Dušš";
+
+"type.amenity.stripclub" = "Stripiklubi";
 
 "type.amenity.taxi" = "Takso";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Hädaabi";
 
+"type.emergency.assembly_point" = "Erakorraline kogunemispunkt";
+
 "type.emergency.defibrillator" = "Defibrillaator";
 
 "type.emergency.fire_hydrant" = "Tuletõrjehüdrant";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Tunnel";
 
 "type.highway.busway" = "Spetsiaalne bussitee";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Sild";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Tunnel";
 
 "type.highway.bus_stop" = "Bussipeatus";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Ristmik";
+
+"type.junction.circular" = "Ringtee";
 
 "type.junction.roundabout" = "Ringtee";
 
@@ -2802,19 +2826,22 @@
 
 "type.railway.rail" = "Raudtee";
 
-"type.railway.rail.highspeed" = "Raudtee";
+"type.railway.rail.highspeed" = "Kiirraudtee";
 
-"type.railway.rail.tourism" = "Raudtee";
+"type.railway.rail.tourism" = "Turismiraudtee";
 
 "type.railway.rail.main" = "Raudtee";
 
-"type.railway.rail.branch" = "Raudtee";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Teisene raudtee";
 
-"type.railway.rail.utility" = "Raudtee";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Teenindus raudtee";
 
 "type.railway.rail.spur" = "Rööbastee";
 
-"type.railway.rail.service" = "Raudtee";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Lisarööpmel rööbastee";
 
 "type.railway.rail.bridge" = "Raudtee sild";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "Metroo";
 
+"type.railway.station.subway.tehran" = "Metroo";
+
 "type.railway.station.subway.tianjin" = "Metroo";
 
 "type.railway.station.subway.tokyo" = "Metroo";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Metroo sissepääs";
 
 "type.railway.subway_entrance.tbilisi" = "Metroo sissepääs";
+
+"type.railway.subway_entrance.tehran" = "Metroo sissepääs";
 
 "type.railway.subway_entrance.tianjin" = "Metroo sissepääs";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Turism";
 
+"type.tourism.aquarium" = "Akvaarium";
+
 "type.tourism.alpine_hut" = "Mägimajutus";
 
 "type.tourism.apartment" = "Korterid";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "Kraav";
 
-"type.waterway.ditch.tunnel" = "Kraav";
+"type.waterway.ditch.tunnel" = "Truup";
 
 "type.waterway.dock" = "Veetee dokk";
 
 "type.waterway.drain" = "Kuivenduskraav";
 
-"type.waterway.drain.tunnel" = "Kuivenduskraav";
+"type.waterway.drain.tunnel" = "Truup";
 
 "type.waterway.lock_gate" = "Lüüsi värav";
 

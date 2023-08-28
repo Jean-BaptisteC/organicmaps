@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "คาสิโน";
 
+"type.amenity.gambling" = "การพนัน";
+
+"type.leisure.adult_gaming_centre" = "ศูนย์เกมสำหรับผู้ใหญ่";
+
+"type.leisure.amusement_arcade" = "อาเขต";
+
 "type.amenity.charging_station" = "สถานีชาร์จ";
 
 "type.amenity.charging_station.bicycle" = "สถานีชาร์จจักรยาน";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "ที่จอดรถใต้ดิน";
 
+"type.amenity.parking.street_side" = "ที่จอดรถ";
+
+"type.amenity.parking.lane" = "ที่จอดรถ";
+
 "type.amenity.parking_entrance" = "ทางเข้าที่จอดรถ";
 
 "type.amenity.parking_entrance.private" = "ทางเข้าที่จอดรถ";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "วัด";
 
 "type.amenity.place_of_worship.christian" = "โบสถ์";
+
+"type.amenity.place_of_worship.christian.mormon" = "โบสถ์พระเยซูคริสต์แห่งวิสุทธิชนยุคสุดท้าย";
 
 "type.amenity.place_of_worship.hindu" = "วัด";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "ที่อยู่อาศัย";
 
 "type.amenity.shower" = "ฝักบัวอาบน้ำ";
+
+"type.amenity.stripclub" = "สตริปคลับ";
 
 "type.amenity.taxi" = "แท็กซี่";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "จุดรวมพลฉุกเฉิน";
+
 "type.emergency.defibrillator" = "เครื่องกระตุ้นหัวใจ";
 
 "type.emergency.fire_hydrant" = "หัวจ่ายน้ำดับเพลิง";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "อุโมงค์";
 
 "type.highway.busway" = "ถนนทางเดินรถโดยเฉพาะ";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "สะพาน";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "อุโมงค์";
 
 "type.highway.bus_stop" = "ป้ายรถเมล์";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "อินเทอร์เน็ต";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "รถไฟ";
 
-"type.railway.rail.highspeed" = "รถไฟ";
+"type.railway.rail.highspeed" = "รถไฟความเร็วสูง";
 
-"type.railway.rail.tourism" = "รถไฟ";
+"type.railway.rail.tourism" = "รถไฟท่องเที่ยว";
 
 "type.railway.rail.main" = "รถไฟ";
 
-"type.railway.rail.branch" = "รถไฟ";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "รถไฟสายรอง";
 
-"type.railway.rail.utility" = "รถไฟ";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "ยูทิลิตี้รถไฟ";
 
-"type.railway.rail.spur" = "รถไฟ";
+"type.railway.rail.spur" = "เดือยรถไฟ";
 
-"type.railway.rail.service" = "รถไฟ";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "รางรถไฟเสริม";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "สะพานรถไฟ";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "สะพานรถไฟ";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "สะพานรถไฟ";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "สะพานรถไฟ";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "สะพานรถไฟ";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "สะพานรถไฟ";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "สะพานรถไฟ";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "สะพานรถไฟ";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "อุโมงค์รถไฟ";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "อุโมงค์รถไฟ";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "อุโมงค์รถไฟ";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "อุโมงค์รถไฟ";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "อุโมงค์รถไฟ";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "อุโมงค์รถไฟ";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "อุโมงค์รถไฟ";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "อุโมงค์รถไฟ";
 
 "type.railway.station" = "สถานีรถไฟ";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "รถไฟ";
 
 "type.railway.station.subway.tbilisi" = "รถไฟ";
+
+"type.railway.station.subway.tehran" = "รถไฟ";
 
 "type.railway.station.subway.tianjin" = "รถไฟ";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "ทางเข้ารถไฟใต้ดิน";
 
 "type.railway.subway_entrance.tbilisi" = "ทางเข้ารถไฟใต้ดิน";
+
+"type.railway.subway_entrance.tehran" = "ทางเข้ารถไฟใต้ดิน";
 
 "type.railway.subway_entrance.tianjin" = "ทางเข้ารถไฟใต้ดิน";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "พิพิธภัณฑ์สัตว์น้ำ";
+
 "type.tourism.alpine_hut" = "ที่พักบนภูเขาโรงแรม";
 
 "type.tourism.apartment" = "อพาร์ตเมนต์";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "ประตูระบายน้ำ";
 

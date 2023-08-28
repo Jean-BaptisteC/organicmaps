@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Divertisment";
 
+"type.amenity.gambling" = "Jocuri de noroc";
+
+"type.leisure.adult_gaming_centre" = "Centru de jocuri pentru adulți";
+
+"type.leisure.amusement_arcade" = "Arcadă";
+
 "type.amenity.charging_station" = "Stație încărcare";
 
 "type.amenity.charging_station.bicycle" = "Stație de încărcare pentru biciclete";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Parcare subterană";
 
+"type.amenity.parking.street_side" = "Parcare";
+
+"type.amenity.parking.lane" = "Parcare";
+
 "type.amenity.parking_entrance" = "Intrare parcare";
 
 "type.amenity.parking_entrance.private" = "Intrare parcare";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Templu";
 
 "type.amenity.place_of_worship.christian" = "Biserică";
+
+"type.amenity.place_of_worship.christian.mormon" = "Biserica lui Isus Hristos a Sfinților din Zilele din Urmă";
 
 "type.amenity.place_of_worship.hindu" = "Templu";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Adăpost";
 
 "type.amenity.shower" = "Duș";
+
+"type.amenity.stripclub" = "Stripclub";
 
 "type.amenity.taxi" = "Taxi Stand";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Punct de adunare de urgență";
+
 "type.emergency.defibrillator" = "Defibrilator";
 
 "type.emergency.fire_hydrant" = "Hidrant";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Tunel";
 
 "type.highway.busway" = "Drum dedicat autobuzului";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Pod";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Tunel";
 
 "type.highway.bus_stop" = "Stație de autobuz";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Cale ferată";
 
-"type.railway.rail.highspeed" = "Cale ferată";
+"type.railway.rail.highspeed" = "Calea ferată de mare viteză";
 
-"type.railway.rail.tourism" = "Cale ferată";
+"type.railway.rail.tourism" = "Calea ferată turistică";
 
-"type.railway.rail.main" = "Cale ferată";
+"type.railway.rail.main" = "Calea ferată";
 
-"type.railway.rail.branch" = "Cale ferată";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Calea ferată secundară";
 
-"type.railway.rail.utility" = "Cale ferată";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Calea ferată utilitară";
 
-"type.railway.rail.spur" = "Cale ferată";
+"type.railway.rail.spur" = "Pinteni de cale ferată";
 
-"type.railway.rail.service" = "Cale ferată";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Calea ferată auxiliară";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Podul de cale ferată";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Podul de cale ferată";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Podul de cale ferată";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Podul de cale ferată";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Podul de cale ferată";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Podul de cale ferată";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Podul de cale ferată";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Podul de cale ferată";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Tunel de cale ferată";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Tunel de cale ferată";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Tunel de cale ferată";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Tunel de cale ferată";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Tunel de cale ferată";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Tunel de cale ferată";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Tunel de cale ferată";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Tunel de cale ferată";
 
 "type.railway.station" = "Feroviar";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Metrou";
 
 "type.railway.station.subway.tbilisi" = "Metrou";
+
+"type.railway.station.subway.tehran" = "Metrou";
 
 "type.railway.station.subway.tianjin" = "Metrou";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Intrare în metro";
 
 "type.railway.subway_entrance.tbilisi" = "Intrare în metro";
+
+"type.railway.subway_entrance.tehran" = "Intrare în metro";
 
 "type.railway.subway_entrance.tianjin" = "Intrare în metro";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "Acvariu";
+
 "type.tourism.alpine_hut" = "Cabană de munte";
 
 "type.tourism.apartment" = "Apartamente";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "Ecluză";
 

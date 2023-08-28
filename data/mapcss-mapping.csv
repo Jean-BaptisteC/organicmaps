@@ -428,7 +428,7 @@ highway|unclassified|area;[highway=unclassified][area?];;name;int_name;354;
 natural|volcano;355;
 deprecated:amenity|parking|underground|fee:01.2020;[amenity=parking][location=underground][fee?],[amenity=parking][parking=underground][fee?];x;name;int_name;356;amenity|parking|underground
 amenity|parking|underground;[amenity=parking][location=underground],[amenity=parking][parking=underground];;name;int_name;357;
-deprecated|deprecated;358;x
+amenity|parking|street_side;[amenity=parking][parking=street_side];;name;int_name;358;
 amenity|parking|multi-storey;[amenity=parking][parking=multi-storey];;name;int_name;359;
 leisure|recreation_ground;360;
 highway|footway|mountain_hiking;[highway=footway][sac_scale=mountain_hiking];;name;int_name;361;
@@ -438,6 +438,7 @@ sport|9pin;364;
 sport|10pin;365;
 piste:type|downhill|novice;[piste:type=downhill][piste:difficulty=novice];;name;int_name;366;
 railway|narrow_gauge|bridge;[railway=narrow_gauge][bridge?];;name;int_name;367;
+amenity|parking|lane;[amenity=parking][parking=lane];;name;int_name;368;
 railway|rail|main|tunnel;[railway=rail][usage=main][!highspeed][!service][tunnel?];;name;int_name;369;
 highway|bridleway|permissive;[highway=bridleway][access=permissive];;name;int_name;370;
 railway|construction;371;
@@ -480,7 +481,7 @@ deprecated:historic|museum:10.2021;[historic=museum];x;name;int_name;406;tourism
 highway|living_street|bridge;[highway=living_street][bridge?];;name;int_name;407;
 leisure|track|area;[leisure=track][area?];;name;int_name;408;
 railway|monorail;409;
-railway|rail|highspeed;[railway=rail][highspeed?];;name;int_name;410;
+railway|rail|highspeed;[railway=rail][highspeed?][!service];;name;int_name;410;
 deprecated|deprecated;411;x
 leisure|park|private;[leisure=park][access=private];;name;int_name;412;
 healthcare|physiotherapist;413;
@@ -922,9 +923,9 @@ deprecated|deprecated;848;x
 deprecated|deprecated;849;x
 deprecated|deprecated;850;x
 deprecated|deprecated;851;x
-railway|rail|highspeed|bridge;[railway=rail][highspeed?][bridge?];;name;int_name;852;
+railway|rail|highspeed|bridge;[railway=rail][highspeed?][!service][bridge?];;name;int_name;852;
 railway|rail|tourism|bridge;[railway=rail][usage=tourism][!service][bridge?];;name;int_name;853;
-railway|rail|highspeed|tunnel;[railway=rail][highspeed?][tunnel?];;name;int_name;854;
+railway|rail|highspeed|tunnel;[railway=rail][highspeed?][!service][tunnel?];;name;int_name;854;
 railway|rail|tourism|tunnel;[railway=rail][usage=tourism][!service][tunnel?];;name;int_name;855;
 mapswithme|grid;856;
 highway|service|busway;[highway=service][service=busway];;name;int_name;857;
@@ -937,7 +938,7 @@ amenity|exhibition_centre;863;
 deprecated:railway|siding|tunnel:06.2023;864;x
 deprecated:railway|yard|tunnel:06.2023;865;x
 area:highway|footway;866;
-deprecated|deprecated;867;x
+junction|circular;867;
 area:highway|residential;868;
 area:highway|secondary;869;
 area:highway|tertiary;870;
@@ -1079,6 +1080,7 @@ place|city|capital|10;[place=city][capital=10],[place=city][capital?][admin_leve
 place|city|capital|11;[place=city][capital=11],[place=city][capital?][admin_level=11];;name;int_name;1006;
 hwtag|yesfoot;1007;
 public_transport|platform;1008;
+# Useless now, it is detected by the classifier, but has no any rules and isn't set as an exception.
 junction;[junction];;name;int_name;1009;
 aeroway|aerodrome|international;[aeroway=aerodrome][aerodrome=international],[aeroway=aerodrome][aerodrome:type=international];;name;int_name;1010;
 railway|station|light_rail;[railway=station][station=light_rail],[railway=station][transport=light_rail];;name;int_name;1011;
@@ -1572,7 +1574,7 @@ railway|subway_entrance|lausanne;[railway=subway_entrance][city=lausanne];;name;
 railway|subway_entrance|lille;[railway=subway_entrance][city=lille];;name;int_name;1499;
 railway|subway_entrance|lima;[railway=subway_entrance][city=lima];;name;int_name;1500;
 railway|subway_entrance|lisboa;[railway=subway_entrance][city=lisboa];;name;int_name;1501;
-deprecated|deprecated;1502;x
+railway|subway_entrance|tehran;[railway=subway_entrance][city=tehran];;name;int_name;1502;
 railway|subway_entrance|lyon;[railway=subway_entrance][city=lyon];;name;int_name;1503;
 railway|subway_entrance|malaga;[railway=subway_entrance][city=malaga];;name;int_name;1504;
 railway|subway_entrance|manila;[railway=subway_entrance][city=manila];;name;int_name;1505;
@@ -1635,3 +1637,11 @@ shop|herbalist;1561;
 shop|camera;1562;
 shop|auction;1563;
 shop|collector;1564;
+railway|station|subway|tehran;[railway=station][transport=subway][city=tehran],[railway=station][station=subway][city=tehran];;name;int_name;1565;
+amenity|stripclub;1566;
+tourism|aquarium;1567;
+emergency|assembly_point;1568;
+amenity|gambling;1569;
+leisure|adult_gaming_centre;1570;
+leisure|amusement_arcade;1571;
+amenity|place_of_worship|christian|mormon;[amenity=place_of_worship][religion=christian][denomination=mormon];;name;int_name;1572;

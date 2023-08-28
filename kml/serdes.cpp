@@ -13,8 +13,6 @@
 #include "base/string_utils.hpp"
 #include "base/timer.hpp"
 
-#include <sstream>
-
 namespace kml
 {
 namespace
@@ -52,36 +50,12 @@ std::string const kExtendedDataFooter =
 
 std::string const kCompilationFooter = "</" + kCompilation + ">\n";
 
-std::string Indent(size_t count)
-{
-  return std::string(count, ' ');
-}
-
-std::string const kIndent0 = Indent(0);
-std::string const kIndent2 = Indent(2);
-std::string const kIndent4 = Indent(4);
-std::string const kIndent6 = Indent(6);
-std::string const kIndent8 = Indent(8);
-std::string const kIndent10 = Indent(10);
-
-std::string PointToString(m2::PointD const & org)
-{
-  double const lon = mercator::XToLon(org.x);
-  double const lat = mercator::YToLat(org.y);
-
-  std::ostringstream ss;
-  ss.precision(8);
-
-  ss << lon << "," << lat;
-  return ss.str();
-}
-
-std::string PointToString(geometry::PointWithAltitude const & pt)
-{
-  if (pt.GetAltitude() != geometry::kInvalidAltitude)
-    return PointToString(pt.GetPoint()) + "," + strings::to_string(pt.GetAltitude());
-  return PointToString(pt.GetPoint());
-}
+std::string_view constexpr kIndent0 = {};
+std::string_view constexpr kIndent2 = {"  "};
+std::string_view constexpr kIndent4 = {"    "};
+std::string_view constexpr kIndent6 = {"      "};
+std::string_view constexpr kIndent8 = {"        "};
+std::string_view constexpr kIndent10 = {"          "};
 
 std::string GetLocalizableString(LocalizableString const & s, int8_t lang)
 {
@@ -201,18 +175,18 @@ void SaveStringWithCDATA(KmlWriter::WriterWrapper & writer, std::string s)
 }
 
 void SaveStyle(KmlWriter::WriterWrapper & writer, std::string const & style,
-               std::string const & offsetStr)
+               std::string_view const & indent)
 {
   if (style.empty())
     return;
 
-  writer << offsetStr << kIndent2 << "<Style id=\"" << style << "\">\n"
-         << offsetStr << kIndent4 << "<IconStyle>\n"
-         << offsetStr << kIndent6 << "<Icon>\n"
-         << offsetStr << kIndent8 << "<href>https://omaps.app/placemarks/" << style << ".png</href>\n"
-         << offsetStr << kIndent6 << "</Icon>\n"
-         << offsetStr << kIndent4 << "</IconStyle>\n"
-         << offsetStr << kIndent2 << "</Style>\n";
+  writer << indent << kIndent2 << "<Style id=\"" << style << "\">\n"
+         << indent << kIndent4 << "<IconStyle>\n"
+         << indent << kIndent6 << "<Icon>\n"
+         << indent << kIndent8 << "<href>https://omaps.app/placemarks/" << style << ".png</href>\n"
+         << indent << kIndent6 << "</Icon>\n"
+         << indent << kIndent4 << "</IconStyle>\n"
+         << indent << kIndent2 << "</Style>\n";
 }
 
 void SaveColorToABGR(KmlWriter::WriterWrapper & writer, uint32_t rgba)
@@ -233,31 +207,31 @@ std::string TimestampToString(Timestamp const & timestamp)
 }
 
 void SaveLocalizableString(KmlWriter::WriterWrapper & writer, LocalizableString const & str,
-                           std::string const & tagName, std::string const & offsetStr)
+                           std::string const & tagName, std::string_view const & indent)
 {
-  writer << offsetStr << "<mwm:" << tagName << ">\n";
+  writer << indent << "<mwm:" << tagName << ">\n";
   for (auto const & s : str)
   {
-    writer << offsetStr << kIndent2 << "<mwm:lang code=\""
+    writer << indent << kIndent2 << "<mwm:lang code=\""
            << StringUtf8Multilang::GetLangByCode(s.first) << "\">";
     SaveStringWithCDATA(writer, s.second);
     writer << "</mwm:lang>\n";
   }
-  writer << offsetStr << "</mwm:" << tagName << ">\n";
+  writer << indent << "</mwm:" << tagName << ">\n";
 }
 
 template <class StringViewLike>
 void SaveStringsArray(KmlWriter::WriterWrapper & writer,
                       std::vector<StringViewLike> const & stringsArray,
-                      std::string const & tagName, std::string const & offsetStr)
+                      std::string const & tagName, std::string_view const & indent)
 {
   if (stringsArray.empty())
     return;
 
-  writer << offsetStr << "<mwm:" << tagName << ">\n";
+  writer << indent << "<mwm:" << tagName << ">\n";
   for (auto const & s : stringsArray)
   {
-    writer << offsetStr << kIndent2 << "<mwm:value>";
+    writer << indent << kIndent2 << "<mwm:value>";
     // Constants from our code do not need any additional checks or escaping.
     if constexpr (std::is_same_v<StringViewLike, std::string_view>)
     {
@@ -268,24 +242,24 @@ void SaveStringsArray(KmlWriter::WriterWrapper & writer,
       SaveStringWithCDATA(writer, s);
     writer << "</mwm:value>\n";
   }
-  writer << offsetStr << "</mwm:" << tagName << ">\n";
+  writer << indent << "</mwm:" << tagName << ">\n";
 }
 
 void SaveStringsMap(KmlWriter::WriterWrapper & writer,
                     std::map<std::string, std::string> const & stringsMap,
-                    std::string const & tagName, std::string const & offsetStr)
+                    std::string const & tagName, std::string_view const & indent)
 {
   if (stringsMap.empty())
     return;
 
-  writer << offsetStr << "<mwm:" << tagName << ">\n";
+  writer << indent << "<mwm:" << tagName << ">\n";
   for (auto const & p : stringsMap)
   {
-    writer << offsetStr << kIndent2 << "<mwm:value key=\"" << p.first << "\">";
+    writer << indent << kIndent2 << "<mwm:value key=\"" << p.first << "\">";
     SaveStringWithCDATA(writer, p.second);
     writer << "</mwm:value>\n";
   }
-  writer << offsetStr << "</mwm:" << tagName << ">\n";
+  writer << indent << "</mwm:" << tagName << ">\n";
 }
 
 void SaveCategoryData(KmlWriter::WriterWrapper & writer, CategoryData const & categoryData,
@@ -388,26 +362,21 @@ void SaveCategoryData(KmlWriter::WriterWrapper & writer, CategoryData const & ca
   if (compilationData)
   {
     for (uint8_t i = 0; i < base::Underlying(PredefinedColor::Count); ++i)
-    {
-      SaveStyle(writer, GetStyleForPredefinedColor(static_cast<PredefinedColor>(i)),
-                compilationData ? kIndent0 : kIndent2);
-    }
-
-    auto const & indent = compilationData ? kIndent2 : kIndent4;
+      SaveStyle(writer, GetStyleForPredefinedColor(static_cast<PredefinedColor>(i)), kIndent0);
 
     // Use CDATA if we have special symbols in the name.
-    writer << indent << "<name>";
+    writer << kIndent2 << "<name>";
     SaveStringWithCDATA(writer, GetLocalizableString(categoryData.m_name, kDefaultLang));
     writer << "</name>\n";
 
     if (!categoryData.m_description.empty())
     {
-      writer << indent << "<description>";
+      writer << kIndent2 << "<description>";
       SaveStringWithCDATA(writer, GetLocalizableString(categoryData.m_description, kDefaultLang));
       writer << "</description>\n";
     }
 
-    writer << indent << "<visibility>" << (categoryData.m_visible ? "1" : "0") << "</visibility>\n";
+    writer << kIndent2 << "<visibility>" << (categoryData.m_visible ? "1" : "0") << "</visibility>\n";
   }
 
   SaveCategoryExtendedData(writer, categoryData, extendedServerId, compilationData);
@@ -517,12 +486,12 @@ void SaveBookmarkData(KmlWriter::WriterWrapper & writer, BookmarkData const & bo
 }
 
 void SaveTrackLayer(KmlWriter::WriterWrapper & writer, TrackLayer const & layer,
-                    std::string const & offsetStr)
+                    std::string_view const & indent)
 {
-  writer << offsetStr << "<color>";
+  writer << indent << "<color>";
   SaveColorToABGR(writer, layer.m_color.m_rgba);
   writer << "</color>\n";
-  writer << offsetStr << "<width>" << strings::to_string(layer.m_lineWidth) << "</width>\n";
+  writer << indent << "<width>" << strings::to_string(layer.m_lineWidth) << "</width>\n";
 }
 
 void SaveTrackGeometry(KmlWriter::WriterWrapper & writer, MultiGeometry const & geom)
@@ -660,11 +629,13 @@ bool ParsePointWithAltitude(std::string_view s, char const * delim,
 {
   geometry::Altitude altitude = geometry::kInvalidAltitude;
   m2::PointD pt;
-  auto result = ParsePoint(s, delim, pt, altitude);
-  point.SetPoint(std::move(pt));
-  point.SetAltitude(altitude);
-
-  return result;
+  if (ParsePoint(s, delim, pt, altitude))
+  {
+    point.SetPoint(pt);
+    point.SetAltitude(altitude);
+    return true;
+  }
+  return false;
 }
 }  // namespace
 
@@ -834,9 +805,10 @@ double KmlParser::GetTrackWidthForStyle(std::string const & styleUrl) const
   return kDefaultTrackWidth;
 }
 
-bool KmlParser::Push(std::string const & tag)
+bool KmlParser::Push(std::string movedTag)
 {
-  m_tags.push_back(tag);
+  std::string const & tag = m_tags.emplace_back(std::move(movedTag));
+
   if (tag == kCompilation)
   {
     m_categoryData = &m_compilationData;
@@ -845,58 +817,56 @@ bool KmlParser::Push(std::string const & tag)
   else if (IsProcessTrackTag())
   {
     m_geometryType = GEOMETRY_TYPE_LINE;
-    m_geometry.m_lines.push_back({});
+    m_geometry.m_lines.emplace_back();
   }
   return true;
 }
 
-void KmlParser::AddAttr(std::string const & attr, std::string const & value)
+void KmlParser::AddAttr(std::string attr, std::string value)
 {
-  std::string attrInLowerCase = attr;
-  strings::AsciiToLower(attrInLowerCase);
+  strings::AsciiToLower(attr);
 
-  if (IsValidAttribute(kStyle, value, attrInLowerCase))
+  if (IsValidAttribute(kStyle, value, attr))
   {
     m_styleId = value;
   }
-  else if (IsValidAttribute(kStyleMap, value, attrInLowerCase))
+  else if (IsValidAttribute(kStyleMap, value, attr))
   {
     m_mapStyleId = value;
   }
-  else if (IsValidAttribute(kCompilation, value, attrInLowerCase))
+  else if (IsValidAttribute(kCompilation, value, attr))
   {
     if (!strings::to_uint64(value, m_categoryData->m_compilationId))
       m_categoryData->m_compilationId = 0;
   }
 
-  if (attrInLowerCase == "code")
+  if (attr == "code")
   {
     m_attrCode = StringUtf8Multilang::GetLangIndex(value);
   }
-  else if (attrInLowerCase == "id")
+  else if (attr == "id")
   {
     m_attrId = value;
   }
-  else if (attrInLowerCase == "key")
+  else if (attr == "key")
   {
     m_attrKey = value;
   }
-  else if (attrInLowerCase == "type" && !value.empty() && GetTagFromEnd(0) == kCompilation)
+  else if (attr == "type" && !value.empty() && GetTagFromEnd(0) == kCompilation)
   {
-    std::string valueInLowerCase = value;
-    strings::AsciiToLower(valueInLowerCase);
-    if (valueInLowerCase == "category")
+    strings::AsciiToLower(value);
+    if (value == "category")
       m_categoryData->m_type = CompilationType::Category;
-    else if (valueInLowerCase == "collection")
+    else if (value == "collection")
       m_categoryData->m_type = CompilationType::Collection;
-    else if (valueInLowerCase == "day")
+    else if (value == "day")
       m_categoryData->m_type = CompilationType::Day;
     else
       m_categoryData->m_type = CompilationType::Category;
   }
 }
 
-bool KmlParser::IsValidAttribute(std::string_view const & type, std::string const & value,
+bool KmlParser::IsValidAttribute(std::string_view type, std::string const & value,
                                  std::string const & attrInLowerCase) const
 {
   return (GetTagFromEnd(0) == type && !value.empty() && attrInLowerCase == "id");
@@ -914,7 +884,7 @@ bool KmlParser::IsProcessTrackTag() const
   return n >= 3 && IsTrack(m_tags[n - 1]) && (m_tags[n - 2] == kPlacemark || m_tags[n - 3] == kPlacemark);
 }
 
-void KmlParser::Pop(std::string const & tag)
+void KmlParser::Pop(std::string_view tag)
 {
   ASSERT_EQUAL(m_tags.back(), tag, ());
 
@@ -1006,9 +976,13 @@ void KmlParser::Pop(std::string const & tag)
     // loading of KML files which were stored by older versions of OMaps.
     TrackLayer layer;
     layer.m_lineWidth = m_trackWidth;
-    layer.m_color.m_predefinedColor = PredefinedColor::None;
-    layer.m_color.m_rgba = (m_color != 0 ? m_color : kDefaultTrackColor);
-    m_trackLayers.push_back(std::move(layer));
+    // Fix wrongly parsed transparent color, see https://github.com/organicmaps/organicmaps/issues/5800
+    // TODO: Remove this fix in 2024 when all users will have their imported GPX files fixed.
+    if (m_color == 0 || (m_color & 0xFF) < 10)
+      layer.m_color.m_rgba = kDefaultTrackColor;
+    else
+      layer.m_color.m_rgba = m_color;
+    m_trackLayers.push_back(layer);
 
     m_trackWidth = kDefaultTrackWidth;
     m_color = 0;
@@ -1030,18 +1004,19 @@ void KmlParser::Pop(std::string const & tag)
   m_tags.pop_back();
 }
 
-void KmlParser::CharData(std::string value)
+void KmlParser::CharData(std::string & value)
 {
   strings::Trim(value);
 
   size_t const count = m_tags.size();
   if (count > 1 && !value.empty())
   {
-    std::string const & currTag = m_tags[count - 1];
-    std::string const & prevTag = m_tags[count - 2];
-    std::string const ppTag = count > 2 ? m_tags[count - 3] : std::string();
-    std::string const pppTag = count > 3 ? m_tags[count - 4] : std::string();
-    std::string const ppppTag = count > 4 ? m_tags[count - 5] : std::string();
+    using namespace std;
+    string const & currTag = m_tags[count - 1];
+    string const & prevTag = m_tags[count - 2];
+    string_view const ppTag = count > 2 ? m_tags[count - 3] : string_view{};
+    string_view const pppTag = count > 3 ? m_tags[count - 4] : string_view{};
+    string_view const ppppTag = count > 4 ? m_tags[count - 5] : string_view{};
 
     auto const TrackTag = [this, &prevTag, &currTag, &value]()
     {
@@ -1188,7 +1163,7 @@ void KmlParser::CharData(std::string value)
         if (!GetColorForStyle(value, m_color))
         {
           // Remove leading '#' symbol.
-          std::string styleId = m_mapStyle2Style[value.substr(1)];
+          std::string const styleId = m_mapStyle2Style[value.substr(1)];
           if (!styleId.empty())
             GetColorForStyle(styleId, m_color);
         }

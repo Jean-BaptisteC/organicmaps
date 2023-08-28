@@ -736,6 +736,9 @@
 	<string name="type.amenity.car_sharing">कार शेअरिंग</string>
 	<string name="type.amenity.car_wash">कार धुणे</string>
 	<string name="type.amenity.casino">जुगारगृह</string>
+	<string name="type.amenity.gambling">जुगार</string>
+	<string name="type.leisure.adult_gaming_centre">प्रौढ गेमिंग केंद्र</string>
+	<string name="type.leisure.amusement_arcade">आर्केड</string>
 	<string name="type.amenity.charging_station">चार्जिंग केंद्र</string>
 	<string name="type.amenity.charging_station.bicycle">सायकल चार्जिंग स्टेशन</string>
 	<string name="type.amenity.charging_station.motorcar">मोटार कार चार्जिंग स्टेशन</string>
@@ -776,6 +779,8 @@
 	<string name="type.amenity.nursing_home">वृद्धाश्रम</string>
 	<string name="type.amenity.parking">वाहनतळ</string>
 	<string name="type.amenity.parking.park_and_ride">वाहनतळ</string>
+	<string name="type.amenity.parking.street_side">वाहनतळ</string>
+	<string name="type.amenity.parking.lane">वाहनतळ</string>
 	<string name="type.amenity.parking_space">पार्किंगची जागा</string>
 	<string name="type.amenity.parking_space.permissive">पार्किंगची जागा</string>
 	<string name="type.amenity.parking_space.private">पार्किंगची जागा</string>
@@ -785,6 +790,7 @@
 	<string name="type.amenity.place_of_worship">धार्मिक ठिकाण</string>
 	<string name="type.amenity.place_of_worship.buddhist">मंदिर</string>
 	<string name="type.amenity.place_of_worship.christian">चर्च</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">चर्च ऑफ जिझस क्राइस्ट ऑफ लेटर डे सेंट्स</string>
 	<string name="type.amenity.place_of_worship.hindu">मंदिर</string>
 	<string name="type.amenity.place_of_worship.jewish">सिनेगॉग</string>
 	<string name="type.amenity.place_of_worship.muslim">मशीद</string>
@@ -816,6 +822,7 @@
 	<string name="type.amenity.school">शाळा</string>
 	<string name="type.amenity.shelter">निवारा</string>
 	<string name="type.amenity.shower">अंघोळ</string>
+	<string name="type.amenity.stripclub">स्ट्रिपक्लब</string>
 	<string name="type.amenity.taxi">टॅक्सी</string>
 	<string name="type.amenity.telephone">फोन</string>
 	<string name="type.amenity.theatre">नाट्यगृह</string>
@@ -938,6 +945,7 @@
 	<string name="type.cuisine.tea">चहा</string>
 	<string name="type.cuisine.vegetarian">शाकाहारी</string>
 	<string name="type.emergency">आणीबाणी</string>
+	<string name="type.emergency.assembly_point">आपत्कालीन विधानसभा पॉइंट</string>
 	<string name="type.emergency.defibrillator">कंपनरोधक</string>
 	<string name="type.emergency.fire_hydrant">अग्निशामक नळ</string>
 	<string name="type.emergency.phone">संकटकालीन फोन</string>
@@ -964,6 +972,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">बोगदा</string>
 	<string name="type.highway.busway">समर्पित बस रस्ता</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">पूल</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">बोगदा</string>
 	<string name="type.highway.bus_stop">बस थांबा</string>
 	<string name="type.highway.construction">बांधकामाधीन रस्ता</string>
 	<string name="type.highway.cycleway">सायकल वाट</string>
@@ -1165,6 +1177,7 @@
 	<string name="type.internet_access">इंटरनेट</string>
 	<string name="type.internet_access.wlan">इंटरनेट</string>
 	<string name="type.junction">जंक्शन</string>
+	<string name="type.junction.circular">गोलमार्ग</string>
 	<string name="type.junction.roundabout">गोलमार्ग</string>
 	<string name="type.landuse">भूमी उपयोग</string>
 	<string name="type.landuse.allotments">वाटप</string>
@@ -1370,13 +1383,16 @@
 	<string name="type.railway.narrow_gauge.tunnel">अरुंदमापी रेल्वे</string>
 	<string name="type.railway.platform">रेल्वे फलाट</string>
 	<string name="type.railway.rail">रेल्वे</string>
-	<string name="type.railway.rail.highspeed">रेल्वे</string>
-	<string name="type.railway.rail.tourism">रेल्वे</string>
+	<string name="type.railway.rail.highspeed">हाय-स्पीड रेल्वे</string>
+	<string name="type.railway.rail.tourism">पर्यटन रेल्वे</string>
 	<string name="type.railway.rail.main">रेल्वे</string>
-	<string name="type.railway.rail.branch">रेल्वे</string>
-	<string name="type.railway.rail.utility">रेल्वे</string>
-	<string name="type.railway.rail.spur">रेल्वे</string>
-	<string name="type.railway.rail.service">रेल्वे</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">दुय्यम रेल्वे</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">उपयुक्तता रेल्वे</string>
+	<string name="type.railway.rail.spur">रेल्वे स्पर</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">सहायक रेल्वे ट्रॅक</string>
 	<string name="type.railway.rail.bridge">रेल्वे</string>
 	<string name="type.railway.rail.highspeed.bridge">रेल्वे</string>
 	<string name="type.railway.rail.tourism.bridge">रेल्वे</string>
@@ -1498,6 +1514,7 @@
 	<string name="type.railway.station.subway.taoyuan">भुयारी मार्ग</string>
 	<string name="type.railway.station.subway.tashkent">भुयारी मार्ग</string>
 	<string name="type.railway.station.subway.tbilisi">भुयारी मार्ग</string>
+	<string name="type.railway.station.subway.tehran">भुयारी मार्ग</string>
 	<string name="type.railway.station.subway.tianjin">भुयारी मार्ग</string>
 	<string name="type.railway.station.subway.tokyo">भुयारी मार्ग</string>
 	<string name="type.railway.station.subway.valencia">भुयारी मार्ग</string>
@@ -1611,6 +1628,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">भुयारी प्रवेशद्वार</string>
 	<string name="type.railway.subway_entrance.tashkent">भुयारी प्रवेशद्वार</string>
 	<string name="type.railway.subway_entrance.tbilisi">भुयारी प्रवेशद्वार</string>
+	<string name="type.railway.subway_entrance.tehran">भुयारी प्रवेशद्वार</string>
 	<string name="type.railway.subway_entrance.tianjin">भुयारी प्रवेशद्वार</string>
 	<string name="type.railway.subway_entrance.tokyo">भुयारी प्रवेशद्वार</string>
 	<string name="type.railway.subway_entrance.valencia">भुयारी प्रवेशद्वार</string>
@@ -1734,6 +1752,7 @@
 	<string name="type.sport.10pin">गोलंदाजी</string>
 	<string name="type.sport.9pin">गोलंदाजी</string>
 	<string name="type.tourism">पर्यटन</string>
+	<string name="type.tourism.aquarium">मत्स्यालय</string>
 	<string name="type.tourism.apartment">सदनिका</string>
 	<string name="type.tourism.artwork">कलाकृती</string>
 	<string name="type.tourism.artwork.architecture">कलाकृती</string>
@@ -1769,7 +1788,7 @@
 	<string name="type.waterway.ditch.tunnel">खंदक</string>
 	<string name="type.waterway.dock">जलमार्ग गोद</string>
 	<string name="type.waterway.drain">नाला</string>
-	<string name="type.waterway.drain.tunnel">नाला</string>
+	<string name="type.waterway.drain.tunnel">खंदक</string>
 	<string name="type.waterway.lock_gate">जलद्वार</string>
 	<string name="type.waterway.river">नदी</string>
 	<string name="type.waterway.river.tunnel">नदी</string>

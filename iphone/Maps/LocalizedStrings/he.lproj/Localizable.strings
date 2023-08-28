@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Casino";
 
+"type.amenity.gambling" = "הימורים";
+
+"type.leisure.adult_gaming_centre" = "מרכז משחקים למבוגרים";
+
+"type.leisure.amusement_arcade" = "מִקמֶרֶת";
+
 "type.amenity.charging_station" = "Charging Station";
 
 "type.amenity.charging_station.bicycle" = "תחנת טעינה לאופניים";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "תיעקרק - תת הינח";
 
+"type.amenity.parking.street_side" = "היָנָחֲ";
+
+"type.amenity.parking.lane" = "היָנָחֲ";
+
 "type.amenity.parking_entrance" = "הינחל הסינכ";
 
 "type.amenity.parking_entrance.private" = "הינחל הסינכ";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Buddhist Temple";
 
 "type.amenity.place_of_worship.christian" = "Church";
+
+"type.amenity.place_of_worship.christian.mormon" = "כנסיית ישוע המשיח של קדושי אחרון הימים";
 
 "type.amenity.place_of_worship.hindu" = "Hindu Temple";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Shelter";
 
 "type.amenity.shower" = "Shower";
+
+"type.amenity.stripclub" = "מועדון חשפנות";
 
 "type.amenity.taxi" = "Taxi Stand";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "נקודת כינוס חירום";
+
 "type.emergency.defibrillator" = "Defibrillator";
 
 "type.emergency.fire_hydrant" = "Fire Hydrant";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "מִנהָרָה";
 
 "type.highway.busway" = "ידועיי סובוטוא שיבכ";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "לְגַשֵׁר";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "מִנהָרָה";
 
 "type.highway.bus_stop" = "Bus Stop";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Railway";
 
-"type.railway.rail.highspeed" = "Railway";
+"type.railway.rail.highspeed" = "רכבת מהירה";
 
-"type.railway.rail.tourism" = "Railway";
+"type.railway.rail.tourism" = "רכבת תיירות";
 
-"type.railway.rail.main" = "Railway";
+"type.railway.rail.main" = "מסילת רכבת";
 
-"type.railway.rail.branch" = "Railway";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "רכבת משנית";
 
-"type.railway.rail.utility" = "Railway";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "רכבת שירות";
 
-"type.railway.rail.spur" = "Railway";
+"type.railway.rail.spur" = "ספר רכבת";
 
-"type.railway.rail.service" = "Railway";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "מסילת רכבת עזר";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "גשר הרכבת";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "גשר הרכבת";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "גשר הרכבת";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "גשר הרכבת";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "גשר הרכבת";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "גשר הרכבת";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "גשר הרכבת";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "גשר הרכבת";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "מנהרת הרכבת";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "מנהרת הרכבת";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "מנהרת הרכבת";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "מנהרת הרכבת";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "מנהרת הרכבת";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "מנהרת הרכבת";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "מנהרת הרכבת";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "מנהרת הרכבת";
 
 "type.railway.station" = "Train Station";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Subway Station";
 
 "type.railway.station.subway.tbilisi" = "Subway Station";
+
+"type.railway.station.subway.tehran" = "Subway Station";
 
 "type.railway.station.subway.tianjin" = "Subway Station";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Subway Entrance";
 
 "type.railway.subway_entrance.tbilisi" = "Subway Entrance";
+
+"type.railway.subway_entrance.tehran" = "Subway Entrance";
 
 "type.railway.subway_entrance.tianjin" = "Subway Entrance";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "אַקוַרִיוּם";
+
 "type.tourism.alpine_hut" = "Alpine Lodging";
 
 "type.tourism.apartment" = "Holiday Apartment";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "Lock Gate";
 

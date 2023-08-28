@@ -9,8 +9,7 @@ namespace platform
 struct ScopedSettings
 {
   /// Saves/restores previous units and sets new units for a scope.
-  explicit ScopedSettings(measurement_utils::Units newUnits)
-    : m_oldUnits(measurement_utils::Units::Metric)
+  explicit ScopedSettings(measurement_utils::Units newUnits) : m_oldUnits(measurement_utils::Units::Metric)
   {
     m_wasSet = settings::Get(settings::kMeasurementUnits, m_oldUnits);
     settings::Set(settings::kMeasurementUnits, newUnits);
@@ -27,6 +26,15 @@ struct ScopedSettings
   bool m_wasSet;
   measurement_utils::Units m_oldUnits;
 };
+
+UNIT_TEST(Distance_InititalDistance)
+{
+  Distance d;
+  TEST(!d.IsValid(), ());
+  TEST_ALMOST_EQUAL_ULPS(d.GetDistance(), -1.0, ());
+  TEST_EQUAL(d.GetDistanceString(), "", ());
+  TEST_EQUAL(d.ToString(), "", ());
+}
 
 UNIT_TEST(Distance_CreateFormatted)
 {
@@ -100,8 +108,9 @@ UNIT_TEST(Distance_To)
     double newDistance;
     Distance::Units newUnits;
   };
+
   // clang-format off
-  std::vector<TestData> testData{
+  TestData testData[] = {
     {0.1,       Units::Meters,     Units::Feet,       0,    Units::Feet},
     {0.3,       Units::Meters,     Units::Feet,       1,    Units::Feet},
     {0.3048,    Units::Meters,     Units::Feet,       1,    Units::Feet},
@@ -118,20 +127,23 @@ UNIT_TEST(Distance_To)
     {402.3,     Units::Meters,     Units::Feet,       0.2,  Units::Miles},
     {402.4,     Units::Meters,     Units::Feet,       0.3,  Units::Miles},
     {482.8,     Units::Meters,     Units::Feet,       0.3,  Units::Miles},
-    {1609.3,    Units::Meters,     Units::Feet,       1,    Units::Miles},
-    {1610,      Units::Meters,     Units::Feet,       1,    Units::Miles},
+    {1609.3,    Units::Meters,     Units::Feet,       1.0,  Units::Miles},
+    {1610,      Units::Meters,     Units::Feet,       1.0,  Units::Miles},
     {1770,      Units::Meters,     Units::Feet,       1.1,  Units::Miles},
     {15933,     Units::Meters,     Units::Feet,       9.9,  Units::Miles},
     {16093,     Units::Meters,     Units::Feet,       10,   Units::Miles},
     {16093.5,   Units::Meters,     Units::Feet,       10,   Units::Miles},
-    {16898.113, Units::Meters,     Units::Feet,       11,   Units::Miles},
+    {16898.464, Units::Meters,     Units::Feet,       11,   Units::Miles},
     {16898.113, Units::Meters,     Units::Kilometers, 17,   Units::Kilometers},
-    {302,       Units::Meters,     Units::Miles,      0.2,  Units::Miles},
+    {302,       Units::Meters,     Units::Miles,      990,  Units::Feet},
+    {994,       Units::Meters,     Units::Kilometers, 990,  Units::Meters},
+    {995,       Units::Meters,     Units::Kilometers, 1.0,  Units::Kilometers},
     {0.1,       Units::Kilometers, Units::Meters,     100,  Units::Meters},
+    {0.3,       Units::Kilometers, Units::Kilometers, 300,  Units::Meters},
     {12,        Units::Kilometers, Units::Feet,       7.5,  Units::Miles},
     {0.1,       Units::Kilometers, Units::Feet,       330,  Units::Feet},
     {110,       Units::Feet,       Units::Meters,     34,   Units::Meters},
-    {1100,      Units::Feet,       Units::Kilometers, 0.3,  Units::Kilometers},
+    {1100,      Units::Feet,       Units::Kilometers, 340,  Units::Meters},
     {1100,      Units::Feet,       Units::Meters,     340,  Units::Meters},
     {1100,      Units::Feet,       Units::Miles,      0.2,  Units::Miles},
     {0.2,       Units::Miles,      Units::Meters,     320,  Units::Meters},
@@ -139,13 +151,14 @@ UNIT_TEST(Distance_To)
     {11,        Units::Miles,      Units::Kilometers, 18,   Units::Kilometers},
     {0.1,       Units::Miles,      Units::Feet,       530,  Units::Feet},
   };
+
   // clang-format on
   for (TestData const & data : testData)
   {
-    Distance const formattedDistance =
+    Distance const formatted =
         Distance(data.initialDistance, data.initialUnits).To(data.to).GetFormattedDistance();
-    TEST_ALMOST_EQUAL_ULPS(formattedDistance.GetDistance(), data.newDistance, (formattedDistance.ToString()));
-    TEST_EQUAL(formattedDistance.GetUnits(), data.newUnits, (formattedDistance.ToString()));
+    TEST_ALMOST_EQUAL_ULPS(formatted.GetDistance(), data.newDistance, (data.initialDistance));
+    TEST_EQUAL(formatted.GetUnits(), data.newUnits, ());
   }
 }
 
@@ -221,8 +234,9 @@ UNIT_TEST(Distance_FormattedDistance)
     std::string formattedDistanceString;
     std::string formattedString;
   };
+
   // clang-format off
-  std::vector<TestData> testData{
+  TestData testData[] = {
     // From Meters to Meters
     {Distance(0,       Units::Meters),     0,    Units::Meters,     "0",    "0 m"},
     {Distance(0.3,     Units::Meters),     0,    Units::Meters,     "0",    "0 m"},
@@ -242,17 +256,21 @@ UNIT_TEST(Distance_FormattedDistance)
     {Distance(991,     Units::Meters),     990,  Units::Meters,     "990",  "990 m"},
 
     // From Kilometers to Kilometers
-    {Distance(0,       Units::Kilometers), 0,    Units::Kilometers, "0",    "0 km"},
+    {Distance(0,       Units::Kilometers), 0,    Units::Meters,     "0",    "0 m"},
+    {Distance(0.3,     Units::Kilometers), 300,  Units::Meters,     "300",  "300 m"},
     {Distance(1.234,   Units::Kilometers), 1.2,  Units::Kilometers, "1.2",  "1.2 km"},
     {Distance(10,      Units::Kilometers), 10,   Units::Kilometers, "10",   "10 km"},
+    {Distance(11,      Units::Kilometers), 11,   Units::Kilometers, "11",   "11 km"},
+    {Distance(54,      Units::Kilometers), 54,   Units::Kilometers, "54",   "54 km"},
     {Distance(99.99,   Units::Kilometers), 100,  Units::Kilometers, "100",  "100 km"},
     {Distance(100.01,  Units::Kilometers), 100,  Units::Kilometers, "100",  "100 km"},
-    {Distance(115,     Units::Kilometers), 120,  Units::Kilometers, "120",  "120 km"},
-    {Distance(130,     Units::Kilometers), 130,  Units::Kilometers, "130",  "130 km"},
-    {Distance(980,     Units::Kilometers), 980,  Units::Kilometers, "980",  "980 km"},
+    {Distance(115,     Units::Kilometers), 115,  Units::Kilometers, "115",  "115 km"},
+    {Distance(999,     Units::Kilometers), 999,  Units::Kilometers, "999",  "999 km"},
     {Distance(1000,    Units::Kilometers), 1000, Units::Kilometers, "1000", "1000 km"},
+    {Distance(1049.99, Units::Kilometers), 1050, Units::Kilometers, "1050", "1050 km"},
     {Distance(1050,    Units::Kilometers), 1050, Units::Kilometers, "1050", "1050 km"},
-    {Distance(1234,    Units::Kilometers), 1230, Units::Kilometers, "1230", "1230 km"},
+    {Distance(1050.01, Units::Kilometers), 1050, Units::Kilometers, "1050", "1050 km"},
+    {Distance(1234,    Units::Kilometers), 1234, Units::Kilometers, "1234", "1234 km"},
 
     // From Feet to Feet
     {Distance(0,       Units::Feet),       0,    Units::Feet,       "0",    "0 ft"},
@@ -264,21 +282,24 @@ UNIT_TEST(Distance_FormattedDistance)
     {Distance(991,     Units::Feet),       990,  Units::Feet,       "990",  "990 ft"},
 
     // From Miles to Miles
-    {Distance(0,       Units::Miles),      0,    Units::Miles,      "0",    "0 mi"},
-    {Distance(1,       Units::Miles),      1,    Units::Miles,      "1",    "1 mi"},
+    {Distance(0,       Units::Miles),      0,    Units::Feet,       "0",    "0 ft"},
+    {Distance(0.1,     Units::Miles),      530,  Units::Feet,       "530",  "530 ft"},
+    {Distance(1,       Units::Miles),      1.0,  Units::Miles,      "1.0",  "1.0 mi"},
     {Distance(1.234,   Units::Miles),      1.2,  Units::Miles,      "1.2",  "1.2 mi"},
     {Distance(9.99,    Units::Miles),      10,   Units::Miles,      "10",   "10 mi"},
     {Distance(10.01,   Units::Miles),      10,   Units::Miles,      "10",   "10 mi"},
-    {Distance(105,     Units::Miles),      110,  Units::Miles,      "110",  "110 mi"},
-    {Distance(145,     Units::Miles),      150,  Units::Miles,      "150",  "150 mi"},
-    {Distance(998,     Units::Miles),      1000, Units::Miles,      "1000", "1000 mi"},
-    {Distance(999,     Units::Miles),      1000, Units::Miles,      "1000", "1000 mi"},
+    {Distance(11,      Units::Miles),      11,   Units::Miles,      "11",   "11 mi"},
+    {Distance(54,      Units::Miles),      54,   Units::Miles,      "54",   "54 mi"},
+    {Distance(145,     Units::Miles),      145,  Units::Miles,      "145",  "145 mi"},
+    {Distance(999,     Units::Miles),      999,  Units::Miles,      "999",  "999 mi"},
+    {Distance(1149.99, Units::Miles),      1150, Units::Miles,      "1150", "1150 mi"},
     {Distance(1150,    Units::Miles),      1150, Units::Miles,      "1150", "1150 mi"},
+    {Distance(1150.01, Units::Miles),      1150, Units::Miles,      "1150", "1150 mi"},
 
     // From Meters to Kilometers
-    {Distance(999,     Units::Meters),     1,    Units::Kilometers, "1",    "1 km"},
-    {Distance(1000,    Units::Meters),     1,    Units::Kilometers, "1",    "1 km"},
-    {Distance(1001,    Units::Meters),     1,    Units::Kilometers, "1",    "1 km"},
+    {Distance(999,     Units::Meters),     1.0,  Units::Kilometers, "1.0",  "1.0 km"},
+    {Distance(1000,    Units::Meters),     1.0,  Units::Kilometers, "1.0",  "1.0 km"},
+    {Distance(1001,    Units::Meters),     1.0,  Units::Kilometers, "1.0",  "1.0 km"},
     {Distance(1100,    Units::Meters),     1.1,  Units::Kilometers, "1.1",  "1.1 km"},
     {Distance(1140,    Units::Meters),     1.1,  Units::Kilometers, "1.1",  "1.1 km"},
     {Distance(1151,    Units::Meters),     1.2,  Units::Kilometers, "1.2",  "1.2 km"},
@@ -291,29 +312,38 @@ UNIT_TEST(Distance_FormattedDistance)
     {Distance(10000,   Units::Meters),     10,   Units::Kilometers, "10",   "10 km"},
     {Distance(10499.9, Units::Meters),     10,   Units::Kilometers, "10",   "10 km"},
     {Distance(10501,   Units::Meters),     11,   Units::Kilometers, "11",   "11 km"},
-    {Distance(287'386, Units::Meters),     290,  Units::Kilometers, "290",  "290 km"},
+    {Distance(101'001, Units::Meters),     101,  Units::Kilometers, "101",  "101 km"},
+    {Distance(101'999, Units::Meters),     102,  Units::Kilometers, "102",  "102 km"},
+    {Distance(287'386, Units::Meters),     287,  Units::Kilometers, "287",  "287 km"},
 
     // From Feet to Miles
     {Distance(999,     Units::Feet),       0.2,  Units::Miles,      "0.2",  "0.2 mi"},
     {Distance(1000,    Units::Feet),       0.2,  Units::Miles,      "0.2",  "0.2 mi"},
     {Distance(1150,    Units::Feet),       0.2,  Units::Miles,      "0.2",  "0.2 mi"},
-    {Distance(5280,    Units::Feet),       1,    Units::Miles,      "1",    "1 mi"},
+    {Distance(5280,    Units::Feet),       1.0,  Units::Miles,      "1.0",  "1.0 mi"},
     {Distance(7920,    Units::Feet),       1.5,  Units::Miles,      "1.5",  "1.5 mi"},
-    {Distance(10560,   Units::Feet),       2,    Units::Miles,      "2",    "2 mi"},
+    {Distance(10560,   Units::Feet),       2.0,  Units::Miles,      "2.0",  "2.0 mi"},
     {Distance(100'000, Units::Feet),       19,   Units::Miles,      "19",   "19 mi"},
+    {Distance(285'120, Units::Feet),       54,   Units::Miles,      "54",   "54 mi"},
+    {Distance(633'547, Units::Feet),       120,  Units::Miles,      "120",  "120 mi"},
+    {Distance(633'600, Units::Feet),       120,  Units::Miles,      "120",  "120 mi"},
+    {Distance(633'653, Units::Feet),       120,  Units::Miles,      "120",  "120 mi"},
+    {Distance(999'999, Units::Feet),       189,  Units::Miles,      "189",  "189 mi"},
   };
+
   // clang-format on
   for (TestData const & data : testData)
   {
-    Distance const formattedDistance = data.distance.GetFormattedDistance();
+    Distance const formatted = data.distance.GetFormattedDistance();
     // Run two times to verify that nothing breaks after second format
-    for (const auto & d : {formattedDistance, formattedDistance.GetFormattedDistance()})
+    for (auto const & d : {formatted, formatted.GetFormattedDistance()})
     {
-      TEST_ALMOST_EQUAL_ULPS(d.GetDistance(), data.formattedDistance, (data.distance.ToString()));
-      TEST_EQUAL(d.GetUnits(), data.formattedUnits, (data.distance.ToString()));
-      TEST_EQUAL(d.GetDistanceString(), data.formattedDistanceString, (data.distance.ToString()));
-      TEST_EQUAL(d.ToString(), data.formattedString, (data.distance.ToString()));
+      TEST_ALMOST_EQUAL_ULPS(d.GetDistance(), data.formattedDistance, (data.distance));
+      TEST_EQUAL(d.GetUnits(), data.formattedUnits, (data.distance));
+      TEST_EQUAL(d.GetDistanceString(), data.formattedDistanceString, (data.distance));
+      TEST_EQUAL(d.ToString(), data.formattedString, (data.distance));
     }
   }
 }
+
 }  // namespace platform

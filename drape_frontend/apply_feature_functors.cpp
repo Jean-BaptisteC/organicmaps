@@ -35,10 +35,9 @@
 #include <algorithm>
 #include <cmath>
 #include <limits>
+#include <map>
 #include <mutex>
-#include <sstream>
-#include <unordered_map>
-#include <utility>
+
 
 namespace df
 {
@@ -63,7 +62,6 @@ df::ColorConstant const kRoadShieldOrangeBackgroundColor = "RoadShieldOrangeBack
 
 uint32_t const kPathTextBaseTextIndex = 128;
 uint32_t const kShieldBaseTextIndex = 0;
-int const kShieldMinVisibleZoomLevel = 10;
 
 #ifdef LINES_GENERATION_CALC_FILTERED_POINTS
 class LinesStat
@@ -219,6 +217,8 @@ m2::PointF GetOffset(int offsetX, int offsetY)
   return { static_cast<float>(offsetX * vs), static_cast<float>(offsetY * vs) };
 }
 
+// TODO : review following exceptions for navigation mode priorities.
+// Shields and highway pathtexts could be made the highest in the prios.txt file directly.
 uint16_t CalculateNavigationPoiPriority()
 {
   // All navigation POI have maximum priority in navigation mode.
@@ -458,7 +458,7 @@ void ApplyPointFeature::ProcessPointRule(Stylist::TRuleWrapper const & rule)
     return;
 
   SymbolRuleProto const * symRule = rule.m_rule->GetSymbol();
-  if (symRule != nullptr)
+  if (symRule)
   {
     m_symbolDepth = rule.m_depth;
     m_symbolRule = symRule;
@@ -473,6 +473,8 @@ void ApplyPointFeature::ProcessPointRule(Stylist::TRuleWrapper const & rule)
     params.m_depthLayer = m_depthLayer;
     params.m_depthTestEnabled = m_depthLayer != DepthLayer::NavigationLayer &&
       m_depthLayer != DepthLayer::OverlayLayer;
+    // @todo: m_depthTestEnabled is false always?
+    ASSERT(!params.m_depthTestEnabled, (params.m_titleDecl.m_primaryText));
     params.m_minVisibleScale = m_minVisibleScale;
     params.m_rank = m_rank;
     params.m_posZ = m_posZ;
@@ -509,6 +511,8 @@ void ApplyPointFeature::Finish(ref_ptr<dp::TextureManager> texMng)
     params.m_tileCenter = m_tileRect.Center();
     params.m_depthTestEnabled = m_depthLayer != DepthLayer::NavigationLayer &&
       m_depthLayer != DepthLayer::OverlayLayer;
+    // @todo: m_depthTestEnabled is false always?
+    ASSERT(!params.m_depthTestEnabled, (params.m_featureId));
     params.m_depth = m_symbolDepth;
     params.m_depthLayer = m_depthLayer;
     params.m_minVisibleScale = m_minVisibleScale;
@@ -530,7 +534,7 @@ void ApplyPointFeature::Finish(ref_ptr<dp::TextureManager> texMng)
     symbolSize = region.GetPixelSize();
 
     if (region.IsValid())
-      m_insertShape(make_unique_dp<PoiSymbolShape>(m2::PointD(m_centerPoint), params, m_tileKey, 0 /* text index */));
+      m_insertShape(make_unique_dp<PoiSymbolShape>(m2::PointD(m_centerPoint), params, m_tileKey, 0 /* textIndex */));
     else
       LOG(LERROR, ("Style error. Symbol name must be valid for feature", m_id));
   }
@@ -702,6 +706,7 @@ void ApplyAreaFeature::BuildEdges(int vertexIndex1, int vertexIndex2, int vertex
 
 void ApplyAreaFeature::CalculateBuildingOutline(bool calculateNormals, BuildingOutline & outline)
 {
+  // Make sure that you called this fuction once! per feature.
   outline.m_vertices = std::move(m_points);
   outline.m_indices.reserve(m_edges.size() * 2);
   if (calculateNormals)
@@ -748,7 +753,7 @@ void ApplyAreaFeature::ProcessAreaRule(Stylist::TRuleWrapper const & rule)
     params.m_baseGtoPScale = static_cast<float>(m_currentScaleGtoP);
 
     BuildingOutline outline;
-    if (m_isBuilding)
+    if (m_isBuilding && !params.m_hatching)
     {
       /// @todo Make borders work for non-building areas too.
       outline.m_generateOutline = areaRule->has_border() &&
@@ -756,12 +761,16 @@ void ApplyAreaFeature::ProcessAreaRule(Stylist::TRuleWrapper const & rule)
                                   areaRule->border().width() > 0.0;
       if (outline.m_generateOutline)
         params.m_outlineColor = ToDrapeColor(areaRule->border().color());
+
       bool const calculateNormals = m_posZ > 0.0;
-      CalculateBuildingOutline(calculateNormals, outline);
+      if (calculateNormals || outline.m_generateOutline)
+        CalculateBuildingOutline(calculateNormals, outline);
+
       params.m_is3D = !outline.m_indices.empty() && calculateNormals;
     }
 
-    m_insertShape(make_unique_dp<AreaShape>(std::vector<m2::PointD>(m_triangles), std::move(outline), params));
+    m_insertShape(make_unique_dp<AreaShape>(params.m_hatching ? m_triangles : std::move(m_triangles),
+                                            std::move(outline), params));
   }
   else
   {
@@ -952,7 +961,7 @@ void ApplyLineFeatureAdditional::GetRoadShieldsViewParams(ref_ptr<dp::TextureMan
   textParams.m_depthTestEnabled = false;
   textParams.m_depth = m_depth;
   textParams.m_depthLayer = DepthLayer::OverlayLayer;
-  textParams.m_minVisibleScale = kShieldMinVisibleZoomLevel;
+  textParams.m_minVisibleScale = m_minVisibleScale;
   textParams.m_rank = m_rank;
   textParams.m_featureId = m_id;
   textParams.m_titleDecl.m_anchor = anchor;
@@ -983,7 +992,7 @@ void ApplyLineFeatureAdditional::GetRoadShieldsViewParams(ref_ptr<dp::TextureMan
     symbolParams.m_depthTestEnabled = true;
     symbolParams.m_depth = m_depth;
     symbolParams.m_depthLayer = DepthLayer::OverlayLayer;
-    symbolParams.m_minVisibleScale = kShieldMinVisibleZoomLevel;
+    symbolParams.m_minVisibleScale = m_minVisibleScale;
     symbolParams.m_rank = m_rank;
     symbolParams.m_anchor = anchor;
     symbolParams.m_offset = shieldOffset;
@@ -1011,7 +1020,7 @@ void ApplyLineFeatureAdditional::GetRoadShieldsViewParams(ref_ptr<dp::TextureMan
     poiParams.m_depth = m_depth;
     poiParams.m_depthTestEnabled = false;
     poiParams.m_depthLayer = DepthLayer::OverlayLayer;
-    poiParams.m_minVisibleScale = kShieldMinVisibleZoomLevel;
+    poiParams.m_minVisibleScale = m_minVisibleScale;
     poiParams.m_rank = m_rank;
     poiParams.m_symbolName = symbolName;
     poiParams.m_extendingSize = 0;

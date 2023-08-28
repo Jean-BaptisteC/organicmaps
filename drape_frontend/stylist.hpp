@@ -5,10 +5,8 @@
 
 #include "base/buffer_vector.hpp"
 
-#include <cstdint>
 #include <functional>
 #include <string>
-#include <utility>
 
 class FeatureType;
 
@@ -17,15 +15,15 @@ namespace drule { class BaseRule; }
 namespace df
 {
 
-// Priority range for area and line drules. Each layer = +/-1 value shifts the range by this number,
-// so that e.g. priorities of the default layer=0 range [0;1000) don't intersect with layer=-1 range [-1000;0) and so on..
-double constexpr kLayerDepthRange = 1000;
-
 class IsHatchingTerritoryChecker : public ftypes::BaseChecker
 {
   IsHatchingTerritoryChecker();
 public:
   DECLARE_CHECKER_INSTANCE(IsHatchingTerritoryChecker);
+protected:
+  bool IsMatched(uint32_t type) const override;
+private:
+  size_t m_type3end;
 };
 
 struct CaptionDescription

@@ -1,13 +1,13 @@
-• GPX import support
-• New OpenStreetMap data as of June 2
-• MRGS and UTM coordinates support (tap on coordinates to change)
-• Improved car and bicycle routing
-• Fixed bug that prevented upload of OSM edits when on battery power
-• Now compass works on devices without gyroscope
-• Fixed missing Wiki descriptions
-• Decreased TTS (Text-To-Speech) voice speed
-• Added Fish Pass
-• Fixed funicular and parcel locker icons
-• Corrected be, eu, en, en-GB, and uk translations
+• Novos dados OSM de 14/08
+• Artigos da Wikipédia atualizados
+• Pesquisa corrigida de endereços na Eslováquia e República Tcheca
+• Adicionado isolinhas ausentes para alguns países
+• Isolinhas mais densas em algumas áreas
+• Correção de bug no Nexus 5X
+• Adição de rotas de balsa ao mapa do mundo
+• Ícones de estacionamento redesenhados
+• Sistema de prioridades reformulado para POIs
+• Muitas outras melhorias e correções
+• Melhorias na busca e roteamento
 
-…more: omaps.org/news
+…mais: omaps.org/news

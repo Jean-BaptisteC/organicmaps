@@ -185,6 +185,7 @@ UNIT_CLASS_TEST(TestWithClassificator, OsmType_Combined)
 
 UNIT_CLASS_TEST(TestWithClassificator, OsmType_Address)
 {
+  uint32_t const addrType = GetType({"building", "address"});
   {
     // Single house number tag is transformed into address type.
     Tags const tags = { {"addr:housenumber", "42"} };
@@ -192,7 +193,7 @@ UNIT_CLASS_TEST(TestWithClassificator, OsmType_Address)
     auto const params = GetFeatureBuilderParams(tags);
 
     TEST_EQUAL(params.m_types.size(), 1, (params));
-    TEST(params.IsTypeExist(GetType({"building", "address"})), ());
+    TEST(params.IsTypeExist(addrType), ());
 
     TEST_EQUAL(params.house.Get(), "42", ());
   }
@@ -213,7 +214,7 @@ UNIT_CLASS_TEST(TestWithClassificator, OsmType_Address)
     auto const params = GetFeatureBuilderParams(tags);
 
     TEST_EQUAL(params.m_types.size(), 1, (params));
-    TEST(params.IsTypeExist(GetType({"building", "address"})), ());
+    TEST(params.IsTypeExist(addrType), ());
 
     TEST_EQUAL(params.house.Get(), "223/5", ());
     TEST_EQUAL(params.GetAddressData().Get(AddrType::Street), "Řetězová", ());
@@ -226,17 +227,19 @@ UNIT_CLASS_TEST(TestWithClassificator, OsmType_Address)
       {"addr:housenumber", "41"},
       {"addr:postcode", "8050"},
       {"addr:street", "Leutschenbachstrasse"},
-      {"entrance", "home"},
+      {"entrance", "main"},
       {"survey:date", "2020-12-17"},
       {"wheelchair", "no"},
+      {"internet_access", "wlan"},
     };
 
     auto const params = GetFeatureBuilderParams(tags);
 
-    TEST_EQUAL(params.m_types.size(), 2, (params));
-    TEST(params.IsTypeExist(GetType({"building", "address"})), ());
+    TEST_EQUAL(params.m_types.size(), 4, (params));
+    TEST(params.IsTypeExist(addrType), ());
+    TEST(params.IsTypeExist(GetType({"entrance", "main"})), ());
     TEST(params.IsTypeExist(GetType({"wheelchair", "no"})), ());
-    TEST(!params.IsTypeExist(GetType({"entrance"})), ());
+    TEST(params.IsTypeExist(GetType({"internet_access", "wlan"})), ());
 
     TEST_EQUAL(params.house.Get(), "41", ());
     TEST_EQUAL(params.GetAddressData().Get(AddrType::Street), "Leutschenbachstrasse", ());
@@ -1332,27 +1335,16 @@ UNIT_CLASS_TEST(TestWithClassificator, OsmType_NoExit)
 
 UNIT_CLASS_TEST(TestWithClassificator, OsmType_Junctions)
 {
-  for (char const * value : { "yes", "circular", "jughandle" })
+  for (char const * value : { "yes", "jughandle" })
   {
     Tags const tags = {
         {"junction", value }
     };
 
+    // Useless now, because they don't have any rules and are not set as an exception.
     auto const params = GetFeatureBuilderParams(tags);
-
     TEST_EQUAL(params.m_types.size(), 1, (params));
     TEST(params.IsTypeExist(GetType({"junction"})), (params));
-  }
-
-  {
-    Tags const tags = {
-        {"junction", "roundabout" }
-    };
-
-    auto const params = GetFeatureBuilderParams(tags);
-
-    TEST_EQUAL(params.m_types.size(), 1, (params));
-    TEST(params.IsTypeExist(GetType({"junction", "roundabout"})), (params));
   }
 }
 
@@ -1629,7 +1621,9 @@ UNIT_CLASS_TEST(TestWithClassificator, OsmType_RailwayRail)
     {{"railway", "rail", "utility"}, {{"railway", "rail"}, {"usage", "industrial"}, {"service", "spur"}}},
     {{"railway", "rail", "spur"}, {{"railway", "rail"}, {"service", "spur"}}},
     {{"railway", "rail", "service"}, {{"railway", "rail"}, {"service", "siding"}}},
+    {{"railway", "rail", "service"}, {{"railway", "rail"}, {"highspeed", "positive_value"}, {"service", "siding"}}},
     {{"railway", "rail", "service"}, {{"railway", "rail"}, {"usage", "main"}, {"service", "siding"}}},
+    {{"railway", "rail", "service"}, {{"railway", "rail"}, {"usage", "branch"}, {"service", "yard"}}},
     {{"railway", "rail", "service"}, {{"railway", "rail"}, {"usage", "unsupported_value"}, {"service", "crossover"}}},
     // TODO: better match to railway-rail-spur:
     {{"railway", "rail"}, {{"railway", "rail"}, {"usage", "unsupported_value"}}},
@@ -1649,7 +1643,9 @@ UNIT_CLASS_TEST(TestWithClassificator, OsmType_RailwayRail)
     {{"railway", "rail", "utility", "bridge"}, {{"railway", "rail"}, {"usage", "military"}, {"service", "spur"}, {"bridge", "positive_value"}}},
     {{"railway", "rail", "spur", "bridge"}, {{"railway", "rail"}, {"service", "spur"}, {"bridge", "positive_value"}}},
     {{"railway", "rail", "service", "bridge"}, {{"railway", "rail"}, {"service", "yard"}, {"bridge", "positive_value"}}},
+    {{"railway", "rail", "service", "bridge"}, {{"railway", "rail"}, {"highspeed", "positive_value"}, {"service", "siding"}, {"bridge", "positive_value"}}},
     {{"railway", "rail", "service", "bridge"}, {{"railway", "rail"}, {"usage", "main"}, {"service", "yard"}, {"bridge", "positive_value"}}},
+    {{"railway", "rail", "service", "bridge"}, {{"railway", "rail"}, {"usage", "branch"}, {"service", "crossover"}, {"bridge", "positive_value"}}},
     {{"railway", "rail", "service", "bridge"}, {{"railway", "rail"}, {"usage", "unsupported_value"}, {"service", "siding"}, {"bridge", "positive_value"}}},
     // TODO: better match to railway-rail-spur-bridge:
     {{"railway", "rail"}, {{"railway", "rail"}, {"usage", "unsupported_value"}, {"bridge", "positive_value"}}},
@@ -1669,7 +1665,9 @@ UNIT_CLASS_TEST(TestWithClassificator, OsmType_RailwayRail)
     {{"railway", "rail", "utility", "tunnel"}, {{"railway", "rail"}, {"usage", "military"}, {"service", "spur"}, {"tunnel", "positive_value"}}},
     {{"railway", "rail", "spur", "tunnel"}, {{"railway", "rail"}, {"service", "spur"}, {"tunnel", "positive_value"}}},
     {{"railway", "rail", "service", "tunnel"}, {{"railway", "rail"}, {"service", "yard"}, {"tunnel", "positive_value"}}},
+    {{"railway", "rail", "service", "tunnel"}, {{"railway", "rail"}, {"highspeed", "positive_value"}, {"service", "siding"}, {"tunnel", "positive_value"}}},
     {{"railway", "rail", "service", "tunnel"}, {{"railway", "rail"}, {"usage", "main"}, {"service", "yard"}, {"tunnel", "positive_value"}}},
+    {{"railway", "rail", "service", "tunnel"}, {{"railway", "rail"}, {"usage", "branch"}, {"service", "crossover"}, {"tunnel", "positive_value"}}},
     {{"railway", "rail", "service", "tunnel"}, {{"railway", "rail"}, {"usage", "unsupported_value"}, {"service", "siding"}, {"tunnel", "positive_value"}}},
     // TODO: better match to railway-rail-spur-tunnel:
     {{"railway", "rail"}, {{"railway", "rail"}, {"usage", "unsupported_value"}, {"tunnel", "positive_value"}}},
@@ -2013,6 +2011,7 @@ UNIT_CLASS_TEST(TestWithClassificator, OsmType_SimpleTypesSmoke)
     {"hwtag", "yescar"},
     {"hwtag", "yesfoot"},
     {"internet_access", "wlan"},
+    {"junction", "circular"},
     {"junction", "roundabout"},
     {"landuse", "allotments"},
     {"landuse", "basin"},

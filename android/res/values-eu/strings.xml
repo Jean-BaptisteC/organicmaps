@@ -777,6 +777,9 @@
 	<string name="type.amenity.car_sharing">Partekatu autoa</string>
 	<string name="type.amenity.car_wash">Kotxe garbiketa</string>
 	<string name="type.amenity.casino">Kasinoa</string>
+	<string name="type.amenity.gambling">Jokoa</string>
+	<string name="type.leisure.adult_gaming_centre">Helduen Joko Zentroa</string>
+	<string name="type.leisure.amusement_arcade">Arcade</string>
 	<string name="type.amenity.charging_station">Kargatzeko geltokia</string>
 	<string name="type.amenity.charging_station.bicycle">Bizikletak kargatzeko geltokia</string>
 	<string name="type.amenity.charging_station.motorcar">Autoak kargatzeko geltokia</string>
@@ -826,6 +829,8 @@
 	<string name="type.amenity.parking.private">Aparkaleku pribatua</string>
 	<string name="type.amenity.parking.park_and_ride">Aparkalekua</string>
 	<string name="type.amenity.parking.underground">Lurpeko Aparkalekua</string>
+	<string name="type.amenity.parking.street_side">Aparkalekua</string>
+	<string name="type.amenity.parking.lane">Aparkalekua</string>
 	<string name="type.amenity.parking_entrance">Aparkalekuaren sarrera</string>
 	<string name="type.amenity.parking_entrance.private">Aparkalekuaren sarrera</string>
 	<string name="type.amenity.parking_entrance.permissive">Aparkalekuaren sarrera</string>
@@ -839,6 +844,7 @@
 	<string name="type.amenity.place_of_worship">Kultu lekua</string>
 	<string name="type.amenity.place_of_worship.buddhist">Tenplua</string>
 	<string name="type.amenity.place_of_worship.christian">Eliza</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Azken Eguneko Santuen Jesukristoren eliza</string>
 	<string name="type.amenity.place_of_worship.hindu">Tenplua</string>
 	<string name="type.amenity.place_of_worship.jewish">Sinagoga</string>
 	<string name="type.amenity.place_of_worship.muslim">Meskita</string>
@@ -872,6 +878,7 @@
 	<string name="type.amenity.school">Eskola</string>
 	<string name="type.amenity.shelter">Aterpea</string>
 	<string name="type.amenity.shower">Dutxa</string>
+	<string name="type.amenity.stripclub">Stripclub</string>
 	<string name="type.amenity.taxi">Taxia</string>
 	<string name="type.amenity.telephone">Telefonoa</string>
 	<string name="type.amenity.theatre">Antzerkia</string>
@@ -1059,6 +1066,7 @@
 	<string name="type.cuisine.vegan">Sukaldaritza beganoa</string>
 	<string name="type.cuisine.vegetarian">Sukaldaritza begetarianoa</string>
 	<string name="type.cuisine.vietnamese">Vietnamgo sukaldaritza</string>
+	<string name="type.emergency.assembly_point">Larrialdietako Batzar Puntua</string>
 	<string name="type.emergency.defibrillator">Desfibriladorea</string>
 	<string name="type.emergency.fire_hydrant">Suteen hidrantea</string>
 	<string name="type.emergency.phone">Larrialdi zenbakia</string>
@@ -1084,6 +1092,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Tunel</string>
 	<string name="type.highway.busway">Autobus errepidea</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Zubia</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Tunel</string>
 	<string name="type.highway.bus_stop">Autobus geltokia</string>
 	<string name="type.highway.construction">Eraikitzen ari diren errepidea</string>
 	<string name="type.highway.cycleway">Bizikletabidea</string>
@@ -1282,6 +1294,7 @@
 	<string name="type.historic.tomb">Ehorztoki</string>
 	<string name="type.historic.wayside_cross">Bideko gurutze</string>
 	<string name="type.historic.wayside_shrine">Bide bazterreko baseliza</string>
+	<string name="type.junction.circular">Biribilgunea</string>
 	<string name="type.junction.roundabout">Biribilgunea</string>
 	<string name="type.landuse.basin">Arroa</string>
 	<!-- In most (European) countries, сemeteries are usually independent of places of worship (e.g. military cemeteries), while grave yards are usually the yard of a place of worship. -->
@@ -1432,13 +1445,32 @@
 	<string name="type.railway.level_crossing">Trenbide-pasagunea</string>
 	<string name="type.railway.monorail">Tren monoraila</string>
 	<string name="type.railway.rail">Trenbidea</string>
-	<string name="type.railway.rail.highspeed">Trenbidea</string>
-	<string name="type.railway.rail.tourism">Trenbidea</string>
+	<string name="type.railway.rail.highspeed">Abiadura handiko trena</string>
+	<string name="type.railway.rail.tourism">Tren turistikoa</string>
 	<string name="type.railway.rail.main">Trenbidea</string>
-	<string name="type.railway.rail.branch">Trenbidea</string>
-	<string name="type.railway.rail.utility">Trenbidea</string>
-	<string name="type.railway.rail.spur">Trenbidea</string>
-	<string name="type.railway.rail.service">Trenbidea</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Bigarren mailako trenbidea</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Erabilgarritasun trena</string>
+	<string name="type.railway.rail.spur">Trenbide-spur</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Trenbide laguntzailea</string>
+	<string name="type.railway.rail.bridge">Trenbide zubia</string>
+	<string name="type.railway.rail.highspeed.bridge">Trenbide zubia</string>
+	<string name="type.railway.rail.tourism.bridge">Trenbide zubia</string>
+	<string name="type.railway.rail.main.bridge">Trenbide zubia</string>
+	<string name="type.railway.rail.branch.bridge">Trenbide zubia</string>
+	<string name="type.railway.rail.utility.bridge">Trenbide zubia</string>
+	<string name="type.railway.rail.spur.bridge">Trenbide zubia</string>
+	<string name="type.railway.rail.service.bridge">Trenbide zubia</string>
+	<string name="type.railway.rail.tunnel">Trenbide-tunela</string>
+	<string name="type.railway.rail.highspeed.tunnel">Trenbide-tunela</string>
+	<string name="type.railway.rail.tourism.tunnel">Trenbide-tunela</string>
+	<string name="type.railway.rail.main.tunnel">Trenbide-tunela</string>
+	<string name="type.railway.rail.branch.tunnel">Trenbide-tunela</string>
+	<string name="type.railway.rail.utility.tunnel">Trenbide-tunela</string>
+	<string name="type.railway.rail.spur.tunnel">Trenbide-tunela</string>
+	<string name="type.railway.rail.service.tunnel">Trenbide-tunela</string>
 	<string name="type.railway.station">Tren geltokian</string>
 	<string name="type.railway.station.funicular">Funikularra</string>
 	<string name="type.railway.station.light_rail">Tren geltokian</string>
@@ -1544,6 +1576,7 @@
 	<string name="type.railway.station.subway.taoyuan">Metroa</string>
 	<string name="type.railway.station.subway.tashkent">Metroa</string>
 	<string name="type.railway.station.subway.tbilisi">Metroa</string>
+	<string name="type.railway.station.subway.tehran">Metroa</string>
 	<string name="type.railway.station.subway.tianjin">Metroa</string>
 	<string name="type.railway.station.subway.tokyo">Metroa</string>
 	<string name="type.railway.station.subway.valencia">Metroa</string>
@@ -1654,6 +1687,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Metroko sarrera</string>
 	<string name="type.railway.subway_entrance.tashkent">Metroko sarrera</string>
 	<string name="type.railway.subway_entrance.tbilisi">Metroko sarrera</string>
+	<string name="type.railway.subway_entrance.tehran">Metroko sarrera</string>
 	<string name="type.railway.subway_entrance.tianjin">Metroko sarrera</string>
 	<string name="type.railway.subway_entrance.tokyo">Metroko sarrera</string>
 	<string name="type.railway.subway_entrance.valencia">Metroko sarrera</string>
@@ -1812,6 +1846,7 @@
 	<string name="type.sport.badminton">Badminton</string>
 	<string name="type.sport.pelota">Eusko pilota</string>
 	<string name="type.tourism">Turismoa</string>
+	<string name="type.tourism.aquarium">Aquariuma</string>
 	<string name="type.tourism.alpine_hut">Kabina</string>
 	<string name="type.tourism.apartment">Apartamentuak</string>
 	<string name="type.tourism.artwork">Artelanak</string>

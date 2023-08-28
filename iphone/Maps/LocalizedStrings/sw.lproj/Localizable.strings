@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Casino";
 
+"type.amenity.gambling" = "Kamari";
+
+"type.leisure.adult_gaming_centre" = "Kituo cha Michezo ya Watu Wazima";
+
+"type.leisure.amusement_arcade" = "Ukumbi wa michezo";
+
 "type.amenity.charging_station" = "Charging Station";
 
 "type.amenity.charging_station.bicycle" = "Kituo cha Kuchaji Baiskeli";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Maegesho ya chini ya ardhi";
 
+"type.amenity.parking.street_side" = "Maegesho";
+
+"type.amenity.parking.lane" = "Maegesho";
+
 "type.amenity.parking_entrance" = "Mlango wa maegesho";
 
 "type.amenity.parking_entrance.private" = "Mlango wa maegesho";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Buddhist Temple";
 
 "type.amenity.place_of_worship.christian" = "Church";
+
+"type.amenity.place_of_worship.christian.mormon" = "Kanisa la Yesu Kristo la Watakatifu wa Siku za Mwisho";
 
 "type.amenity.place_of_worship.hindu" = "Hindu Temple";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Shelter";
 
 "type.amenity.shower" = "Shower";
+
+"type.amenity.stripclub" = "Klabu ya Strip";
 
 "type.amenity.taxi" = "Taxi Stand";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Sehemu ya Mkutano wa Dharura";
+
 "type.emergency.defibrillator" = "Defibrillator";
 
 "type.emergency.fire_hydrant" = "Fire Hydrant";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Mtaro";
 
 "type.highway.busway" = "Barabara ya basi iliyotengwa";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Daraja";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Mtaro";
 
 "type.highway.bus_stop" = "Bus Stop";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Njia ya Reli";
 
-"type.railway.rail.highspeed" = "Njia ya Reli";
+"type.railway.rail.highspeed" = "Reli ya mwendo wa kasi";
 
-"type.railway.rail.tourism" = "Njia ya Reli";
+"type.railway.rail.tourism" = "Reli ya kitalii";
 
-"type.railway.rail.main" = "Njia ya Reli";
+"type.railway.rail.main" = "Reli";
 
-"type.railway.rail.branch" = "Njia ya Reli";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Reli ya sekondari";
 
-"type.railway.rail.utility" = "Njia ya Reli";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Utility railway";
 
-"type.railway.rail.spur" = "Njia ya Reli";
+"type.railway.rail.spur" = "Railway spur";
 
-"type.railway.rail.service" = "Njia ya Reli";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Njia ya reli ya msaidizi";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Daraja la reli";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Daraja la reli";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Daraja la reli";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Daraja la reli";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Daraja la reli";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Daraja la reli";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Daraja la reli";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Daraja la reli";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Njia ya reli";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Njia ya reli";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Njia ya reli";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Njia ya reli";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Njia ya reli";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Njia ya reli";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Njia ya reli";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Njia ya reli";
 
 "type.railway.station" = "Train Station";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Subway Station";
 
 "type.railway.station.subway.tbilisi" = "Subway Station";
+
+"type.railway.station.subway.tehran" = "Subway Station";
 
 "type.railway.station.subway.tianjin" = "Subway Station";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Lango la kuingilia stesheni ya reli";
 
 "type.railway.subway_entrance.tbilisi" = "Lango la kuingilia stesheni ya reli";
+
+"type.railway.subway_entrance.tehran" = "Lango la kuingilia stesheni ya reli";
 
 "type.railway.subway_entrance.tianjin" = "Lango la kuingilia stesheni ya reli";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "Aquarium";
+
 "type.tourism.alpine_hut" = "Alpine Lodging";
 
 "type.tourism.apartment" = "Holiday Apartment";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "Lock Gate";
 

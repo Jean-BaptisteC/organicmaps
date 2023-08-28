@@ -252,6 +252,9 @@
 	<string name="type.amenity">Kistawishi</string>
 	<string name="type.amenity.arts_centre">Kituo cha sanaa</string>
 	<string name="type.amenity.bicycle_repair_station">Cykelreparationsstation</string>
+	<string name="type.amenity.gambling">Kamari</string>
+	<string name="type.leisure.adult_gaming_centre">Kituo cha Michezo ya Watu Wazima</string>
+	<string name="type.leisure.amusement_arcade">Ukumbi wa michezo</string>
 	<string name="type.amenity.charging_station.bicycle">Kituo cha Kuchaji Baiskeli</string>
 	<string name="type.amenity.charging_station.motorcar">Kituo cha Kuchaji Magari</string>
 	<string name="type.leisure.bowling_alley">Njia ya Bowling</string>
@@ -268,6 +271,8 @@
 	<string name="type.amenity.parking.permissive">Maegesho ya Kibinafsi</string>
 	<string name="type.amenity.parking.private">Maegesho ya Kibinafsi</string>
 	<string name="type.amenity.parking.underground">Maegesho ya chini ya ardhi</string>
+	<string name="type.amenity.parking.street_side">Maegesho</string>
+	<string name="type.amenity.parking.lane">Maegesho</string>
 	<string name="type.amenity.parking_entrance">Mlango wa maegesho</string>
 	<string name="type.amenity.parking_entrance.private">Mlango wa maegesho</string>
 	<string name="type.amenity.parking_entrance.permissive">Mlango wa maegesho</string>
@@ -276,10 +281,12 @@
 	<string name="type.amenity.parking_space.private">Sehemu ya maegesho</string>
 	<string name="type.amenity.parking_space.underground">Sehemu ya maegesho</string>
 	<string name="type.amenity.parking_space.disabled">Nafasi ya maegesho iliyozimwa</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Kanisa la Yesu Kristo la Watakatifu wa Siku za Mwisho</string>
 	<string name="type.amenity.post_office">Ofisi ya posta</string>
 
 	<!-- SECTION: Types: Recycling -->
 	<string name="type.recycling.batteries">Betri</string>
+	<string name="type.amenity.stripclub">Klabu ya Strip</string>
 	<string name="type.amenity.vending_machine.public_transport_tickets">Mashine ya kuuzia tiketi za usafiri wa umma</string>
 	<string name="type.barrier.city_wall">Ukuta wa jiji</string>
 	<string name="type.barrier.ditch">Moti</string>
@@ -317,6 +324,7 @@
 	<string name="type.craft.winery">Mvinyo</string>
 	<string name="type.craft.tailor">Mshonaji nguo</string>
 	<string name="type.cuisine.coffee_shop">Kahawa</string>
+	<string name="type.emergency.assembly_point">Sehemu ya Mkutano wa Dharura</string>
 	<!-- This is for main/primary entrances, for secondary entrances see type.entrance -->
 	<string name="type.entrance.main">Mlango Mkuu</string>
 	<string name="type.entrance.exit">Utgång</string>
@@ -337,6 +345,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Mtaro</string>
 	<string name="type.highway.busway">Barabara ya basi iliyotengwa</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Daraja</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Mtaro</string>
 	<string name="type.highway.construction">Barabara inatengenezwa</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
 	<string name="type.highway.cycleway.bridge">Daraja</string>
@@ -560,13 +572,32 @@
 	<string name="type.railway.level_crossing">Tambuka Reli</string>
 	<string name="type.railway.monorail">Mfumo wa reli moja</string>
 	<string name="type.railway.rail">Njia ya Reli</string>
-	<string name="type.railway.rail.highspeed">Njia ya Reli</string>
-	<string name="type.railway.rail.tourism">Njia ya Reli</string>
-	<string name="type.railway.rail.main">Njia ya Reli</string>
-	<string name="type.railway.rail.branch">Njia ya Reli</string>
-	<string name="type.railway.rail.utility">Njia ya Reli</string>
-	<string name="type.railway.rail.spur">Njia ya Reli</string>
-	<string name="type.railway.rail.service">Njia ya Reli</string>
+	<string name="type.railway.rail.highspeed">Reli ya mwendo wa kasi</string>
+	<string name="type.railway.rail.tourism">Reli ya kitalii</string>
+	<string name="type.railway.rail.main">Reli</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Reli ya sekondari</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Utility railway</string>
+	<string name="type.railway.rail.spur">Railway spur</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Njia ya reli ya msaidizi</string>
+	<string name="type.railway.rail.bridge">Daraja la reli</string>
+	<string name="type.railway.rail.highspeed.bridge">Daraja la reli</string>
+	<string name="type.railway.rail.tourism.bridge">Daraja la reli</string>
+	<string name="type.railway.rail.main.bridge">Daraja la reli</string>
+	<string name="type.railway.rail.branch.bridge">Daraja la reli</string>
+	<string name="type.railway.rail.utility.bridge">Daraja la reli</string>
+	<string name="type.railway.rail.spur.bridge">Daraja la reli</string>
+	<string name="type.railway.rail.service.bridge">Daraja la reli</string>
+	<string name="type.railway.rail.tunnel">Njia ya reli</string>
+	<string name="type.railway.rail.highspeed.tunnel">Njia ya reli</string>
+	<string name="type.railway.rail.tourism.tunnel">Njia ya reli</string>
+	<string name="type.railway.rail.main.tunnel">Njia ya reli</string>
+	<string name="type.railway.rail.branch.tunnel">Njia ya reli</string>
+	<string name="type.railway.rail.utility.tunnel">Njia ya reli</string>
+	<string name="type.railway.rail.spur.tunnel">Njia ya reli</string>
+	<string name="type.railway.rail.service.tunnel">Njia ya reli</string>
 	<string name="type.railway.station.funicular">Funicular</string>
 	<string name="type.railway.subway_entrance">Lango la kuingilia stesheni ya reli</string>
 	<string name="type.railway.subway_entrance.adana">Lango la kuingilia stesheni ya reli</string>
@@ -669,6 +700,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Lango la kuingilia stesheni ya reli</string>
 	<string name="type.railway.subway_entrance.tashkent">Lango la kuingilia stesheni ya reli</string>
 	<string name="type.railway.subway_entrance.tbilisi">Lango la kuingilia stesheni ya reli</string>
+	<string name="type.railway.subway_entrance.tehran">Lango la kuingilia stesheni ya reli</string>
 	<string name="type.railway.subway_entrance.tianjin">Lango la kuingilia stesheni ya reli</string>
 	<string name="type.railway.subway_entrance.tokyo">Lango la kuingilia stesheni ya reli</string>
 	<string name="type.railway.subway_entrance.valencia">Lango la kuingilia stesheni ya reli</string>
@@ -759,6 +791,7 @@
 	<string name="type.sport.field_hockey">Hoki ya shamba</string>
 	<string name="type.sport.badminton">Badminton</string>
 	<string name="type.sport.pelota">Basque pelota</string>
+	<string name="type.tourism.aquarium">Aquarium</string>
 	<string name="type.tourism.information">Taarifa za Watalii</string>
 	<string name="type.tourism.information.board">Bodi ya habari</string>
 	<string name="type.tourism.information.guidepost">Chapisho la mwongozo</string>

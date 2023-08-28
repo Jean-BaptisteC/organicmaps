@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Казино";
 
+"type.amenity.gambling" = "Играть в азартные игры";
+
+"type.leisure.adult_gaming_centre" = "Игровой центр для взрослых";
+
+"type.leisure.amusement_arcade" = "Аркада";
+
 "type.amenity.charging_station" = "Зарядная станция";
 
 "type.amenity.charging_station.bicycle" = "Станция зарядки велосипедов";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Подземный паркинг";
 
+"type.amenity.parking.street_side" = "Парковка";
+
+"type.amenity.parking.lane" = "Парковка";
+
 "type.amenity.parking_entrance" = "Въезд на парковку";
 
 "type.amenity.parking_entrance.private" = "Въезд на парковку";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Храм";
 
 "type.amenity.place_of_worship.christian" = "Церковь";
+
+"type.amenity.place_of_worship.christian.mormon" = "Церковь Иисуса Христа Святых последних дней";
 
 "type.amenity.place_of_worship.hindu" = "Храм";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Укрытие";
 
 "type.amenity.shower" = "Душ";
+
+"type.amenity.stripclub" = "Стриптиз-клуб";
 
 "type.amenity.taxi" = "Такси";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Экстренная служба";
 
+"type.emergency.assembly_point" = "Пункт аварийного сбора";
+
 "type.emergency.defibrillator" = "Дефибриллятор";
 
 "type.emergency.fire_hydrant" = "Пожарный гидрант";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Тоннель";
 
 "type.highway.busway" = "Выделенная автобусная дорога";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Мост";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Тоннель";
 
 "type.highway.bus_stop" = "Остановка";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Интернет";
 
 "type.junction" = "Перекрёсток";
+
+"type.junction.circular" = "Кольцо";
 
 "type.junction.roundabout" = "Кольцо";
 
@@ -2802,19 +2826,22 @@
 
 "type.railway.rail" = "Железнодорожный путь";
 
-"type.railway.rail.highspeed" = "Железнодорожный путь";
+"type.railway.rail.highspeed" = "Высокоскоростная железная дорога";
 
-"type.railway.rail.tourism" = "Железнодорожный путь";
+"type.railway.rail.tourism" = "Туристическая железная дорога";
 
-"type.railway.rail.main" = "Железнодорожный путь";
+"type.railway.rail.main" = "Железная дорога";
 
-"type.railway.rail.branch" = "Железнодорожный путь";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Второстепенная железная дорога";
 
-"type.railway.rail.utility" = "Железнодорожный путь";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Служебная железная дорога";
 
-"type.railway.rail.spur" = "Подъездная Ж/Д";
+"type.railway.rail.spur" = "Подъездной Ж/Д путь";
 
-"type.railway.rail.service" = "Железнодорожный путь";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Вспомогательный Ж/Д путь";
 
 "type.railway.rail.bridge" = "Железнодорожный мост";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "Метро";
 
+"type.railway.station.subway.tehran" = "Метро";
+
 "type.railway.station.subway.tianjin" = "Метро";
 
 "type.railway.station.subway.tokyo" = "Метро";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Вход в метро";
 
 "type.railway.subway_entrance.tbilisi" = "Вход в метро";
+
+"type.railway.subway_entrance.tehran" = "Вход в метро";
 
 "type.railway.subway_entrance.tianjin" = "Вход в метро";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Туризм";
 
+"type.tourism.aquarium" = "Аквариум";
+
 "type.tourism.alpine_hut" = "Горный отель";
 
 "type.tourism.apartment" = "Апартаменты";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "Канава";
 
-"type.waterway.ditch.tunnel" = "Канава";
+"type.waterway.ditch.tunnel" = "Водопропускная труба";
 
 "type.waterway.dock" = "Причал";
 
 "type.waterway.drain" = "Водоотвод";
 
-"type.waterway.drain.tunnel" = "Водоотвод";
+"type.waterway.drain.tunnel" = "Водопропускная труба";
 
 "type.waterway.lock_gate" = "Шлюз";
 

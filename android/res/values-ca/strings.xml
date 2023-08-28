@@ -571,7 +571,7 @@
 	<string name="bookmark_lists_show_all">Mostra-ho tot</string>
 	<string name="bookmarks_create_new_group">Crea una llista</string>
 	<!-- Bookmark categories screen, button that opens folder selection dialog to import KML/KMZ/GPX/KMB files -->
-	<string name="bookmarks_import">Importa marcadors i les pistes</string>
+	<string name="bookmarks_import">Importa marcadors i les traces</string>
 	<string name="bookmarks_error_message_share_general">No s\'ha pogut compartir a causa d\'un error de l\'aplicació</string>
 	<string name="bookmarks_error_title_share_empty">Error al compartir</string>
 	<string name="bookmarks_error_message_share_empty">No es pot compartir una llista buida</string>
@@ -737,6 +737,9 @@
 	<string name="type.addr_interpolation">Adreça/Bloc</string>
 	<string name="type.addr_interpolation.even">Adreça/Bloc</string>
 	<string name="type.addr_interpolation.odd">Adreça/Bloc</string>
+	<string name="type.amenity.gambling">Jocs d\'atzar</string>
+	<string name="type.leisure.adult_gaming_centre">Centre de joc per a adults</string>
+	<string name="type.leisure.amusement_arcade">Arcade</string>
 	<string name="type.amenity.charging_station.bicycle">Estació de recàrrega de bicicletes</string>
 	<string name="type.amenity.charging_station.motorcar">Estació de recàrrega de cotxes</string>
 	<string name="type.leisure.bowling_alley">Bolera</string>
@@ -744,8 +747,10 @@
 	<string name="type.amenity.exhibition_centre">Centre d\'exposicions</string>
 	<string name="type.amenity.money_transfer">Transferència de diners</string>
 	<string name="type.amenity.loading_dock">Moll de càrrega</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Església de Jesucrist dels Sants dels Últims Dies</string>
 
 	<!-- SECTION: Types: Recycling -->
+	<string name="type.amenity.stripclub">Club de striptease</string>
 	<string name="type.barrier.turnstile">Torniquet</string>
 	<string name="type.boundary.protected_area">Àrea Protegida</string>
 	<string name="type.boundary.protected_area.1">Àrea Protegida</string>
@@ -757,6 +762,7 @@
 	<string name="type.craft.key_cutter">Tall de claus</string>
 	<string name="type.craft.locksmith">Serraller</string>
 	<string name="type.shop.camera">Botiga de càmeres</string>
+	<string name="type.emergency.assembly_point">Punt de reunió d\'emergència</string>
 	<!-- This is for main/primary entrances, for secondary entrances see type.entrance -->
 	<string name="type.entrance.main">Entrada principal</string>
 	<string name="type.entrance.exit">Sortida</string>
@@ -777,6 +783,32 @@
 	<string name="type.power.plant.solar">Central d\'energia solar</string>
 	<string name="type.power.plant.wind">Central eòlica</string>
 	<string name="type.railway.funicular">Funicular</string>
+	<string name="type.railway.rail.highspeed">Ferrocarril d\'alta velocitat</string>
+	<string name="type.railway.rail.tourism">Ferrocarril turístic</string>
+	<string name="type.railway.rail.main">Ferrocarril</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Ferrocarril secundari</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Ferrocarril d\'utilitat</string>
+	<string name="type.railway.rail.spur">Espoló de ferrocarril</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Via ferroviària auxiliar</string>
+	<string name="type.railway.rail.bridge">Pont del ferrocarril</string>
+	<string name="type.railway.rail.highspeed.bridge">Pont del ferrocarril</string>
+	<string name="type.railway.rail.tourism.bridge">Pont del ferrocarril</string>
+	<string name="type.railway.rail.main.bridge">Pont del ferrocarril</string>
+	<string name="type.railway.rail.branch.bridge">Pont del ferrocarril</string>
+	<string name="type.railway.rail.utility.bridge">Pont del ferrocarril</string>
+	<string name="type.railway.rail.spur.bridge">Pont del ferrocarril</string>
+	<string name="type.railway.rail.service.bridge">Pont del ferrocarril</string>
+	<string name="type.railway.rail.tunnel">Túnel ferroviari</string>
+	<string name="type.railway.rail.highspeed.tunnel">Túnel ferroviari</string>
+	<string name="type.railway.rail.tourism.tunnel">Túnel ferroviari</string>
+	<string name="type.railway.rail.main.tunnel">Túnel ferroviari</string>
+	<string name="type.railway.rail.branch.tunnel">Túnel ferroviari</string>
+	<string name="type.railway.rail.utility.tunnel">Túnel ferroviari</string>
+	<string name="type.railway.rail.spur.tunnel">Túnel ferroviari</string>
+	<string name="type.railway.rail.service.tunnel">Túnel ferroviari</string>
 	<string name="type.railway.station.funicular">Funicular</string>
 	<string name="type.shop.bathroom_furnishing">Mobles de bany</string>
 	<string name="type.shop.cannabis">Botiga de cànnabis</string>
@@ -792,6 +824,7 @@
 	<string name="type.shop.agrarian">Botiga agrícola</string>
 	<string name="type.shop.appliance">Botiga d\'electrodomèstics</string>
 	<string name="type.shop.bed">Botiga de llits</string>
+	<string name="type.tourism.aquarium">Aquari</string>
 	<string name="type.waterway.fish_pass">Pas de peix</string>
 	<string name="type.shop.auction">Subhasta</string>
 	<string name="type.shop.collector">Col·leccionables</string>

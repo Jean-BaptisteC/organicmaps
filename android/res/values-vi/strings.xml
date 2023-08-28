@@ -717,6 +717,9 @@
 	<string name="type.amenity.car_sharing">Chia sẻ Xe</string>
 	<string name="type.amenity.car_wash">Rửa Xe</string>
 	<string name="type.amenity.casino">Giải trí</string>
+	<string name="type.amenity.gambling">Bài bạc</string>
+	<string name="type.leisure.adult_gaming_centre">Trung tâm trò chơi dành cho người lớn</string>
+	<string name="type.leisure.amusement_arcade">Giải trí</string>
 	<string name="type.amenity.charging_station">Trạm Sạc điện</string>
 	<string name="type.amenity.charging_station.bicycle">Trạm sạc xe đạp</string>
 	<string name="type.amenity.charging_station.motorcar">Trạm sạc xe máy</string>
@@ -765,6 +768,8 @@
 	<string name="type.amenity.parking.private">Bãi đậu xe tư nhân</string>
 	<string name="type.amenity.parking.park_and_ride">đỗ xe</string>
 	<string name="type.amenity.parking.underground">Bãi đậu xe ngầm</string>
+	<string name="type.amenity.parking.street_side">đỗ xe</string>
+	<string name="type.amenity.parking.lane">đỗ xe</string>
 	<string name="type.amenity.parking_entrance">Lối vào bãi đậu xe</string>
 	<string name="type.amenity.parking_entrance.private">Lối vào bãi đậu xe</string>
 	<string name="type.amenity.parking_entrance.permissive">Lối vào bãi đậu xe</string>
@@ -778,6 +783,7 @@
 	<string name="type.amenity.place_of_worship">Chùa</string>
 	<string name="type.amenity.place_of_worship.buddhist">Đền</string>
 	<string name="type.amenity.place_of_worship.christian">Chùa</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Nhà thờ Các Thánh hữu Ngày sau của Chúa Giêsu Kitô</string>
 	<string name="type.amenity.place_of_worship.hindu">Đền</string>
 	<string name="type.amenity.place_of_worship.jewish">Giáo đường Do Thái</string>
 	<string name="type.amenity.place_of_worship.muslim">Nhà thờ Hồi Giáo</string>
@@ -805,6 +811,7 @@
 	<string name="type.amenity.school">Trường học</string>
 	<string name="type.amenity.shelter">Chổ nương thân</string>
 	<string name="type.amenity.shower">Nhà tắm</string>
+	<string name="type.amenity.stripclub">Câu lạc bộ thoát y</string>
 	<string name="type.amenity.telephone">Điện thoại</string>
 	<string name="type.amenity.theatre">Điểm trú ẩn</string>
 	<string name="type.amenity.toilets">Nhà vệ sinh</string>
@@ -954,6 +961,7 @@
 	<string name="type.cuisine.vegan">Ẩm thực chay</string>
 	<string name="type.cuisine.vegetarian">Ẩm thực chay</string>
 	<string name="type.cuisine.vietnamese">Ẩm thực việt</string>
+	<string name="type.emergency.assembly_point">Điểm tập hợp khẩn cấp</string>
 	<string name="type.emergency.defibrillator">Máy khử rung tim</string>
 	<string name="type.emergency.fire_hydrant">Vòi chữa cháy</string>
 	<string name="type.emergency.phone">Điện thoại khẩn cấp</string>
@@ -979,6 +987,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Đường hầm</string>
 	<string name="type.highway.busway">Đường dành riêng cho xe buýt</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Cầu</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Đường hầm</string>
 	<string name="type.highway.bus_stop">Bến xe buýt</string>
 	<string name="type.highway.construction">Đường đang thi công</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
@@ -1318,13 +1330,32 @@
 	<string name="type.railway.level_crossing">Chỗ qua đường sắt</string>
 	<string name="type.railway.monorail">Đường sắt một chiều</string>
 	<string name="type.railway.rail">Đường sắt</string>
-	<string name="type.railway.rail.highspeed">Đường sắt</string>
-	<string name="type.railway.rail.tourism">Đường sắt</string>
+	<string name="type.railway.rail.highspeed">Đường sắt cao tốc</string>
+	<string name="type.railway.rail.tourism">Đường sắt du lịch</string>
 	<string name="type.railway.rail.main">Đường sắt</string>
-	<string name="type.railway.rail.branch">Đường sắt</string>
-	<string name="type.railway.rail.utility">Đường sắt</string>
-	<string name="type.railway.rail.spur">Đường sắt</string>
-	<string name="type.railway.rail.service">Đường sắt</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Đường sắt phụ</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Đường sắt tiện ích</string>
+	<string name="type.railway.rail.spur">Đường sắt thúc đẩy</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Đường ray phụ trợ</string>
+	<string name="type.railway.rail.bridge">Cầu đường sắt</string>
+	<string name="type.railway.rail.highspeed.bridge">Cầu đường sắt</string>
+	<string name="type.railway.rail.tourism.bridge">Cầu đường sắt</string>
+	<string name="type.railway.rail.main.bridge">Cầu đường sắt</string>
+	<string name="type.railway.rail.branch.bridge">Cầu đường sắt</string>
+	<string name="type.railway.rail.utility.bridge">Cầu đường sắt</string>
+	<string name="type.railway.rail.spur.bridge">Cầu đường sắt</string>
+	<string name="type.railway.rail.service.bridge">Cầu đường sắt</string>
+	<string name="type.railway.rail.tunnel">Đường hầm đường sắt</string>
+	<string name="type.railway.rail.highspeed.tunnel">Đường hầm đường sắt</string>
+	<string name="type.railway.rail.tourism.tunnel">Đường hầm đường sắt</string>
+	<string name="type.railway.rail.main.tunnel">Đường hầm đường sắt</string>
+	<string name="type.railway.rail.branch.tunnel">Đường hầm đường sắt</string>
+	<string name="type.railway.rail.utility.tunnel">Đường hầm đường sắt</string>
+	<string name="type.railway.rail.spur.tunnel">Đường hầm đường sắt</string>
+	<string name="type.railway.rail.service.tunnel">Đường hầm đường sắt</string>
 	<string name="type.railway.station">Đường tàu hỏa</string>
 	<string name="type.railway.station.funicular">Đường sắt leo núi</string>
 	<string name="type.railway.station.light_rail">Đường tàu hỏa</string>
@@ -1430,6 +1461,7 @@
 	<string name="type.railway.station.subway.taoyuan">Ngầm</string>
 	<string name="type.railway.station.subway.tashkent">Ngầm</string>
 	<string name="type.railway.station.subway.tbilisi">Ngầm</string>
+	<string name="type.railway.station.subway.tehran">Ngầm</string>
 	<string name="type.railway.station.subway.tianjin">Ngầm</string>
 	<string name="type.railway.station.subway.tokyo">Ngầm</string>
 	<string name="type.railway.station.subway.valencia">Ngầm</string>
@@ -1540,6 +1572,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Lỗi vào Metro</string>
 	<string name="type.railway.subway_entrance.tashkent">Lỗi vào Metro</string>
 	<string name="type.railway.subway_entrance.tbilisi">Lỗi vào Metro</string>
+	<string name="type.railway.subway_entrance.tehran">Lỗi vào Metro</string>
 	<string name="type.railway.subway_entrance.tianjin">Lỗi vào Metro</string>
 	<string name="type.railway.subway_entrance.tokyo">Lỗi vào Metro</string>
 	<string name="type.railway.subway_entrance.valencia">Lỗi vào Metro</string>
@@ -1696,6 +1729,7 @@
 	<string name="type.sport.field_hockey">Khúc côn cầu</string>
 	<string name="type.sport.badminton">Cầu lông</string>
 	<string name="type.sport.pelota">Pơ mu Basque</string>
+	<string name="type.tourism.aquarium">Bể nuôi cá</string>
 	<string name="type.tourism.alpine_hut">Nhà ở trên núi</string>
 	<string name="type.tourism.apartment">Căn hộ</string>
 	<string name="type.tourism.artwork">Du lịch</string>

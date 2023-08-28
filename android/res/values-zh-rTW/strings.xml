@@ -233,7 +233,7 @@
 	<!-- Text in menu -->
 	<string name="facebook">臉書</string>
 	<!-- Text in menu -->
-	<string name="twitter">推特</string>
+	<string name="twitter">X (推特)</string>
 	<!-- Text in menu -->
 	<string name="openstreetmap">開放街圖</string>
 	<!-- Settings: Send feedback button and dialog title -->
@@ -748,6 +748,9 @@
 	<string name="type.amenity.car_sharing">汽車共用</string>
 	<string name="type.amenity.car_wash">洗車</string>
 	<string name="type.amenity.casino">賭場</string>
+	<string name="type.amenity.gambling">賭博</string>
+	<string name="type.leisure.adult_gaming_centre">成人遊戲中心</string>
+	<string name="type.leisure.amusement_arcade">拱廊</string>
 	<string name="type.amenity.charging_station">充電站</string>
 	<string name="type.amenity.charging_station.bicycle">自行車充電站</string>
 	<string name="type.amenity.charging_station.motorcar">汽車充電站</string>
@@ -796,6 +799,8 @@
 	<string name="type.amenity.parking.private">私人停車場</string>
 	<string name="type.amenity.parking.park_and_ride">停車場</string>
 	<string name="type.amenity.parking.underground">地下停車場</string>
+	<string name="type.amenity.parking.street_side">停車場</string>
+	<string name="type.amenity.parking.lane">停車場</string>
 	<string name="type.amenity.parking_entrance">停車場入口</string>
 	<string name="type.amenity.parking_entrance.private">停車場入口</string>
 	<string name="type.amenity.parking_entrance.permissive">停車場入口</string>
@@ -809,6 +814,7 @@
 	<string name="type.amenity.place_of_worship">寺廟</string>
 	<string name="type.amenity.place_of_worship.buddhist">佛教寺廟</string>
 	<string name="type.amenity.place_of_worship.christian">基督教堂</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">耶穌基督後期聖徒教會</string>
 	<string name="type.amenity.place_of_worship.hindu">印度教寺廟</string>
 	<string name="type.amenity.place_of_worship.jewish">猶太教堂</string>
 	<string name="type.amenity.place_of_worship.muslim">清真寺</string>
@@ -837,6 +843,7 @@
 	<string name="type.amenity.school">學校</string>
 	<string name="type.amenity.shelter">隱藏處</string>
 	<string name="type.amenity.shower">淋浴間</string>
+	<string name="type.amenity.stripclub">脫衣舞俱樂部</string>
 	<string name="type.amenity.taxi">計程車</string>
 	<string name="type.amenity.telephone">電話</string>
 	<string name="type.amenity.theatre">劇場</string>
@@ -987,6 +994,7 @@
 	<string name="type.cuisine.vegan">全素料理</string>
 	<string name="type.cuisine.vegetarian">素食</string>
 	<string name="type.cuisine.vietnamese">越南料理</string>
+	<string name="type.emergency.assembly_point">緊急集合點</string>
 	<string name="type.emergency.defibrillator">心臟電擊器</string>
 	<string name="type.emergency.fire_hydrant">消防栓</string>
 	<string name="type.emergency.phone">緊急電話</string>
@@ -1012,6 +1020,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">隧道</string>
 	<string name="type.highway.busway">巴士專用道</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">橋</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">隧道</string>
 	<string name="type.highway.bus_stop">巴士站</string>
 	<string name="type.highway.construction">在建道路</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
@@ -1356,21 +1368,24 @@
 	<string name="type.railway.monorail.bridge">單軌軌道</string>
 	<string name="type.railway.monorail.tunnel">單軌軌道</string>
 	<string name="type.railway.rail">鐵路軌道</string>
-	<string name="type.railway.rail.highspeed">鐵路軌道</string>
-	<string name="type.railway.rail.tourism">鐵路軌道</string>
-	<string name="type.railway.rail.main">鐵路軌道</string>
-	<string name="type.railway.rail.branch">鐵路軌道</string>
-	<string name="type.railway.rail.utility">鐵路軌道</string>
-	<string name="type.railway.rail.spur">鐵路軌道</string>
-	<string name="type.railway.rail.service">鐵路軌道</string>
-	<string name="type.railway.rail.bridge">鐵路軌道</string>
-	<string name="type.railway.rail.highspeed.bridge">鐵路軌道</string>
-	<string name="type.railway.rail.tourism.bridge">鐵路軌道</string>
-	<string name="type.railway.rail.main.bridge">鐵路軌道</string>
-	<string name="type.railway.rail.branch.bridge">鐵路軌道</string>
-	<string name="type.railway.rail.utility.bridge">鐵路軌道</string>
-	<string name="type.railway.rail.spur.bridge">鐵路軌道</string>
-	<string name="type.railway.rail.service.bridge">鐵路軌道</string>
+	<string name="type.railway.rail.highspeed">高鐵</string>
+	<string name="type.railway.rail.tourism">旅遊鐵路</string>
+	<string name="type.railway.rail.main">鐵路</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">二級鐵路</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">公用鐵路</string>
+	<string name="type.railway.rail.spur">鐵路支線</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">輔助鐵軌</string>
+	<string name="type.railway.rail.bridge">鐵路橋</string>
+	<string name="type.railway.rail.highspeed.bridge">鐵路橋</string>
+	<string name="type.railway.rail.tourism.bridge">鐵路橋</string>
+	<string name="type.railway.rail.main.bridge">鐵路橋</string>
+	<string name="type.railway.rail.branch.bridge">鐵路橋</string>
+	<string name="type.railway.rail.utility.bridge">鐵路橋</string>
+	<string name="type.railway.rail.spur.bridge">鐵路橋</string>
+	<string name="type.railway.rail.service.bridge">鐵路橋</string>
 	<string name="type.railway.rail.tunnel">鐵路軌道</string>
 	<string name="type.railway.rail.highspeed.tunnel">鐵路軌道</string>
 	<string name="type.railway.rail.tourism.tunnel">鐵路軌道</string>
@@ -1484,6 +1499,7 @@
 	<string name="type.railway.station.subway.taoyuan">捷運站</string>
 	<string name="type.railway.station.subway.tashkent">捷運站</string>
 	<string name="type.railway.station.subway.tbilisi">捷運站</string>
+	<string name="type.railway.station.subway.tehran">捷運站</string>
 	<string name="type.railway.station.subway.tianjin">捷運站</string>
 	<string name="type.railway.station.subway.tokyo">捷運站</string>
 	<string name="type.railway.station.subway.valencia">捷運站</string>
@@ -1594,6 +1610,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">地鐵入口</string>
 	<string name="type.railway.subway_entrance.tashkent">地鐵入口</string>
 	<string name="type.railway.subway_entrance.tbilisi">地鐵入口</string>
+	<string name="type.railway.subway_entrance.tehran">地鐵入口</string>
 	<string name="type.railway.subway_entrance.tianjin">地鐵入口</string>
 	<string name="type.railway.subway_entrance.tokyo">地鐵入口</string>
 	<string name="type.railway.subway_entrance.valencia">地鐵入口</string>
@@ -1755,6 +1772,7 @@
 	<string name="type.sport.field_hockey">曲棍球</string>
 	<string name="type.sport.badminton">羽毛球</string>
 	<string name="type.sport.pelota">巴斯克回力球</string>
+	<string name="type.tourism.aquarium">水族館</string>
 	<string name="type.tourism.alpine_hut">山上住宿</string>
 	<string name="type.tourism.apartment">公寓</string>
 	<string name="type.tourism.artwork">藝術品</string>

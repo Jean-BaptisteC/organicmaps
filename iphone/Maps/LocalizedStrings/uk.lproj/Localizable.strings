@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Казино";
 
+"type.amenity.gambling" = "Азартні ігри";
+
+"type.leisure.adult_gaming_centre" = "Ігровий центр для дорослих";
+
+"type.leisure.amusement_arcade" = "Аркада";
+
 "type.amenity.charging_station" = "Зарядна станція";
 
 "type.amenity.charging_station.bicycle" = "Велосипедна зарядна станція";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Підземний паркінг";
 
+"type.amenity.parking.street_side" = "Парковка";
+
+"type.amenity.parking.lane" = "Парковка";
+
 "type.amenity.parking_entrance" = "Вхід на паркінг";
 
 "type.amenity.parking_entrance.private" = "Вхід на паркінг";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Храм";
 
 "type.amenity.place_of_worship.christian" = "Церква";
+
+"type.amenity.place_of_worship.christian.mormon" = "Церква Ісуса Христа Святих Останніх Днів";
 
 "type.amenity.place_of_worship.hindu" = "Храм";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Укриття";
 
 "type.amenity.shower" = "Душ";
+
+"type.amenity.stripclub" = "Стриптиз-клуб";
 
 "type.amenity.taxi" = "Таксі";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Аварійний збірний пункт";
+
 "type.emergency.defibrillator" = "Дефібрилятор";
 
 "type.emergency.fire_hydrant" = "Пожежний гідрант";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Тунель";
 
 "type.highway.busway" = "Виділена автобусна дорога";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Міст";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Тунель";
 
 "type.highway.bus_stop" = "Зупинка";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Інтернет";
 
 "type.junction" = "Перехрестя";
+
+"type.junction.circular" = "Кільце";
 
 "type.junction.roundabout" = "Кільце";
 
@@ -2802,19 +2826,22 @@
 
 "type.railway.rail" = "Залізнична дорога";
 
-"type.railway.rail.highspeed" = "Залізнична дорога";
+"type.railway.rail.highspeed" = "Швидкісна залізниця";
 
-"type.railway.rail.tourism" = "Залізнична дорога";
+"type.railway.rail.tourism" = "Туристична залізниця";
 
-"type.railway.rail.main" = "Залізнична дорога";
+"type.railway.rail.main" = "Залізниця";
 
-"type.railway.rail.branch" = "Залізнична дорога";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Залізнична гілка";
 
-"type.railway.rail.utility" = "Залізнична дорога";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Службова залізниця";
 
 "type.railway.rail.spur" = "Під'їздна залізниця";
 
-"type.railway.rail.service" = "Залізнична дорога";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Допоміжна залізнична колія";
 
 "type.railway.rail.bridge" = "Залізничний міст";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "Метро";
 
+"type.railway.station.subway.tehran" = "Метро";
+
 "type.railway.station.subway.tianjin" = "Метро";
 
 "type.railway.station.subway.tokyo" = "Метро";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "Вхід до метро";
 
 "type.railway.subway_entrance.tbilisi" = "Вхід до метро";
+
+"type.railway.subway_entrance.tehran" = "Вхід до метро";
 
 "type.railway.subway_entrance.tianjin" = "Вхід до метро";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Туризм";
 
+"type.tourism.aquarium" = "Акваріум";
+
 "type.tourism.alpine_hut" = "Гірський готель";
 
 "type.tourism.apartment" = "Апартаменти";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "Канава";
 
-"type.waterway.ditch.tunnel" = "Канава";
+"type.waterway.ditch.tunnel" = "Водопропускна труба";
 
 "type.waterway.dock" = "Причал";
 
 "type.waterway.drain" = "Водовiдвiд";
 
-"type.waterway.drain.tunnel" = "Водовiдвiд";
+"type.waterway.drain.tunnel" = "Водопропускна труба";
 
 "type.waterway.lock_gate" = "Шлюз";
 

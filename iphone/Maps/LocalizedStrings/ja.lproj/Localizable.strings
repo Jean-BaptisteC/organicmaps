@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "カジノ";
 
+"type.amenity.gambling" = "ギャンブル";
+
+"type.leisure.adult_gaming_centre" = "アダルト ゲーム センター";
+
+"type.leisure.amusement_arcade" = "アーケード";
+
 "type.amenity.charging_station" = "充電ステーション";
 
 "type.amenity.charging_station.bicycle" = "自転車充電ステーション";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "地下駐車場";
 
+"type.amenity.parking.street_side" = "駐車場";
+
+"type.amenity.parking.lane" = "駐車場";
+
 "type.amenity.parking_entrance" = "駐車場入口";
 
 "type.amenity.parking_entrance.private" = "駐車場入口";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "寺院";
 
 "type.amenity.place_of_worship.christian" = "キリスト教会";
+
+"type.amenity.place_of_worship.christian.mormon" = "末日聖徒イエス・キリスト教会";
 
 "type.amenity.place_of_worship.hindu" = "ヒンドゥー教寺院";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "避難所";
 
 "type.amenity.shower" = "シャワー";
+
+"type.amenity.stripclub" = "ストリップクラブ";
 
 "type.amenity.taxi" = "タクシー";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "緊急集合場所";
+
 "type.emergency.defibrillator" = "除細動器";
 
 "type.emergency.fire_hydrant" = "消火栓";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "馬道(トンネル)";
 
 "type.highway.busway" = "バス専用道路";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "橋";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "トンネル";
 
 "type.highway.bus_stop" = "バス停";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "インターネット";
 
 "type.junction" = "交差点";
+
+"type.junction.circular" = "ラウンドアバウト";
 
 "type.junction.roundabout" = "ラウンドアバウト";
 
@@ -2802,19 +2826,22 @@
 
 "type.railway.rail" = "鉄道";
 
-"type.railway.rail.highspeed" = "鉄道";
+"type.railway.rail.highspeed" = "高速鉄道";
 
-"type.railway.rail.tourism" = "鉄道";
+"type.railway.rail.tourism" = "観光鉄道";
 
 "type.railway.rail.main" = "鉄道";
 
-"type.railway.rail.branch" = "鉄道";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "二次鉄道";
 
-"type.railway.rail.utility" = "鉄道";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "実用鉄道";
 
 "type.railway.rail.spur" = "引き込み線";
 
-"type.railway.rail.service" = "鉄道";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "補助線路";
 
 "type.railway.rail.bridge" = "鉄道(橋)";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "地下鉄";
 
+"type.railway.station.subway.tehran" = "地下鉄";
+
 "type.railway.station.subway.tianjin" = "地下鉄";
 
 "type.railway.station.subway.tokyo" = "地下鉄";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "地下鉄入り口";
 
 "type.railway.subway_entrance.tbilisi" = "地下鉄入り口";
+
+"type.railway.subway_entrance.tehran" = "地下鉄入り口";
 
 "type.railway.subway_entrance.tianjin" = "地下鉄入り口";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "観光";
 
+"type.tourism.aquarium" = "水族館";
+
 "type.tourism.alpine_hut" = "山小屋";
 
 "type.tourism.apartment" = "アパート";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "排水路";
 
-"type.waterway.ditch.tunnel" = "排水路";
+"type.waterway.ditch.tunnel" = "暗渠";
 
 "type.waterway.dock" = "ドック";
 
 "type.waterway.drain" = "用水路";
 
-"type.waterway.drain.tunnel" = "用水路";
+"type.waterway.drain.tunnel" = "暗渠";
 
 "type.waterway.lock_gate" = "水門";
 

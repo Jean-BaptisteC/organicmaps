@@ -289,7 +289,7 @@
 "facebook" = "臉書";
 
 /* Text in menu */
-"twitter" = "推特";
+"twitter" = "X (推特)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "賭場";
 
+"type.amenity.gambling" = "賭博";
+
+"type.leisure.adult_gaming_centre" = "成人遊戲中心";
+
+"type.leisure.amusement_arcade" = "拱廊";
+
 "type.amenity.charging_station" = "充電站";
 
 "type.amenity.charging_station.bicycle" = "自行車充電站";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "地下停車場";
 
+"type.amenity.parking.street_side" = "停車場";
+
+"type.amenity.parking.lane" = "停車場";
+
 "type.amenity.parking_entrance" = "停車場入口";
 
 "type.amenity.parking_entrance.private" = "停車場入口";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "佛教寺廟";
 
 "type.amenity.place_of_worship.christian" = "基督教堂";
+
+"type.amenity.place_of_worship.christian.mormon" = "耶穌基督後期聖徒教會";
 
 "type.amenity.place_of_worship.hindu" = "印度教寺廟";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "隱藏處";
 
 "type.amenity.shower" = "淋浴間";
+
+"type.amenity.stripclub" = "脫衣舞俱樂部";
 
 "type.amenity.taxi" = "計程車";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "緊急集合點";
+
 "type.emergency.defibrillator" = "心臟電擊器";
 
 "type.emergency.fire_hydrant" = "消防栓";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "隧道";
 
 "type.highway.busway" = "巴士專用道";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "橋";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "隧道";
 
 "type.highway.bus_stop" = "巴士站";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "互聯網";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,35 +2826,38 @@
 
 "type.railway.rail" = "鐵路軌道";
 
-"type.railway.rail.highspeed" = "鐵路軌道";
+"type.railway.rail.highspeed" = "高鐵";
 
-"type.railway.rail.tourism" = "鐵路軌道";
+"type.railway.rail.tourism" = "旅遊鐵路";
 
-"type.railway.rail.main" = "鐵路軌道";
+"type.railway.rail.main" = "鐵路";
 
-"type.railway.rail.branch" = "鐵路軌道";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "二級鐵路";
 
-"type.railway.rail.utility" = "鐵路軌道";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "公用鐵路";
 
-"type.railway.rail.spur" = "鐵路軌道";
+"type.railway.rail.spur" = "鐵路支線";
 
-"type.railway.rail.service" = "鐵路軌道";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "輔助鐵軌";
 
-"type.railway.rail.bridge" = "鐵路軌道";
+"type.railway.rail.bridge" = "鐵路橋";
 
-"type.railway.rail.highspeed.bridge" = "鐵路軌道";
+"type.railway.rail.highspeed.bridge" = "鐵路橋";
 
-"type.railway.rail.tourism.bridge" = "鐵路軌道";
+"type.railway.rail.tourism.bridge" = "鐵路橋";
 
-"type.railway.rail.main.bridge" = "鐵路軌道";
+"type.railway.rail.main.bridge" = "鐵路橋";
 
-"type.railway.rail.branch.bridge" = "鐵路軌道";
+"type.railway.rail.branch.bridge" = "鐵路橋";
 
-"type.railway.rail.utility.bridge" = "鐵路軌道";
+"type.railway.rail.utility.bridge" = "鐵路橋";
 
-"type.railway.rail.spur.bridge" = "鐵路軌道";
+"type.railway.rail.spur.bridge" = "鐵路橋";
 
-"type.railway.rail.service.bridge" = "鐵路軌道";
+"type.railway.rail.service.bridge" = "鐵路橋";
 
 "type.railway.rail.tunnel" = "鐵路軌道";
 
@@ -3058,6 +3085,8 @@
 
 "type.railway.station.subway.tbilisi" = "捷運站";
 
+"type.railway.station.subway.tehran" = "捷運站";
+
 "type.railway.station.subway.tianjin" = "捷運站";
 
 "type.railway.station.subway.tokyo" = "捷運站";
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "地鐵入口";
 
 "type.railway.subway_entrance.tbilisi" = "地鐵入口";
+
+"type.railway.subway_entrance.tehran" = "地鐵入口";
 
 "type.railway.subway_entrance.tianjin" = "地鐵入口";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "水族館";
+
 "type.tourism.alpine_hut" = "山上住宿";
 
 "type.tourism.apartment" = "公寓";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "閘門";
 

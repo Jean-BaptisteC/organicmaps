@@ -21,6 +21,13 @@ bool HouseNumbersMatch(string const & houseNumber, string const & query, bool qu
   return search::house_numbers::HouseNumbersMatch(MakeUniString(houseNumber), queryParse);
 }
 
+bool HouseNumbersMatchConscription(string const & houseNumber, string const & query, bool queryIsPrefix = false)
+{
+  vector<Token> queryParse;
+  ParseQuery(MakeUniString(query), queryIsPrefix, queryParse);
+  return search::house_numbers::HouseNumbersMatchConscription(MakeUniString(houseNumber), queryParse);
+}
+
 bool HouseNumbersMatchRange(string_view const & hnRange, string const & query, feature::InterpolType interpol)
 {
   vector<Token> queryParse;
@@ -167,6 +174,28 @@ UNIT_TEST(HouseNumber_Matcher)
   TEST(!HouseNumbersMatch("12,14", "13"), ());
 }
 
+UNIT_TEST(HouseNumber_Matcher_Conscription)
+{
+  TEST(HouseNumbersMatchConscription("77/21", "77"), ());
+  TEST(HouseNumbersMatchConscription("77 b/21", "77b"), ());
+
+  TEST(HouseNumbersMatchConscription("77/21", "21"), ());
+  TEST(HouseNumbersMatchConscription("77/21 a", "21a"), ());
+
+  TEST(HouseNumbersMatchConscription("77/21", "77/21"), ());
+  TEST(HouseNumbersMatchConscription("77/21", "21/77"), ());
+
+  TEST(HouseNumbersMatchConscription("77x/21y", "77"), ());
+  TEST(HouseNumbersMatchConscription("77x/21y", "21"), ());
+
+  /// @todo Controversial, but need skip ParseQuery and treat query as 2 separate inputs.
+  /// @{
+  TEST(HouseNumbersMatchConscription("77/21", "77x/21y"), ());
+  TEST(!HouseNumbersMatchConscription("77x/21y", "77/21"), ());
+  TEST(!HouseNumbersMatchConscription("78/21", "77/21"), ());
+  /// @}
+}
+
 UNIT_TEST(HouseNumber_Matcher_Range)
 {
   using IType = feature::InterpolType;
@@ -186,6 +215,7 @@ UNIT_TEST(HouseNumber_LooksLike)
 {
   TEST(LooksLikeHouseNumber("1", false /* isPrefix */), ());
   TEST(LooksLikeHouseNumber("ev 10", false /* isPrefix */), ());
+  TEST(LooksLikeHouseNumber("ev.1", false /* isPrefix */), ());
 
   TEST(LooksLikeHouseNumber("14 к", true /* isPrefix */), ());
   TEST(LooksLikeHouseNumber("14 кор", true /* isPrefix */), ());
@@ -214,6 +244,8 @@ UNIT_TEST(HouseNumber_LooksLike)
 
   TEST(LooksLikeHouseNumber("дом ", true /* isPrefix */), ());
   TEST(LooksLikeHouseNumber("дом ", false /* isPrefix */), ());
+  TEST(LooksLikeHouseNumber("house", true /* isPrefix */), ());
+  TEST(LooksLikeHouseNumber("house ", false /* isPrefix */), ());
 
   TEST(LooksLikeHouseNumber("дом 39 строение 79", false /* isPrefix */), ());
 

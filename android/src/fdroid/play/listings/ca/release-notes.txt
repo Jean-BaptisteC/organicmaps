@@ -1,13 +1,10 @@
-• GPX import support
-• New OpenStreetMap data as of June 2
-• MRGS and UTM coordinates support (tap on coordinates to change)
-• Improved car and bicycle routing
-• Fixed bug that prevented upload of OSM edits when on battery power
-• Now compass works on devices without gyroscope
-• Fixed missing Wiki descriptions
-• Decreased TTS (Text-To-Speech) voice speed
-• Added Fish Pass
-• Fixed funicular and parcel locker icons
-• Corrected be, eu, en, en-GB, and uk translations
+• Dades de l'OpenStreetMap actualitzades al 14 d'agost
+• Publicacions de la Viquipèdia més recents
+• S'ha corregit la cerca en adreces de la República Txeca i Eslovàquia
+• S'ha afegit informació faltant per a algunes regions d'Argentina, Xile, Casaquistan, Tibet, USA i Rússia
+• Informació més detallada d'algunes àrees
+• S'han afegit rutes en ferri al mapa mundial
+• S'ha redissenyat la icona del pàrquing
+• Sistema de prioritats renovat per als PDI
 
-…more: omaps.org/news
+…més informació: omaps.org/news

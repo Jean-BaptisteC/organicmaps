@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1269,25 +1269,25 @@
 
 "type.aerialway.station" = "Stazione";
 
-"type.aeroway" = "Airspace Infrastructure";
+"type.aeroway" = "Infrastruttura aeroportuale";
 
 "type.aeroway.aerodrome" = "Aeroporto";
 
 "type.aeroway.aerodrome.international" = "Aeroporto";
 
-"type.aeroway.apron" = "Apron";
+"type.aeroway.apron" = "Area di stazionamento per aeromobili";
 
-"type.aeroway.gate" = "Gate";
+"type.aeroway.gate" = "Cancello aeroportuale";
 
 "type.aeroway.helipad" = "Piattaforma per elicotteri";
 
-"type.aeroway.runway" = "Pista";
+"type.aeroway.runway" = "Pista di decollo/atterraggio";
 
 "type.aeroway.taxiway" = "Pista di rullaggio";
 
-"type.aeroway.terminal" = "Terminal";
+"type.aeroway.terminal" = "Terminal aeroportuale";
 
-"type.amenity" = "Servize";
+"type.amenity" = "Struttura";
 
 "type.amenity.arts_centre" = "Centro artistico";
 
@@ -1295,7 +1295,7 @@
 
 "type.amenity.bank" = "Banca";
 
-"type.amenity.bar" = "Bar";
+"type.amenity.bar" = "Bar alcolico";
 
 "type.amenity.bbq" = "Grill pubblico";
 
@@ -1317,13 +1317,19 @@
 
 "type.amenity.cafe" = "Caffè";
 
-"type.amenity.car_rental" = "Noleggio di automobili";
+"type.amenity.car_rental" = "Noleggio automobili";
 
-"type.amenity.car_sharing" = "Car Sharing";
+"type.amenity.car_sharing" = "Car sharing";
 
 "type.amenity.car_wash" = "Lavaggio auto";
 
 "type.amenity.casino" = "Casinò";
+
+"type.amenity.gambling" = "Gioco d'azzardo";
+
+"type.leisure.adult_gaming_centre" = "Centro giochi per adulti";
+
+"type.leisure.amusement_arcade" = "Arcade";
 
 "type.amenity.charging_station" = "Stazione di ricarica";
 
@@ -1359,7 +1365,7 @@
 
 "type.amenity.money_transfer" = "Trasferimento di denaro";
 
-"type.amenity.music_school" = "Scuola di Musica";
+"type.amenity.music_school" = "Scuola di musica";
 
 "type.amenity.language_school" = "Scuola di lingue";
 
@@ -1367,7 +1373,7 @@
 
 "type.amenity.fast_food" = "Fast food";
 
-"type.amenity.ferry_terminal" = "Traghetto";
+"type.amenity.ferry_terminal" = "Terminal traghetti";
 
 "type.amenity.fire_station" = "Squadra antincendio";
 
@@ -1417,9 +1423,13 @@
 
 "type.amenity.parking.private" = "Parcheggio privato";
 
-"type.amenity.parking.park_and_ride" = "Parcheggio";
+"type.amenity.parking.park_and_ride" = "Parcheggio di interscambio";
 
 "type.amenity.parking.underground" = "Parcheggio sotterraneo";
+
+"type.amenity.parking.street_side" = "Parcheggio";
+
+"type.amenity.parking.lane" = "Parcheggio";
 
 "type.amenity.parking_entrance" = "Ingresso parcheggio";
 
@@ -1427,13 +1437,13 @@
 
 "type.amenity.parking_entrance.permissive" = "Ingresso parcheggio";
 
-"type.amenity.parking_space" = "Parcheggio";
+"type.amenity.parking_space" = "Posteggio singolo";
 
-"type.amenity.parking_space.permissive" = "Parcheggio";
+"type.amenity.parking_space.permissive" = "Posteggio singolo";
 
-"type.amenity.parking_space.private" = "Parcheggio";
+"type.amenity.parking_space.private" = "Posteggio singolo";
 
-"type.amenity.parking_space.underground" = "Parcheggio";
+"type.amenity.parking_space.underground" = "Posteggio singolo";
 
 "type.amenity.parking_space.disabled" = "Posto auto per disabili";
 
@@ -1443,31 +1453,33 @@
 
 "type.amenity.place_of_worship" = "Luogo di culto";
 
-"type.amenity.place_of_worship.buddhist" = "Tempio";
+"type.amenity.place_of_worship.buddhist" = "Tempio buddista";
 
 "type.amenity.place_of_worship.christian" = "Chiesa";
 
-"type.amenity.place_of_worship.hindu" = "Tempio";
+"type.amenity.place_of_worship.christian.mormon" = "Chiesa di Gesù Cristo dei Santi degli Ultimi Giorni";
+
+"type.amenity.place_of_worship.hindu" = "Tempio induista";
 
 "type.amenity.place_of_worship.jewish" = "Sinagoga";
 
 "type.amenity.place_of_worship.muslim" = "Moschea";
 
-"type.amenity.place_of_worship.shinto" = "Santuario";
+"type.amenity.place_of_worship.shinto" = "Santuario shintoista";
 
-"type.amenity.place_of_worship.taoist" = "Tempio";
+"type.amenity.place_of_worship.taoist" = "Tempio taoista";
 
 "type.amenity.police" = "Polizia";
 
-"type.amenity.post_box" = "Casella della posta";
+"type.amenity.post_box" = "Casella postale";
 
 "type.amenity.post_office" = "Ufficio postale";
 
 "type.amenity.prison" = "Prigione";
 
-"type.amenity.pub" = "Pub";
+"type.amenity.pub" = "Taverna";
 
-"type.amenity.public_bookcase" = "Libreria";
+"type.amenity.public_bookcase" = "Biblioteca di strada";
 
 
 /********** Types: Recycling **********/
@@ -1502,11 +1514,11 @@
 
 "type.recycling.green_waste" = "Umido";
 
-"type.recycling.cartons" = "Cartons";
+"type.recycling.cartons" = "Tetrapak";
 
 "type.amenity.restaurant" = "Ristorante";
 
-"type.amenity.sanitary_dump_station" = "Area servizi camper";
+"type.amenity.sanitary_dump_station" = "Scarico acque nere";
 
 "type.amenity.school" = "Scuola";
 
@@ -1514,53 +1526,55 @@
 
 "type.amenity.shower" = "Doccia";
 
+"type.amenity.stripclub" = "Stripclub";
+
 "type.amenity.taxi" = "Taxi";
 
 "type.amenity.telephone" = "Telefono";
 
 "type.amenity.theatre" = "Teatro";
 
-"type.amenity.toilets" = "Toilette";
+"type.amenity.toilets" = "Servizi igienici";
 
 "type.amenity.townhall" = "Municipio";
 
 "type.amenity.university" = "Università";
 
-"type.amenity.vending_machine" = "Macchinetta";
+"type.amenity.vending_machine" = "Distributore automatico";
 
 "type.amenity.vending_machine.cigarettes" = "Distributore automatico di sigarette";
 
-"type.amenity.vending_machine.coffee" = "Distributore di caffè";
+"type.amenity.vending_machine.coffee" = "Macchina del caffè";
 
 "type.amenity.vending_machine.condoms" = "Distributore di profilattici";
 
 "type.amenity.vending_machine.drinks" = "Distributore automatico di bibite";
 
-"type.amenity.vending_machine.food" = "Distributore di alimenti";
+"type.amenity.vending_machine.food" = "Distributore automatico di alimenti";
 
-"type.amenity.vending_machine.newspapers" = "Distributore di giornali";
+"type.amenity.vending_machine.newspapers" = "Distributore automatico di giornali";
 
 "type.amenity.vending_machine.parking_tickets" = "Parcometro";
 
-"type.amenity.vending_machine.public_transport_tickets" = "Distributore automatico biglietti di trasporto";
+"type.amenity.vending_machine.public_transport_tickets" = "Biglietteria automatica del trasporto pubblico";
 
-"type.amenity.vending_machine.sweets" = "Distributore di dolciumi";
+"type.amenity.vending_machine.sweets" = "Distributore automatico di dolciumi";
 
-"type.amenity.vending_machine.excrement_bags" = "Excrement Bags Dispenser";
+"type.amenity.vending_machine.excrement_bags" = "Distributore di sacchetti per escrementi";
 
 "type.amenity.parcel_locker" = "Punto di ritiro";
 
-"type.amenity.vending_machine.fuel" = "Fuel Pump";
+"type.amenity.vending_machine.fuel" = "Pompa di rifornimento";
 
 "type.amenity.veterinary" = "Veterinario";
 
 "type.amenity.waste_basket" = "Contenitore per rifiuti";
 
-"type.amenity.waste_disposal" = "Spazzatura";
+"type.amenity.waste_disposal" = "Cassonetto";
 
 "type.amenity.waste_transfer_station" = "Centro trasferimento rifiuti";
 
-"type.amenity.water_point" = "Distributore acqua";
+"type.amenity.water_point" = "Punto acqua";
 
 "type.barrier" = "Barriera";
 
@@ -1588,9 +1602,9 @@
 
 "type.barrier.kissing_gate" = "Cancello";
 
-"type.barrier.lift_gate" = "Barriera ferroviaria";
+"type.barrier.lift_gate" = "Sbarra";
 
-"type.barrier.retaining_wall" = "Retaining Wall";
+"type.barrier.retaining_wall" = "Muro di sostegno";
 
 "type.barrier.stile" = "Scaletta per recinzioni";
 
@@ -1745,7 +1759,7 @@
 
 "type.cuisine.breakfast" = "Colazione";
 
-"type.cuisine.bubble_tea" = "Bubble Tea";
+"type.cuisine.bubble_tea" = "Bubble tea";
 
 "type.cuisine.burger" = "Hamburger";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergenza";
 
+"type.emergency.assembly_point" = "Punto di raccolta di emergenza";
+
 "type.emergency.defibrillator" = "Defibrillatore";
 
 "type.emergency.fire_hydrant" = "Idrante";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Tunnel";
 
 "type.highway.busway" = "Strada dedicata agli autobus";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Ponte";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Tunnel";
 
 "type.highway.bus_stop" = "Fermata dell'autobus";
 
@@ -1997,10 +2019,10 @@
 "type.highway.motorway" = "Autostrada";
 
 /* These translations are used for all type.highway.*.bridge. */
-"type.highway.motorway.bridge" = "Ponte";
+"type.highway.motorway.bridge" = "Ponte autostradale";
 
 /* These translations are used for all type.highway.*.tunnel. */
-"type.highway.motorway.tunnel" = "Tunnel";
+"type.highway.motorway.tunnel" = "Tunnel autostradale";
 
 "type.highway.motorway_junction" = "Road Exit";
 
@@ -2334,11 +2356,13 @@
 
 "type.junction" = "Incrocio";
 
+"type.junction.circular" = "Rotonda";
+
 "type.junction.roundabout" = "Rotonda";
 
 "type.landuse" = "Landuse";
 
-"type.landuse.allotments" = "Allotments";
+"type.landuse.allotments" = "Orti comunitari";
 
 "type.landuse.basin" = "Bacino d'acqua";
 
@@ -2474,7 +2498,7 @@
 
 "type.leisure.water_park" = "Parco acquatico";
 
-"type.leisure.beach_resort" = "Beach Resort";
+"type.leisure.beach_resort" = "Resort balneare";
 
 "type.man_made" = "Stabilimento balneare";
 
@@ -2492,7 +2516,7 @@
 
 "type.man_made.lighthouse" = "Faro";
 
-"type.man_made.mast" = "Mast";
+"type.man_made.mast" = "Pilone";
 
 "type.man_made.pier" = "Molo";
 
@@ -2752,7 +2776,7 @@
 
 "type.railway" = "Ferrovia";
 
-"type.railway.abandoned" = "Abandoned Railway";
+"type.railway.abandoned" = "Ferrovia abbandonata";
 
 "type.railway.abandoned.bridge" = "Abandoned Railway Bridge";
 
@@ -2760,9 +2784,9 @@
 
 "type.railway.construction" = "Binari in costruzione";
 
-"type.railway.crossing" = "Railway Crossing";
+"type.railway.crossing" = "Passaggio ferroviario";
 
-"type.railway.disused" = "Disused Railway";
+"type.railway.disused" = "Ferrovia in disuso";
 
 "type.railway.funicular" = "Funicolare";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Binari";
 
-"type.railway.rail.highspeed" = "Binari";
+"type.railway.rail.highspeed" = "Ferrovia ad alta velocità";
 
-"type.railway.rail.tourism" = "Binari";
+"type.railway.rail.tourism" = "Ferrovia turistica";
 
-"type.railway.rail.main" = "Binari";
+"type.railway.rail.main" = "Ferrovia";
 
-"type.railway.rail.branch" = "Binari";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Ferrovia secondaria";
 
-"type.railway.rail.utility" = "Binari";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Ferrovia di utilità";
 
-"type.railway.rail.spur" = "Binari";
+"type.railway.rail.spur" = "Sperone ferroviario";
 
-"type.railway.rail.service" = "Binari";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Binario ausiliario";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Ponte ferroviario";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Ponte ferroviario";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Ponte ferroviario";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Ponte ferroviario";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Ponte ferroviario";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Ponte ferroviario";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Ponte ferroviario";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Ponte ferroviario";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Tunnel ferroviario";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Tunnel ferroviario";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Tunnel ferroviario";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Tunnel ferroviario";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Tunnel ferroviario";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Tunnel ferroviario";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Tunnel ferroviario";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Tunnel ferroviario";
 
 "type.railway.station" = "Stazione ferroviaria";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "Stazione della metrò";
 
 "type.railway.station.subway.tbilisi" = "Stazione della metrò";
+
+"type.railway.station.subway.tehran" = "Stazione della metrò";
 
 "type.railway.station.subway.tianjin" = "Stazione della metrò";
 
@@ -3284,6 +3313,8 @@
 
 "type.railway.subway_entrance.tbilisi" = "Stazione metropolitana";
 
+"type.railway.subway_entrance.tehran" = "Stazione metropolitana";
+
 "type.railway.subway_entrance.tianjin" = "Stazione metropolitana";
 
 "type.railway.subway_entrance.tokyo" = "Stazione metropolitana";
@@ -3406,7 +3437,7 @@
 
 "type.shop.hairdresser" = "Parrucchiera";
 
-"type.shop.hardware" = "Hardware Store";
+"type.shop.hardware" = "Ferramenta";
 
 "type.shop.health_food" = "Negozio di alimenti naturali";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Turismo";
 
+"type.tourism.aquarium" = "Acquario";
+
 "type.tourism.alpine_hut" = "Rifugio";
 
 "type.tourism.apartment" = "Appartamento";
@@ -3692,13 +3725,13 @@
 
 "type.waterway.ditch" = "Fosso";
 
-"type.waterway.ditch.tunnel" = "Fosso";
+"type.waterway.ditch.tunnel" = "Cunicolo";
 
 "type.waterway.dock" = "Darsena";
 
 "type.waterway.drain" = "Canale di scolo";
 
-"type.waterway.drain.tunnel" = "Canale di scolo";
+"type.waterway.drain.tunnel" = "Cunicolo";
 
 "type.waterway.lock_gate" = "Sbarramento";
 
@@ -3742,17 +3775,17 @@
 
 "type.piste_type.downhill" = "Downhill Ski Run";
 
-"type.piste_type.downhill.advanced" = "Downhill Ski Run";
+"type.piste_type.downhill.advanced" = "Pista difficile";
 
-"type.piste_type.downhill.easy" = "Downhill Ski Run";
+"type.piste_type.downhill.easy" = "Pista facile";
 
-"type.piste_type.downhill.expert" = "Downhill Ski Run";
+"type.piste_type.downhill.expert" = "Pista per esperti";
 
 "type.piste_type.downhill.freeride" = "Downhill Ski Run";
 
-"type.piste_type.downhill.intermediate" = "Downhill Ski Run";
+"type.piste_type.downhill.intermediate" = "Pista media";
 
-"type.piste_type.downhill.novice" = "Downhill Ski Run";
+"type.piste_type.downhill.novice" = "Pista per principianti";
 
 "type.piste_type.nordic" = "Nordic Ski Trail";
 

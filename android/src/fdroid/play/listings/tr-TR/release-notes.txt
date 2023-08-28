@@ -1,10 +1,13 @@
-• GPX dosyalarını içe aktarma desteği
-• Yeni OpenStreetMap verileri (2 Haziran)
-• MRGS ve UTM koordinat desteği (ayarlamak için koordinatlara dokunun)
-• İyileştirilmiş araç ve bisiklet rotaları
-• Pil tasarrufundayken harita düzenlemede oluşan hata düzeltildi
-• Artık pusula, jiroskop sensörü olmayan cihazlarda da çalışıyor
-• Eksik Vikipedi açıklamaları düzeltildi
-• Navigasyon sesi yavaşlatıldı
-• Balık geçidi kategorisi eklendi
-…dahası: omaps.org/tr/news
+• New OpenStreetMap data as of August 14
+• Fresh Wikipedia articles
+• Fixed search for addresses in Czech and Slovakia
+• Added missing isolines for some regions of Argentina, Chile, Kazakhstan, Tibet, USA, Russia
+• More dense isolines in some areas
+• Fixed bug on Nexus 5X
+• Added ferry routes to the World map
+• Redesigned parking icons
+• Revamped priorities system for POIs
+• Many other smaller enhancements and bug fixes
+• Faster, improved search and routing
+
+…more: omaps.org/news

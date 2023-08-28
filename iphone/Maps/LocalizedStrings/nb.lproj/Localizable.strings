@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "Kasino";
 
+"type.amenity.gambling" = "Gambling";
+
+"type.leisure.adult_gaming_centre" = "Spillsenter for voksne";
+
+"type.leisure.amusement_arcade" = "Arcade";
+
 "type.amenity.charging_station" = "Ladestasjon";
 
 "type.amenity.charging_station.bicycle" = "Ladestasjon for sykkel";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "Underjordisk parkering";
 
+"type.amenity.parking.street_side" = "Parkering";
+
+"type.amenity.parking.lane" = "Parkering";
+
 "type.amenity.parking_entrance" = "Parkeringsinngang";
 
 "type.amenity.parking_entrance.private" = "Parkeringsinngang";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "Tempel";
 
 "type.amenity.place_of_worship.christian" = "Kirke";
+
+"type.amenity.place_of_worship.christian.mormon" = "Jesu Kristi Kirke av Siste Dagers Hellige";
 
 "type.amenity.place_of_worship.hindu" = "Tempel";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "Ly";
 
 "type.amenity.shower" = "Dusj";
+
+"type.amenity.stripclub" = "Stripklubb";
 
 "type.amenity.taxi" = "Drosje";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "Nødsamlingssted";
+
 "type.emergency.defibrillator" = "Hjertestarter";
 
 "type.emergency.fire_hydrant" = "Brannhydrant";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "Tunnel";
 
 "type.highway.busway" = "Dedikert bussvei";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "Bru";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "Tunnel";
 
 "type.highway.bus_stop" = "Busstopp";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "Internet";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "Toglinje";
 
-"type.railway.rail.highspeed" = "Toglinje";
+"type.railway.rail.highspeed" = "Høyhastighetsjernbane";
 
-"type.railway.rail.tourism" = "Toglinje";
+"type.railway.rail.tourism" = "Turistjernbane";
 
-"type.railway.rail.main" = "Toglinje";
+"type.railway.rail.main" = "Jernbane";
 
-"type.railway.rail.branch" = "Toglinje";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "Sekundær jernbane";
 
-"type.railway.rail.utility" = "Toglinje";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "Service jernbane";
 
-"type.railway.rail.spur" = "Toglinje";
+"type.railway.rail.spur" = "Jernbanespor";
 
-"type.railway.rail.service" = "Toglinje";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "Ekstra jernbanespor";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "Jernbanebro";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "Jernbanebro";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "Jernbanebro";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "Jernbanebro";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "Jernbanebro";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "Jernbanebro";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "Jernbanebro";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "Jernbanebro";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "Jernbanetunnel";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "Jernbanetunnel";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "Jernbanetunnel";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "Jernbanetunnel";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "Jernbanetunnel";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "Jernbanetunnel";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "Jernbanetunnel";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "Jernbanetunnel";
 
 "type.railway.station" = "Togstasjon";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "T-bane";
 
 "type.railway.station.subway.tbilisi" = "T-bane";
+
+"type.railway.station.subway.tehran" = "T-bane";
 
 "type.railway.station.subway.tianjin" = "T-bane";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "T-bane inngang";
 
 "type.railway.subway_entrance.tbilisi" = "T-bane inngang";
+
+"type.railway.subway_entrance.tehran" = "T-bane inngang";
 
 "type.railway.subway_entrance.tianjin" = "T-bane inngang";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Turisme";
 
+"type.tourism.aquarium" = "Akvarium";
+
 "type.tourism.alpine_hut" = "Fjellstue";
 
 "type.tourism.apartment" = "Leiligheter";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "Sluseport";
 

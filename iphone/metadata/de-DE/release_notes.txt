@@ -1,17 +1,41 @@
-• GPX import support
-• New OpenStreetMap data as of June 2, 2023
-• Fixed disappearing bookmark lists when wrong characters were saved in a bookmark name or description
-• Improved car and bicycle routing
-• Fixed non-working Portuguese (Brazil) and Spanish (Mexico) voice directions languages
-• Fixed crash when importing KML/KMZ/GPX file
-• Fixed repeated imports of the same file
-• Corrected Basque, Belarusian, British, English, and Ukrainian translations
+• Neue OpenStreetMap-Kartendaten ab dem 14. August
+• Mehr als ein Jahr alte Wikipedia-Artikel aktualisiert
+• Wiki-Text im dunklen Modus korrigiert
+• Fehlende Isolinien für einige Regionen Argentiniens, Chiles, Kasachstans, Tibets, der USA und Russlands hinzugefügt (Kartengröße erhöht)
+• Dichtere Isolinien in vielen Gebieten
+• Viele andere Kartengrößen wurden verkleinert
+• Kommentare aus GPX cmt Tag importieren
+• GPX-Track-Segmente werden als Teil des einzelnen Tracks behandelt, zu dem sie gehören
+• Fehler bei der Bearbeitung von sozialen Kontakten behoben
+• Hundepark kann im Editor hinzugefügt werden
+• Persische Sprachanweisungen aktualisiert
 
-Styles:
-• Fixed funicular icon
-• Changed desert color in the dark mode
-• Added Fish Pass
-• New Icon for Parcel Locker
-• Fixed icon for northernmost Munich underground station
+Routenplanung
+• Die Faktoren der Strassenoberfläche für das Auto-Routing-Profil wurden aktualisiert
+• Aktualisiertes Fußgänger-Routing-Profil für die Türkei und Georgien
+• Cross-MWM-Routing bei aktivierten "Vermeiden"-Optionen korrigiert
 
-Follow our news at https://omaps.org/news
+Suche
+• Die Suche nach Adressen in Tschechien und der Slowakei wurde korrigiert
+• Verbesserter Straßenabgleich
+• Touristeninformation, Kultstätte, Park, Informationstafel und Touristenkarte wurden aus der Kategorie Sehenswürdigkeiten entfernt
+• Doppelte Suchergebnisse werden nicht mehr gefiltert, außer bei sehr nahen Haltestellen
+• Besseres Ranking bei der Suche nach Kategorien
+• Behobene Suche nach einem Hausnamen
+
+Stile
+• Fährenrouten zur Weltkarte hinzugefügt
+• Der quadratische Hintergrund von Parksymbolen wurde entfernt
+• Separate Icons für kostenpflichtige und private Parkplätze hinzugefügt
+• Das Fahrradparkplatz-Symbol unterscheidet sich nun deutlicher vom Motorrad-Symbol
+• Das Symbol für den Parkeingang wurde aktualisiert
+• Für Parkplätze am Straßenrand und auf Fahrspuren wird nun ein kleineres Symbol verwendet, das beim Heranzoomen später erscheint
+• Ein Motorradparkplatz• und Parkeingangssymbol wurde zum Navigationsmodus hinzugefügt
+• Die Sichtbarkeit der Autobahn-Links im Navigationsmodus wurde verbessert
+• Verbesserte Farben für Autobahn
+• Zu kleine Isolinien bei Übersichts-Zoomstufen wurden entfernt
+• Teheraner U-Bahn-Symbol hinzugefügt
+• Überarbeitetes Prioritätensystem, insbesondere für POIs
+• Viele weitere Korrekturen und Verbesserungen
+
+Verfolgen Sie unsere Neuigkeiten unter https://omaps.org/de/news

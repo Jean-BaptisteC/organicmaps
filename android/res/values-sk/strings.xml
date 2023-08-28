@@ -715,6 +715,9 @@
 	<string name="type.amenity.car_sharing">Zdieľanie automobilov</string>
 	<string name="type.amenity.car_wash">Autoumývareň</string>
 	<string name="type.amenity.casino">Kasíno</string>
+	<string name="type.amenity.gambling">Hazardné hry</string>
+	<string name="type.leisure.adult_gaming_centre">Centrum hier pre dospelých</string>
+	<string name="type.leisure.amusement_arcade">Arcade</string>
 	<string name="type.amenity.charging_station">Dobíjacia stanica</string>
 	<string name="type.amenity.charging_station.bicycle">Nabíjacia stanica pre bicykle</string>
 	<string name="type.amenity.charging_station.motorcar">Nabíjacia stanica pre motorové vozidlá</string>
@@ -763,6 +766,8 @@
 	<string name="type.amenity.parking.private">Súkromné parkovisko</string>
 	<string name="type.amenity.parking.park_and_ride">Parkovisko</string>
 	<string name="type.amenity.parking.underground">Podzemné parkovisko</string>
+	<string name="type.amenity.parking.street_side">Parkovisko</string>
+	<string name="type.amenity.parking.lane">Parkovisko</string>
 	<string name="type.amenity.parking_entrance">Vstup na parkovisko</string>
 	<string name="type.amenity.parking_entrance.private">Vstup na parkovisko</string>
 	<string name="type.amenity.parking_entrance.permissive">Vstup na parkovisko</string>
@@ -776,6 +781,7 @@
 	<string name="type.amenity.place_of_worship">Svätyňa</string>
 	<string name="type.amenity.place_of_worship.buddhist">Chrám</string>
 	<string name="type.amenity.place_of_worship.christian">Chrám</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Cirkev Ježiša Krista Svätých neskorších dní</string>
 	<string name="type.amenity.place_of_worship.hindu">Chrám</string>
 	<string name="type.amenity.place_of_worship.jewish">Synagóga</string>
 	<string name="type.amenity.place_of_worship.muslim">Mešita</string>
@@ -803,6 +809,7 @@
 	<string name="type.amenity.school">Škola</string>
 	<string name="type.amenity.shelter">Prístrešok</string>
 	<string name="type.amenity.shower">Sprcha</string>
+	<string name="type.amenity.stripclub">Stripclub</string>
 	<string name="type.amenity.telephone">Telefón</string>
 	<string name="type.amenity.theatre">Divadlo</string>
 	<string name="type.amenity.toilets">Záchody</string>
@@ -952,6 +959,7 @@
 	<string name="type.cuisine.vegan">Vegánske jedlá</string>
 	<string name="type.cuisine.vegetarian">Vegetariánske jedlá</string>
 	<string name="type.cuisine.vietnamese">Vietnamská kuchyňa</string>
+	<string name="type.emergency.assembly_point">Núdzové zhromaždenie</string>
 	<string name="type.emergency.defibrillator">Defibrilátor</string>
 	<string name="type.emergency.fire_hydrant">Požiarny hydrant</string>
 	<string name="type.emergency.phone">Tiesňového volania</string>
@@ -977,6 +985,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Tunel</string>
 	<string name="type.highway.busway">Vyhradená autobusová cesta</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Most</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Tunel</string>
 	<string name="type.highway.bus_stop">Autobusová zastávka</string>
 	<string name="type.highway.construction">Cesta vo výstavbe</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
@@ -1315,13 +1327,32 @@
 	<string name="type.railway.level_crossing">Križovanie úrovní</string>
 	<string name="type.railway.monorail">Jednokoľajnicová dráha</string>
 	<string name="type.railway.rail">Železnica</string>
-	<string name="type.railway.rail.highspeed">Železnica</string>
-	<string name="type.railway.rail.tourism">Železnica</string>
-	<string name="type.railway.rail.main">Železnica</string>
-	<string name="type.railway.rail.branch">Železnica</string>
-	<string name="type.railway.rail.utility">Železnica</string>
-	<string name="type.railway.rail.spur">Železnica</string>
-	<string name="type.railway.rail.service">Železnica</string>
+	<string name="type.railway.rail.highspeed">Vysokorýchlostná železnica</string>
+	<string name="type.railway.rail.tourism">Turistická železnica</string>
+	<string name="type.railway.rail.main">Železnice</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Sekundárna železnica</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Úžitková železnica</string>
+	<string name="type.railway.rail.spur">Železničná odbočka</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Pomocná železničná trať</string>
+	<string name="type.railway.rail.bridge">Železničný most</string>
+	<string name="type.railway.rail.highspeed.bridge">Železničný most</string>
+	<string name="type.railway.rail.tourism.bridge">Železničný most</string>
+	<string name="type.railway.rail.main.bridge">Železničný most</string>
+	<string name="type.railway.rail.branch.bridge">Železničný most</string>
+	<string name="type.railway.rail.utility.bridge">Železničný most</string>
+	<string name="type.railway.rail.spur.bridge">Železničný most</string>
+	<string name="type.railway.rail.service.bridge">Železničný most</string>
+	<string name="type.railway.rail.tunnel">Železničný tunel</string>
+	<string name="type.railway.rail.highspeed.tunnel">Železničný tunel</string>
+	<string name="type.railway.rail.tourism.tunnel">Železničný tunel</string>
+	<string name="type.railway.rail.main.tunnel">Železničný tunel</string>
+	<string name="type.railway.rail.branch.tunnel">Železničný tunel</string>
+	<string name="type.railway.rail.utility.tunnel">Železničný tunel</string>
+	<string name="type.railway.rail.spur.tunnel">Železničný tunel</string>
+	<string name="type.railway.rail.service.tunnel">Železničný tunel</string>
 	<string name="type.railway.station">Železničná stanica</string>
 	<string name="type.railway.station.funicular">Lanovka</string>
 	<string name="type.railway.station.light_rail">Železničná stanica</string>
@@ -1427,6 +1458,7 @@
 	<string name="type.railway.station.subway.taoyuan">Metro</string>
 	<string name="type.railway.station.subway.tashkent">Metro</string>
 	<string name="type.railway.station.subway.tbilisi">Metro</string>
+	<string name="type.railway.station.subway.tehran">Metro</string>
 	<string name="type.railway.station.subway.tianjin">Metro</string>
 	<string name="type.railway.station.subway.tokyo">Metro</string>
 	<string name="type.railway.station.subway.valencia">Metro</string>
@@ -1537,6 +1569,7 @@
 	<string name="type.railway.subway_entrance.taoyuan">Vstup do metra</string>
 	<string name="type.railway.subway_entrance.tashkent">Vstup do metra</string>
 	<string name="type.railway.subway_entrance.tbilisi">Vstup do metra</string>
+	<string name="type.railway.subway_entrance.tehran">Vstup do metra</string>
 	<string name="type.railway.subway_entrance.tianjin">Vstup do metra</string>
 	<string name="type.railway.subway_entrance.tokyo">Vstup do metra</string>
 	<string name="type.railway.subway_entrance.valencia">Vstup do metra</string>
@@ -1689,6 +1722,7 @@
 	<string name="type.sport.field_hockey">Pozemný hokej</string>
 	<string name="type.sport.badminton">Bedminton</string>
 	<string name="type.sport.pelota">Baskická pelota</string>
+	<string name="type.tourism.aquarium">Akvárium</string>
 	<string name="type.tourism.alpine_hut">Horská chata</string>
 	<string name="type.tourism.apartment">Apartmány</string>
 	<string name="type.tourism.artwork">Umelecké diela</string>

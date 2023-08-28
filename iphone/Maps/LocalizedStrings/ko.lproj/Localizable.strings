@@ -289,7 +289,7 @@
 "facebook" = "Facebook";
 
 /* Text in menu */
-"twitter" = "Twitter";
+"twitter" = "X (Twitter)";
 
 /* Text in menu */
 "instagram" = "Instagram";
@@ -1325,6 +1325,12 @@
 
 "type.amenity.casino" = "카지노";
 
+"type.amenity.gambling" = "도박";
+
+"type.leisure.adult_gaming_centre" = "성인 게임 센터";
+
+"type.leisure.amusement_arcade" = "아케이드";
+
 "type.amenity.charging_station" = "충전 역";
 
 "type.amenity.charging_station.bicycle" = "자전거 충전소";
@@ -1421,6 +1427,10 @@
 
 "type.amenity.parking.underground" = "지하주차장";
 
+"type.amenity.parking.street_side" = "주차";
+
+"type.amenity.parking.lane" = "주차";
+
 "type.amenity.parking_entrance" = "주차장 입구";
 
 "type.amenity.parking_entrance.private" = "주차장 입구";
@@ -1446,6 +1456,8 @@
 "type.amenity.place_of_worship.buddhist" = "불교 사원";
 
 "type.amenity.place_of_worship.christian" = "교회";
+
+"type.amenity.place_of_worship.christian.mormon" = "예수 그리스도 후기 성도 교회";
 
 "type.amenity.place_of_worship.hindu" = "힌두교 사원";
 
@@ -1513,6 +1525,8 @@
 "type.amenity.shelter" = "대피소";
 
 "type.amenity.shower" = "샤워시설";
+
+"type.amenity.stripclub" = "스트립클럽";
 
 "type.amenity.taxi" = "택시";
 
@@ -1893,6 +1907,8 @@
 
 "type.emergency" = "Emergency";
 
+"type.emergency.assembly_point" = "비상 집결지";
+
 "type.emergency.defibrillator" = "제세동기";
 
 "type.emergency.fire_hydrant" = "소화전";
@@ -1943,6 +1959,12 @@
 "type.highway.bridleway.tunnel" = "터널";
 
 "type.highway.busway" = "버스전용도로";
+
+/* These translations are used for all type.highway.*.bridge. */
+"type.highway.busway.bridge" = "다리";
+
+/* These translations are used for all type.highway.*.tunnel. */
+"type.highway.busway.tunnel" = "터널";
 
 "type.highway.bus_stop" = "버스 정류장";
 
@@ -2333,6 +2355,8 @@
 "type.internet_access.wlan" = "인터넷";
 
 "type.junction" = "Junction";
+
+"type.junction.circular" = "Roundabout";
 
 "type.junction.roundabout" = "Roundabout";
 
@@ -2802,51 +2826,54 @@
 
 "type.railway.rail" = "철로";
 
-"type.railway.rail.highspeed" = "철로";
+"type.railway.rail.highspeed" = "고속 철도";
 
-"type.railway.rail.tourism" = "철로";
+"type.railway.rail.tourism" = "관광 철도";
 
-"type.railway.rail.main" = "철로";
+"type.railway.rail.main" = "철도";
 
-"type.railway.rail.branch" = "철로";
+/* Includes ordinary railway=rail w/o more specific usage= and service= tags. */
+"type.railway.rail.branch" = "보조 철도";
 
-"type.railway.rail.utility" = "철로";
+/* Non-passenger utility tracks: industrial, military, test. */
+"type.railway.rail.utility" = "유틸리티 철도";
 
-"type.railway.rail.spur" = "철로";
+"type.railway.rail.spur" = "철도 박차";
 
-"type.railway.rail.service" = "철로";
+/* Short service tracks: siding, yard, crossover. */
+"type.railway.rail.service" = "보조 레일 트랙";
 
-"type.railway.rail.bridge" = "Railway Bridge";
+"type.railway.rail.bridge" = "철도 교량";
 
-"type.railway.rail.highspeed.bridge" = "Railway Bridge";
+"type.railway.rail.highspeed.bridge" = "철도 교량";
 
-"type.railway.rail.tourism.bridge" = "Railway Bridge";
+"type.railway.rail.tourism.bridge" = "철도 교량";
 
-"type.railway.rail.main.bridge" = "Railway Bridge";
+"type.railway.rail.main.bridge" = "철도 교량";
 
-"type.railway.rail.branch.bridge" = "Railway Bridge";
+"type.railway.rail.branch.bridge" = "철도 교량";
 
-"type.railway.rail.utility.bridge" = "Railway Bridge";
+"type.railway.rail.utility.bridge" = "철도 교량";
 
-"type.railway.rail.spur.bridge" = "Railway Bridge";
+"type.railway.rail.spur.bridge" = "철도 교량";
 
-"type.railway.rail.service.bridge" = "Railway Bridge";
+"type.railway.rail.service.bridge" = "철도 교량";
 
-"type.railway.rail.tunnel" = "Railway Tunnel";
+"type.railway.rail.tunnel" = "철도 터널";
 
-"type.railway.rail.highspeed.tunnel" = "Railway Tunnel";
+"type.railway.rail.highspeed.tunnel" = "철도 터널";
 
-"type.railway.rail.tourism.tunnel" = "Railway Tunnel";
+"type.railway.rail.tourism.tunnel" = "철도 터널";
 
-"type.railway.rail.main.tunnel" = "Railway Tunnel";
+"type.railway.rail.main.tunnel" = "철도 터널";
 
-"type.railway.rail.branch.tunnel" = "Railway Tunnel";
+"type.railway.rail.branch.tunnel" = "철도 터널";
 
-"type.railway.rail.utility.tunnel" = "Railway Tunnel";
+"type.railway.rail.utility.tunnel" = "철도 터널";
 
-"type.railway.rail.spur.tunnel" = "Railway Tunnel";
+"type.railway.rail.spur.tunnel" = "철도 터널";
 
-"type.railway.rail.service.tunnel" = "Railway Tunnel";
+"type.railway.rail.service.tunnel" = "철도 터널";
 
 "type.railway.station" = "기차역";
 
@@ -3057,6 +3084,8 @@
 "type.railway.station.subway.tashkent" = "지하철";
 
 "type.railway.station.subway.tbilisi" = "지하철";
+
+"type.railway.station.subway.tehran" = "지하철";
 
 "type.railway.station.subway.tianjin" = "지하철";
 
@@ -3283,6 +3312,8 @@
 "type.railway.subway_entrance.tashkent" = "지하철 입구";
 
 "type.railway.subway_entrance.tbilisi" = "지하철 입구";
+
+"type.railway.subway_entrance.tehran" = "지하철 입구";
 
 "type.railway.subway_entrance.tianjin" = "지하철 입구";
 
@@ -3614,6 +3645,8 @@
 
 "type.tourism" = "Tourism";
 
+"type.tourism.aquarium" = "수족관";
+
 "type.tourism.alpine_hut" = "고산 오두막";
 
 "type.tourism.apartment" = "아파트";
@@ -3698,7 +3731,7 @@
 
 "type.waterway.drain" = "Drain";
 
-"type.waterway.drain.tunnel" = "Drain";
+"type.waterway.drain.tunnel" = "Ditch";
 
 "type.waterway.lock_gate" = "수문";
 

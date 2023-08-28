@@ -727,7 +727,7 @@
 	<!-- Description in preferences -->
 	<string name="enable_show_on_lock_screen_description">Калі ўключана, вам не трэба разблакіраваць прыладу кожны раз падчас працы праграмы.</string>
 	<!-- OpenStreetMap text on splash screen -->
-	<string name="splash_subtitle">Дадзеныя карты з OpenStreetMap</string>
+	<string name="splash_subtitle">Даныя карты з OpenStreetMap</string>
 	<!-- Telegram group url for the "?" About page -->
 	<string name="telegram_url">https://t.me/OrganicMapsRu</string>
 	<!-- Translated Organic Maps site, add new translations here: https://github.com/organicmaps/organicmaps.github.io/tree/master/content -->
@@ -738,6 +738,9 @@
 	<string name="type.addr_interpolation.even">Адрас/Блок</string>
 	<string name="type.addr_interpolation.odd">Адрас/Блок</string>
 	<string name="type.amenity.bicycle_parking">Велапаркоўка</string>
+	<string name="type.amenity.gambling">Азартныя гульні</string>
+	<string name="type.leisure.adult_gaming_centre">Гульнявы цэнтр для дарослых</string>
+	<string name="type.leisure.amusement_arcade">Аркада</string>
 	<string name="type.amenity.charging_station.bicycle">Станцыя для зарадкі ровараў</string>
 	<string name="type.amenity.charging_station.motorcar">Аўтамабільная зарадная станцыя</string>
 	<string name="type.leisure.bowling_alley">Боўлінг</string>
@@ -762,10 +765,13 @@
 	<string name="type.amenity.parking.permissive">Прыватная паркоўка</string>
 	<string name="type.amenity.parking.private">Прыватная паркоўка</string>
 	<string name="type.amenity.parking.underground">Падземны паркінг</string>
+	<string name="type.amenity.parking.street_side">Паркоўка</string>
+	<string name="type.amenity.parking.lane">Паркоўка</string>
 	<string name="type.amenity.parking_entrance">Уваход на паркоўку</string>
 	<string name="type.amenity.parking_entrance.private">Уваход на паркоўку</string>
 	<string name="type.amenity.parking_entrance.permissive">Уваход на паркоўку</string>
 	<string name="type.amenity.parking_space.disabled">Паркоўка для інвалідаў</string>
+	<string name="type.amenity.place_of_worship.christian.mormon">Царква Ісуса Хрыста Святых апошніх дзён</string>
 	<string name="type.amenity.post_box">Паштовая скрыня</string>
 
 	<!-- SECTION: Types: Recycling -->
@@ -785,6 +791,7 @@
 	<string name="type.recycling.green_waste">Арганіка / Харчовыя адходы</string>
 	<string name="type.recycling.cartons">Тэтрапак і аналагі</string>
 	<string name="type.amenity.sanitary_dump_station">Зліў для прыбіральняў транспартных сродкаў</string>
+	<string name="type.amenity.stripclub">Стрыптыз-клуб</string>
 	<string name="type.amenity.townhall">Адміністрацыя</string>
 	<string name="type.amenity.vending_machine">Гандлёвы аўтамат</string>
 	<string name="type.amenity.vending_machine.cigarettes">Аўтамат з цыгарэтамі</string>
@@ -840,6 +847,7 @@
 	<string name="type.craft.tailor">Кравец</string>
 	<string name="type.cuisine.bubble_tea">Чай з бурбалкамі</string>
 	<string name="type.cuisine.deli">Дэлікатэсы</string>
+	<string name="type.emergency.assembly_point">Аварыйны зборны пункт</string>
 	<string name="type.emergency.defibrillator">Дэфібрылятар</string>
 	<string name="type.emergency.fire_hydrant">Пажарны гідрант</string>
 	<!-- This is for main/primary entrances, for secondary entrances see type.entrance -->
@@ -862,6 +870,10 @@
 	<!-- These translations are used for all type.highway.*.tunnel. -->
 	<string name="type.highway.bridleway.tunnel">Тунэль</string>
 	<string name="type.highway.busway">Выдзеленая аўтобусная дарога</string>
+	<!-- These translations are used for all type.highway.*.bridge. -->
+	<string name="type.highway.busway.bridge">Мост</string>
+	<!-- These translations are used for all type.highway.*.tunnel. -->
+	<string name="type.highway.busway.tunnel">Тунэль</string>
 	<!-- These translations are used for all type.highway.*.bridge. -->
 	<string name="type.highway.cycleway.bridge">Мост</string>
 	<!-- These translations are used for all type.highway.*.tunnel. -->
@@ -1091,6 +1103,32 @@
 	<string name="type.power.plant.wind">Ветраэлектрастанцыя</string>
 	<string name="type.railway.funicular">Фунікулёр</string>
 	<string name="type.railway.platform">Чыгуначная платформа</string>
+	<string name="type.railway.rail.highspeed">Хуткасная чыгунка</string>
+	<string name="type.railway.rail.tourism">Турыстычная чыгунка</string>
+	<string name="type.railway.rail.main">Чыгуначны</string>
+	<!-- Includes ordinary railway=rail w/o more specific usage= and service= tags. -->
+	<string name="type.railway.rail.branch">Другасная чыгунка</string>
+	<!-- Non-passenger utility tracks: industrial, military, test. -->
+	<string name="type.railway.rail.utility">Службова чыгунка</string>
+	<string name="type.railway.rail.spur">Чыгуначны шлях</string>
+	<!-- Short service tracks: siding, yard, crossover. -->
+	<string name="type.railway.rail.service">Дапаможны чыгуначны шлях</string>
+	<string name="type.railway.rail.bridge">Чыгуначны мост</string>
+	<string name="type.railway.rail.highspeed.bridge">Чыгуначны мост</string>
+	<string name="type.railway.rail.tourism.bridge">Чыгуначны мост</string>
+	<string name="type.railway.rail.main.bridge">Чыгуначны мост</string>
+	<string name="type.railway.rail.branch.bridge">Чыгуначны мост</string>
+	<string name="type.railway.rail.utility.bridge">Чыгуначны мост</string>
+	<string name="type.railway.rail.spur.bridge">Чыгуначны мост</string>
+	<string name="type.railway.rail.service.bridge">Чыгуначны мост</string>
+	<string name="type.railway.rail.tunnel">Чыгуначны тунэль</string>
+	<string name="type.railway.rail.highspeed.tunnel">Чыгуначны тунэль</string>
+	<string name="type.railway.rail.tourism.tunnel">Чыгуначны тунэль</string>
+	<string name="type.railway.rail.main.tunnel">Чыгуначны тунэль</string>
+	<string name="type.railway.rail.branch.tunnel">Чыгуначны тунэль</string>
+	<string name="type.railway.rail.utility.tunnel">Чыгуначны тунэль</string>
+	<string name="type.railway.rail.spur.tunnel">Чыгуначны тунэль</string>
+	<string name="type.railway.rail.service.tunnel">Чыгуначны тунэль</string>
 	<string name="type.railway.station.funicular">Фунікулёр</string>
 	<string name="type.shop.bathroom_furnishing">Мэбля для ванных пакояў</string>
 	<string name="type.shop.beverages">Напоі</string>
@@ -1182,6 +1220,7 @@
 	<string name="type.sport.field_hockey">Хакей на траве</string>
 	<string name="type.sport.badminton">Бадмінтон</string>
 	<string name="type.sport.pelota">Баскская пелота</string>
+	<string name="type.tourism.aquarium">Акварыум</string>
 	<string name="type.tourism.caravan_site">Кемпінг для аўтадамоў</string>
 	<string name="type.tourism.information">Турыстычная інфармацыя</string>
 	<string name="type.tourism.information.board">Інфармацыйны шчыт</string>

@@ -38,8 +38,12 @@ public:
     size_t m_beg, m_end;
 
   public:
-    explicit Range(ResultsT const & v) : m_v(v), m_beg(0), m_end(kTopPoiResultsCount) {}
-    Range(ResultsT const & v, size_t beg, size_t end = kTopPoiResultsCount) : m_v(v), m_beg(beg), m_end(end) {}
+    Range(ResultsT const & v, size_t beg, size_t end = kTopPoiResultsCount) : m_v(v), m_beg(beg), m_end(end)
+    {
+      TEST_LESS(beg, end, ());
+      TEST_GREATER_OR_EQUAL(v.size(), end, ());
+    }
+    explicit Range(ResultsT const & v) : Range(v, 0, kTopPoiResultsCount) {}
 
     size_t size() const { return m_end - m_beg; }
     auto begin() const { return m_v.begin() + m_beg; }
@@ -93,6 +97,14 @@ public:
     }
   }
 
+  static size_t CountClassifType(Range const & results, uint32_t type)
+  {
+    return std::count_if(results.begin(), results.end(), [type](search::Result const & r)
+    {
+      return EqualClassifType(r.GetFeatureType(), type);
+    });
+  }
+
   static void NameStartsWith(Range const & results, base::StringIL const & prefixes)
   {
     for (auto const & r : results)
@@ -117,17 +129,23 @@ public:
   }
 
   /// @param[in] street, house May be empty.
-  static void HasAddress(Range const & results, std::string const & street, std::string const & house)
+  static void HasAddress(Range const & results, std::string const & street, std::string const & house,
+                         base::StringIL classifType = {"building"})
   {
-    auto const buildingType = classif().GetTypeByPath({"building"});
+    auto const type = classif().GetTypeByPath(classifType);
 
     bool found = false;
     for (auto const & r : results)
     {
-      if (r.GetResultType() == search::Result::Type::Feature && EqualClassifType(r.GetFeatureType(), buildingType))
+      if (r.GetResultType() == search::Result::Type::Feature && EqualClassifType(r.GetFeatureType(), type))
       {
-        found = true;
-        break;
+        auto const & addr = r.GetAddress();
+        if ((street.empty() || addr.find(street) != std::string::npos) &&
+            (house.empty() || addr.find(house) != std::string::npos))
+        {
+          found = true;
+          break;
+        }
       }
     }
 
@@ -302,7 +320,13 @@ UNIT_CLASS_TEST(MwmTestsFixture, Hamburg_Park)
   TEST_GREATER(results.size(), kTopPoiResultsCount, ());
 
   Range const range(results, 0, 4);
-  EqualClassifType(range, GetClassifTypes({{"tourism"}, {"shop", "gift"}, {"amenity", "fast_food"}}));
+  EqualClassifType(range, GetClassifTypes({
+      {"tourism", "theme_park"},
+      {"amenity", "fast_food"},
+      {"shop", "gift"},
+      {"highway", "service"}
+  }));
+
   NameStartsWith(range, {"Heide Park", "Heide-Park"});
   double const dist = SortedByDistance(range, center);
   TEST_LESS(dist, 100000, ());
@@ -320,7 +344,10 @@ UNIT_CLASS_TEST(MwmTestsFixture, Barcelona_Carrers)
     auto const & results = request->Results();
     TEST_GREATER(results.size(), kTopPoiResultsCount, ());
 
-    Range const range(results, 0, 4);
+    // - First 2 streets in Barcelona (1-2 km)
+    // - Next streets in Badalona, Barbera, Sadabel, ... (20-30 km)
+    // - Again 2 _minor_ footways in Barcelona (1-2 km)
+    Range const range(results, 0, 2);
     EqualClassifType(range, GetClassifTypes({{"highway"}}));
     CenterInRect(range, {2.1651583, 41.3899995, 2.1863021, 41.4060494});
   }
@@ -424,12 +451,8 @@ UNIT_CLASS_TEST(MwmTestsFixture, Arbat_Address)
   for (auto const & query : {"Арбат 2", "Арбат 4"})
   {
     auto request = MakeRequest(query);
-    auto const & results = request->Results();
-    size_t constexpr kResultsCount = 3;   // Building should be at the top.
-    TEST_GREATER(results.size(), kResultsCount, ());
-
-    Range const range(results, 0, kResultsCount);
-    HasAddress(range, {}, {});
+    // Address should be at the top.
+    HasAddress(Range(request->Results(), 0, 3), {}, {});
   }
 }
 
@@ -440,12 +463,8 @@ UNIT_CLASS_TEST(MwmTestsFixture, Hawaii_Address)
   SetViewportAndLoadMaps(center);
 
   auto request = MakeRequest("1000 Ululani Street");
-  auto const & results = request->Results();
-  size_t constexpr kResultsCount = 3;   // Building should be at the top.
-  TEST_GREATER_OR_EQUAL(results.size(), kResultsCount, ());
-
-  Range const range(results, 0, kResultsCount);
-  HasAddress(range, "Ululani Street", "1000");
+  // Address should be at the top.
+  HasAddress(Range(request->Results(), 0, 3), "Ululani Street", "1000");
 }
 
 // https://github.com/organicmaps/organicmaps/issues/3712
@@ -466,6 +485,7 @@ UNIT_CLASS_TEST(MwmTestsFixture, French_StopWord_Category)
 UNIT_CLASS_TEST(MwmTestsFixture, Street_BusStop)
 {
   // Buenos Aires
+  // Also should download Argentina_Santa Fe.
   ms::LatLon const center(-34.60655, -58.43566);
   SetViewportAndLoadMaps(center);
 
@@ -474,9 +494,10 @@ UNIT_CLASS_TEST(MwmTestsFixture, Street_BusStop)
     auto const & results = request->Results();
     TEST_GREATER(results.size(), kTopPoiResultsCount, ());
 
-    // Top results are Hotel and Street (sometimes bus stop).
+    // Top results are Hotel, Shop and Street.
+    // Full Match street (20 km) is better than Full Prefix bus stop (1 km).
     Range const range(results);
-    EqualClassifType(range, GetClassifTypes({{"tourism", "hotel"}, {"highway", "bus_stop"}, {"highway", "residential"}}));
+    EqualClassifType(range, GetClassifTypes({{"tourism", "hotel"}, {"shop"}, {"highway", "residential"}}));
   }
 
   {
@@ -694,14 +715,14 @@ UNIT_CLASS_TEST(MwmTestsFixture, Famous_Cities_Rank)
   // Buenos Aires like starting point :)
   arrCenters[0] = {-34.60649, -58.43540};
 
-  bool isGoGo = false;
+  // For DEBUG.
+  // bool isGoGo = false;
   for (size_t i = 0; i < count; ++i)
   {
-    // For DEBUG.
-//    if (!isGoGo && arrCities[i] == "London")
-//      isGoGo = true;
-//    if (i > 0 && !isGoGo)
-//      continue;
+    // if (!isGoGo && arrCities[i] == "London")
+    //   isGoGo = true;
+    // if (i > 0 && !isGoGo)
+    //   continue;
 
     /// @todo Temporary, USA has a lot of similar close cities.
     if (arrCities[i] == "New York")
@@ -736,4 +757,141 @@ UNIT_CLASS_TEST(MwmTestsFixture, Famous_Cities_Rank)
   }
 }
 
+UNIT_CLASS_TEST(MwmTestsFixture, Conscription_HN)
+{
+  // Brno (Czech)
+  ms::LatLon const center(49.19217, 16.61121);
+  SetViewportAndLoadMaps(center);
+
+  for (std::string hn : {"77", "29"})
+  {
+    // postcode + street + house number
+    auto request = MakeRequest("63900 Havlenova " + hn, "cs");
+    // Should be the first result.
+    HasAddress(Range(request->Results(), 0, 1), "Havlenova", "77/29");
+  }
+}
+
+UNIT_CLASS_TEST(MwmTestsFixture, ToiletAirport)
+{
+  // Frankfurt Airport
+  ms::LatLon const center(50.052108, 8.571086);
+  SetViewportAndLoadMaps(center);
+
+  for (bool const isCategory : {false, true})
+  {
+    auto params = GetDefaultSearchParams("toilet");
+    params.m_categorialRequest = isCategory;
+    size_t constexpr kResultsCount = 30;
+    TEST_GREATER_OR_EQUAL(params.m_maxNumResults, kResultsCount, ());
+
+    auto request = MakeRequest(params);
+    auto const & results = request->Results();
+    TEST_EQUAL(results.size(), kResultsCount, ());
+
+    Range const range(results, 0, kResultsCount);
+    EqualClassifType(range, GetClassifTypes({{"amenity", "toilets"}}));
+    double const dist = SortedByDistance(range, center);
+    TEST_LESS(dist, 1000, ());
+  }
+}
+
+UNIT_CLASS_TEST(MwmTestsFixture, WaterTap)
+{
+  // UK, Christchurch
+  ms::LatLon const center(50.744914, -1.787959);
+  SetViewportAndLoadMaps(center);
+
+  for (bool const isCategory : {false, true})
+  {
+    auto params = GetDefaultSearchParams("water tap ");
+    params.m_categorialRequest = isCategory;
+
+    auto request = MakeRequest(params);
+    auto const & results = request->Results();
+    TEST_GREATER_OR_EQUAL(results.size(), kTopPoiResultsCount, ());
+
+    Range const range(results);
+    EqualClassifType(range, GetClassifTypes({{"man_made", "water_tap"}}));
+    double const dist = SortedByDistance(range, center);
+    TEST_LESS(dist, 3500, ());
+  }
+}
+
+UNIT_CLASS_TEST(MwmTestsFixture, BA_LasHeras)
+{
+  // Buenos Aires (Palermo)
+  ms::LatLon const center(-34.5801125, -58.4158058);
+  SetViewportAndLoadMaps(center);
+
+  {
+    auto request = MakeRequest("Las Heras 2900");
+    auto const & results = request->Results();
+    TEST_GREATER(results.size(), kPopularPoiResultsCount, ());
+
+    // First results will be:
+    // - _exact_ street match addresses "Las Heras 2900"
+    // - "Las Heras 2900" bus stop (only one, avoid a bunch of duplicates)
+
+    // _sub-string_ street address match
+    HasAddress(Range(results, 0, 5), "Avenida General Las Heras", "2900");
+  }
+}
+
+UNIT_CLASS_TEST(MwmTestsFixture, BA_SanMartin)
+{
+  // Buenos Aires (Palermo)
+  ms::LatLon const center(-34.5801392, -58.415764);
+  SetViewportAndLoadMaps(center);
+
+  {
+    auto request = MakeRequest("San Martin");
+    auto const & results = request->Results();
+    size_t constexpr kResultsCount = 12;
+    TEST_GREATER(results.size(), kResultsCount, ());
+    TEST_GREATER(CountClassifType(Range(results, 0, kResultsCount),
+                                  classif().GetTypeByPath({"railway", "station"})), 2, ());
+  }
+}
+
+UNIT_CLASS_TEST(MwmTestsFixture, Full_Address)
+{
+  {
+    // Krakow
+    ms::LatLon const center(50.061431, 19.9361584);
+    SetViewportAndLoadMaps(center);
+
+    auto request = MakeRequest("Sucha Beskidzka Armii Krajowej b-1 kozikowka  34-200 Poland");
+    auto const & results = request->Results();
+    TEST_GREATER(results.size(), kPopularPoiResultsCount, ());
+
+    HasAddress(Range(results, 0, 3), "Armii Krajowej", "B-1");
+    HasAddress(Range(results, 0, 3), "Armii Krajowej", "B-1A");
+  }
+
+  {
+    // Regensburg (DE)
+    ms::LatLon const center(49.0195332, 12.0974856);
+    SetViewportAndLoadMaps(center);
+
+    {
+      auto request = MakeRequest("Wörth an der Donau Gewerbepark A 1 93086 Germany");
+      auto const & results = request->Results();
+      TEST_GREATER(results.size(), kPopularPoiResultsCount, ());
+
+      HasAddress(Range(results, 0, 1), "Gewerbepark A", "A 1", {"shop", "car"});
+    }
+    {
+      auto request = MakeRequest("Wörth an der Donau Gewerbepark C 1 93086 Germany");
+      auto const & results = request->Results();
+      TEST_GREATER(results.size(), kPopularPoiResultsCount, ());
+
+      /// @todo There is a tricky neighborhood here, so ranking gets dumb :)
+      /// 1: "Gewerbepark A", "A 1" near "Gewerbepark C" st
+      /// 2: "Gewerbepark B", "1" near "Gewerbepark C" st
+      /// 3: "Gewerbepark C", "1"
+      HasAddress(Range(results, 0, 3), "Gewerbepark C", "1");
+    }
+  }
+}
 } // namespace real_mwm_tests
