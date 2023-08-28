@@ -36,7 +36,7 @@ jobs:
           run: |
             cmake --version
             ninja --version
-            gradle -Parm64 assembleFdroidBeta
+            gradle -Parm32 assembleFdroidBeta
         - name: Upload apk
           uses: actions/upload-artifact@v3
           with:
