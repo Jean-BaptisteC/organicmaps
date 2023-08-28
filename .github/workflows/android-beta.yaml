@@ -14,8 +14,8 @@ jobs:
         - name: Checkout the code
           uses: actions/checkout@v3
           with:
-            repository: Nimausfi/organicmaps
-            ref: 'new-changes'
+            repository: organicmaps/organicmaps
+            ref: 'rt-android-background-location'
             path: ./
         - name: Update dependencies
           shell: bash
