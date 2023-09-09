@@ -30,4 +30,4 @@ jobs:
           uses: actions/upload-artifact@v3
           with:
             name: Android
-            path: android/res/values*/
+            path: android/app/src/main/res/values*/
