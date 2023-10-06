@@ -41,5 +41,5 @@ jobs:
           uses: actions/upload-artifact@v3
           with:
             name: android-FDroidBeta
-            path: android/build/outputs/apk/**/OrganicMaps-*.apk
+            path: android/app/build/outputs/apk/**/OrganicMaps-*.apk
             if-no-files-found: error
