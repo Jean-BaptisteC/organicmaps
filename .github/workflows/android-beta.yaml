@@ -14,8 +14,8 @@ jobs:
         - name: Checkout the code
           uses: actions/checkout@v3
           with:
-            repository: AndrewShkrob/organicmaps
-            ref: 'android-auto/navigation-screen-refactoring'
+            repository: sandy99405/organicmaps
+            ref: 'master'
             path: ./
         - name: Update dependencies
           shell: bash
