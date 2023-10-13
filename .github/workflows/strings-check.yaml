@@ -11,7 +11,7 @@ jobs:
           uses: actions/checkout@v3
           with:
             repository: Jean-BaptisteC/organicmaps
-            ref: 'fr_translations'
+            ref: 'fix_fr'
             path: ./
         - name: Update dependencies
           shell: bash
@@ -31,3 +31,8 @@ jobs:
           with:
             name: Android
             path: android/app/src/main/res/values*/
+        - name: Upload TTS Translations
+          uses: actions/upload-artifact@v3
+          with:
+            name: TTS
+            path: data/sound-strings
