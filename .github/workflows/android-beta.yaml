@@ -14,8 +14,8 @@ jobs:
         - name: Checkout the code
           uses: actions/checkout@v3
           with:
-            repository: sandy99405/organicmaps
-            ref: 'master'
+            repository: walterjwhite/organicmaps
+            ref: 'bug/6126'
             path: ./
         - name: Update dependencies
           shell: bash
