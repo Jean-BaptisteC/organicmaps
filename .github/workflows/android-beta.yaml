@@ -14,8 +14,8 @@ jobs:
         - name: Checkout the code
           uses: actions/checkout@v3
           with:
-            repository: organicmaps/organicmaps
-            ref: '01cf8ee8bc65e0c0407db13f0c63aea57a529e1a'
+            repository: Jean-BaptisteC/organicmaps
+            ref: 'dialog_theme'
             path: ./
         - name: Update dependencies
           shell: bash
