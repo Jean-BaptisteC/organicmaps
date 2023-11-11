@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!-- Default theme -->
-  <style name="MwmTheme.Base" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+  <style name="MwmTheme.Base" parent="Theme.Material3.Light.NoActionBar">
     <item name="materialCalendarStyle">@style/Widget.MaterialComponents.MaterialCalendar</item>
     <item name="materialCalendarFullscreenTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar.Fullscreen</item>
     <item name="materialCalendarTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar</item>
@@ -134,7 +134,7 @@
   </style>
 
   <!-- Night theme -->
-  <style name="MwmTheme.Night.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+  <style name="MwmTheme.Night.Base" parent="Theme.Material3.DayNight.NoActionBar">
     <item name="materialCalendarStyle">@style/Widget.MaterialComponents.MaterialCalendar</item>
     <item name="materialCalendarFullscreenTheme">@style/MwmWidget.MaterialCalendar.Theme.FullScreen.Dark</item>
     <item name="materialCalendarTheme">@style/MwmWidget.MaterialCalendar.Theme.Dark</item>

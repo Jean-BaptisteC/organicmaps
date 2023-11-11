@@ -40,14 +40,18 @@
             android:orientation="horizontal">
 
           <app.organicmaps.widget.RoutingToolbarButton
+              style="@style/Widget.AppCompat.CompoundButton.RadioButton"
               android:id="@+id/vehicle"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginStart="@dimen/routing_selector_wheel_margin"
               tools:button="@drawable/ic_car"
-              tools:buttonTint="?colorAccent" />
+              tools:buttonTint="?colorAccent"
+              android:scaleX="0.8"
+              android:scaleY="0.8"/>
 
           <app.organicmaps.widget.RoutingToolbarButton
+              style="@style/Widget.AppCompat.CompoundButton.RadioButton"
               android:id="@+id/pedestrian"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -57,6 +61,7 @@
               tools:buttonTint="?iconTintLight" />
 
           <app.organicmaps.widget.RoutingToolbarButton
+              style="@style/Widget.AppCompat.CompoundButton.RadioButton"
               android:id="@+id/transit"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -65,6 +70,7 @@
               tools:buttonTint="?iconTintLight" />
 
           <app.organicmaps.widget.RoutingToolbarButton
+             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
               android:id="@+id/bicycle"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -73,6 +79,7 @@
               tools:buttonTint="?iconTintLight" />
 
           <app.organicmaps.widget.RoutingToolbarButton
+              style="@style/Widget.AppCompat.CompoundButton.RadioButton"
               android:id="@+id/ruler"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"

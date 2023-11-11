@@ -56,12 +56,14 @@
   <style name="MwmWidget.Editor.CustomTextInput">
     <item name="android:layout_height">wrap_content</item>
     <item name="android:layout_width">match_parent</item>
+    <item name="boxBackgroundMode">filled</item>
   </style>
 
   <style name="MwmWidget.Editor.FieldLayout">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
     <item name="android:layout_marginStart">@dimen/editor_margin_left</item>
+    <item name="android:textColorHint">?android:colorAccent</item>
   </style>
 
   <style name="MwmWidget.Editor.FieldLayout.EditText" parent="MwmWidget.Editor">
@@ -70,6 +72,7 @@
     <item name="android:ellipsize">end</item>
     <item name="android:singleLine">true</item>
     <item name="android:textAppearance">@style/MwmTextAppearance.Body1</item>
+    <item name="boxBackgroundMode">filled</item>
   </style>
 
   <style name="MwmWidget.Editor.Problem" tools:ignore="NewApi">

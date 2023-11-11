@@ -101,6 +101,7 @@
       <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_base"
         android:layout_marginBottom="@dimen/margin_base">
         <FrameLayout
           android:id="@+id/login_container"
@@ -116,7 +117,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login_osm"
-            android:textAppearance="@style/MwmTextAppearance.Body2.Light" />
+            android:textAppearance="@style/MwmTextAppearance.Body2.Light"
+            app:backgroundTint="?android:colorAccent"/>
           <ProgressBar
             android:id="@+id/osm_login_progress"
             android:layout_width="@dimen/editor_auth_btn_height"
@@ -135,6 +137,7 @@
           android:padding="@dimen/margin_half"
           android:text="@string/forgot_password"
           android:textAppearance="@style/MwmTextAppearance.Body3"
+          android:textColor="?android:textColorPrimary"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toStartOf="@id/login_container"
           app:layout_constraintStart_toStartOf="parent"
@@ -172,6 +175,7 @@
           android:text="@string/register_at_openstreetmap"
           android:textAppearance="@style/MwmTextAppearance.Body2"
           android:textColor="@color/text_dark"
+          app:backgroundTint="@color/light_gray"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toEndOf="@id/register_text"

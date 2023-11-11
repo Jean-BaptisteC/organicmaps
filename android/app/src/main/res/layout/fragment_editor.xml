@@ -228,12 +228,14 @@
               android:layout_marginStart="@dimen/editor_margin_left"
               android:layout_toStartOf="@+id/sw__wifi"
               android:text="@string/wifi"/>
-          <androidx.appcompat.widget.SwitchCompat
+          <com.google.android.material.materialswitch.MaterialSwitch
               android:id="@+id/sw__wifi"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_alignParentEnd="true"
-              android:layout_centerVertical="true"/>
+              android:layout_centerVertical="true"
+              android:clickable="true"
+              android:focusable="true" />
         </RelativeLayout>
 
         <!-- ToDo: Level is missing compared with iOS. -->
