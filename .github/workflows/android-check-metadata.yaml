@@ -1,12 +1,7 @@
-name: Android Check Metadata
+name: Android API Test
 on:
   workflow_dispatch: # Manual trigger
   pull_request:
-    paths:
-      - .github/workflows/android-check-metadata.yaml  # Run check on self change
-      - android/src/fdroid/**
-      - android/src/google/**
-      - tools/python/check_store_metadata.py
 
 jobs:
   android-check-metadata:
@@ -14,7 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Check metadata
-        run: ./tools/python/check_store_metadata.py android
+        uses: actions/checkout@v4
+        with:
+            repository: organicmaps/api-android
+            ref: master
+            path: ./
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3
+        with:
+            distribution: 'temurin'
+      - name: Generate release build
+        run: ./gradlew assemble
