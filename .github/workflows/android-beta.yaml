@@ -15,7 +15,7 @@ jobs:
           uses: actions/checkout@v3
           with:
             repository: Jean-BaptisteC/organicmaps
-            ref: 'improve_performance'
+            ref: 'radio_button'
             path: ./
         - name: Update dependencies
           shell: bash
