@@ -15,7 +15,7 @@ jobs:
           uses: actions/checkout@v3
           with:
             repository: Jean-BaptisteC/organicmaps
-            ref: 'rm_customtextinput'
+            ref: 'improve_performance'
             path: ./
         - name: Update dependencies
           shell: bash
