@@ -11,7 +11,7 @@ jobs:
           uses: actions/checkout@v3
           with:
             repository: Jean-BaptisteC/organicmaps
-            ref: 'fix_fr'
+            ref: 'activity_not_found'
             path: ./
         - name: Update dependencies
           shell: bash
