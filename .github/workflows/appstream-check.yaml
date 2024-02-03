@@ -23,8 +23,6 @@ jobs:
             sudo apt-get install -y ninja-build
         - name: CD 
           run: git submodule update --init --recursive
-        - name: Install brew
-          run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        - run: echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
-        - run: brew install translate-shell
+        - run: wget git.io/trans
+        - run: chmod +x ./trans
         - run: ./tools/python/translate.py Description
