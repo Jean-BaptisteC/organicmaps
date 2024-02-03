@@ -1,29 +1,26 @@
-name: Validate appstream metadata xml
+name: Generate translations
+
+env:
+    DEEPL_API_KEY: {{secrets.DEEPL_API_KEY}}
+
 on:
-  workflow_dispatch: # Manual trigger
-  pull_request:
-    paths:
-      - packaging/app.organicmaps.desktop.metainfo.xml
-      - .github/workflows/appstream-check.yaml  # Run check on self change
+  workflow_dispatch:
 
 jobs:
-  validate-appstream:
-    name: Validate appstream metadata xml
-    runs-on: ubuntu-22.04
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout sources
-        uses: actions/checkout@v3
-
-      - name: Install appstream validator
-        shell: bash
-        run: |
-          sudo apt update -y
-          sudo apt install -y \
-              flatpak
-          sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-          # We get it from flathub to ensure we have a recent version
-          sudo flatpak install -y org.freedesktop.appstream-glib
-
-      - name: Validate appstream data
-        shell: bash
-        run: flatpak run org.freedesktop.appstream-glib validate --nonet packaging/app.organicmaps.desktop.metainfo.xml
+        - name: Checkout the code
+          uses: actions/checkout@v4
+          with:
+            repository: Jean-BaptisteC/organicmaps
+            ref: 'linkify_desc'
+            path: ./
+        - name: Update dependencies
+          shell: bash
+          run: |
+            sudo apt-get update -y
+            sudo apt-get install -y ninja-build
+        - name: CD 
+          run: git submodule update --init --recursive
+        - run: ./tools/python/translate.py Description
