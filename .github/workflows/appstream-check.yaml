@@ -1,7 +1,7 @@
 name: Generate translations
 
 env:
-    DEEPL_API_KEY: {{secrets.DEEPL_API_KEY}}
+    DEEPL_FREE_API_KEY: {{secrets.DEEPL_FREE_API_KEY}}
 
 on:
   workflow_dispatch:
