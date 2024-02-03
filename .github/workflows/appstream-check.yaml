@@ -25,6 +25,6 @@ jobs:
           run: git submodule update --init --recursive
         - name: Install brew
           run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        - run: eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-        - run: .linuxbrew/bin/brew install translate-shell
+        - run: echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
+        - run: brew install translate-shell
         - run: ./tools/python/translate.py Description
