@@ -14,8 +14,8 @@ jobs:
         - name: Checkout the code
           uses: actions/checkout@v3
           with:
-            repository: Jean-BaptisteC/organicmaps
-            ref: 'blurred_icons'
+            repository: Isira-Seneviratne/organicmaps
+            ref: 'java.time'
             path: ./
         - name: Update dependencies
           shell: bash
