@@ -14,8 +14,8 @@ jobs:
         - name: Checkout the code
           uses: actions/checkout@v4
           with:
-            repository: Isira-Seneviratne/organicmaps
-            ref: 'java.time'
+            repository: RedAuburn/organicmaps
+            ref: 'use-animation-for-spinner'
             path: ./
         - name: Update dependencies
           shell: bash
