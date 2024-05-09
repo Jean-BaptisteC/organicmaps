@@ -396,7 +396,7 @@
         android:configChanges="orientation|screenLayout|screenSize"
         android:label="@string/bookmarks"
         android:parentActivityName="app.organicmaps.bookmarks.BookmarkCategoriesActivity"
-        android:windowSoftInputMode="adjustResize" />
+        android:windowSoftInputMode="adjustPan" />
 
     <activity
         android:name="app.organicmaps.editor.EditorActivity"
