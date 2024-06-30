@@ -34,7 +34,7 @@
       android:layout_height="wrap_content"
       android:layout_gravity="center_vertical"
       android:layout_marginEnd="@dimen/bookmark_collection_item_end_margin"
-      android:layout_marginBottom="@dimen/margin_half_plus"
+      android:layout_marginBottom="@dimen/margin_base"
       android:ellipsize="end"
       android:singleLine="true"
       android:textColor="?android:textColorSecondary"
