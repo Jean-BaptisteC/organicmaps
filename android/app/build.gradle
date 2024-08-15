@@ -115,7 +115,6 @@ android {
     buildConfigField 'String', 'SUPPORT_MAIL', '"android@organicmaps.app"'
     // Should be customized in flavors.
     buildConfigField 'String', 'REVIEW_URL', '""'
-    generateLocaleConfig true
 
     externalNativeBuild {
       def pchFlag = 'OFF'
@@ -230,6 +229,10 @@ android {
     disable 'InsecureBaseConfiguration'
     abortOnError true
   }
+
+  androidResources {
+        generateLocaleConfig true
+    }
 
   gradle.projectsEvaluated {
     android.applicationVariants.all { variant ->
