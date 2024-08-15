@@ -14,8 +14,8 @@ jobs:
         - name: Checkout the code
           uses: actions/checkout@v4
           with:
-            repository: organicmaps/organicmaps
-            ref: 'release/2024.06.02'
+            repository: AndrewShkrob/organicmaps
+            ref: 'android-auto/fix-downloader'
             path: ./
         - name: Update dependencies
           shell: bash
